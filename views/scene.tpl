@@ -6,12 +6,12 @@
 
 	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}/??/{% include 'widget/common-css.tpl' %}" />
 	{{ macroset.linkcsss(config,[
-		"bulid/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
-		,"bulid/js/lib/colorbox/expample1/colorbox.min.css"
-		,"bulid/js/lib/jquery-jcrop/jquery.Jcrop.min.css"
-		,"bulid/js/lib/nanoscroller/nanoscroller.min.css"
-		,"bulid/js/lib/jquery-ui/css/jquery-ui.min.css"
-		,"bulid/css/main.min.css"
+		"build/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
+		,"build/js/lib/colorbox/expample1/colorbox.min.css"
+		,"build/js/lib/jquery-jcrop/jquery.Jcrop.min.css"
+		,"build/js/lib/nanoscroller/nanoscroller.min.css"
+		,"build/js/lib/jquery-ui/css/jquery-ui.min.css"
+		,"build/css/main.min.css"
 	]) }}
 </head>
 <body>
@@ -34,20 +34,20 @@
 	{% include "widget/global.tpl" %}
 	<script src="{{ config.jsServer }}/??/{% include 'widget/common-js.tpl' %}"></script>
 	{{ macroset.scripts(config,[
-		"bulid/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"
-		,"bulid/js/lib/cheditor/ckeditor.min.js"
-		,"bulid/js/lib/colorbox/jquery.colorbox.min.js"
-		,"bulid/js/lib/dragsort/jquery.dragsort-0.4.min.js"
-		,"bulid/js/lib/jquery-ui/jquery-ui.min.js"
-		,"bulid/js/lib/widget/jquery.ui.widget.min.js"
-		,"bulid/js/lib/fileupload/jquery.iframe-transport.min.js"
-		,"bulid/js/lib/fileupload/jquery.fileupload.min.js"
-		,"bulid/js/lib/fileupload/jquery.fileupload-process.min.js"
-		,"bulid/js/lib/fileupload/jquery.fileupload-validate.min.js"
-		,"bulid/js/lib/jquery-jcrop/jquery.Jcrop.min.js"
-		,"bulid/js/lib/nanoscroller/jquery.nanoscroller.min.js"
-		,"bulid/js/lib/qrcode/jquery.qrcode.min.js"
-		,"bulid/js/lib/require/require.min.js"
+		"build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"
+		,"build/js/lib/cheditor/ckeditor.min.js"
+		,"build/js/lib/colorbox/jquery.colorbox.min.js"
+		,"build/js/lib/dragsort/jquery.dragsort-0.4.min.js"
+		,"build/js/lib/jquery-ui/jquery-ui.min.js"
+		,"build/js/lib/widget/jquery.ui.widget.min.js"
+		,"build/js/lib/fileupload/jquery.iframe-transport.min.js"
+		,"build/js/lib/fileupload/jquery.fileupload.min.js"
+		,"build/js/lib/fileupload/jquery.fileupload-process.min.js"
+		,"build/js/lib/fileupload/jquery.fileupload-validate.min.js"
+		,"build/js/lib/jquery-jcrop/jquery.Jcrop.min.js"
+		,"build/js/lib/nanoscroller/jquery.nanoscroller.min.js"
+		,"build/js/lib/qrcode/jquery.qrcode.min.js"
+		,"build/js/lib/require/require.min.js"
 	]) }}
 </body>
 </html>

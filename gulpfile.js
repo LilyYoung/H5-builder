@@ -18,9 +18,9 @@ var paths = {
 	imgsrc:mainPath+'src/img/**/*',
     move:mainPath+'src/css',
     spitesrc:mainPath+'src/css/i/**',
-	outputjs: mainPath+'bulid/js',
-	outputcss: mainPath+'bulid/css',
-	outimgsrc: mainPath+'bulid/img',
+	outputjs: mainPath+'build/js',
+	outputcss: mainPath+'build/css',
+	outimgsrc: mainPath+'build/img',
     rootpath:mainPath
 };
 
