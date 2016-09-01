@@ -10,6 +10,7 @@
 		,"bulid/js/lib/colorbox/expample1/colorbox.min.css"
 		,"bulid/js/lib/jcrop/jquery.Jcrop.min.css"
 		,"bulid/js/lib/nanoscroller/nanoscroller.min.css"
+		,"bulid/js/lib/jquery-ui/1.10.4/css/jquery-ui.min.css"
 		,"bulid/css/main.min.css"
 	]) }}
 </head>
@@ -44,6 +45,7 @@
 		,"bulid/js/lib/fileupload/jquery.fileupload-validate.min.js"
 		,"bulid/js/lib/jquery-jcrop/jquery.Jcrop.min.js"
 		,"bulid/js/lib/nanoscroller/jquery.nanoscroller.min.js"
+		,"bulid/js/lib/jquery-ui/1.10.4/jquery-ui.min.js"
 		,"bulid/js/lib/qrcode/jquery.qrcode.min.js"
 		,"bulid/js/lib/require/require.min.js"
 	]) }}
