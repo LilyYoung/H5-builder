@@ -9,5 +9,3 @@ body { font: 14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,s
 .scene .outline { position: fixed; left: 0; top: 50px; bottom: 0; width: 184px; z-index: 10000; background-color: red; }
 
 .scene .workspace { height: 100%; position: absolute; top: 0; bottom: 0; left: 184px; right: 0; }
-
-/*# sourceMappingURL=static/src/css/base.css.map */

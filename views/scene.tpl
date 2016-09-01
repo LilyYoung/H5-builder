@@ -8,9 +8,9 @@
 	{{ macroset.linkcsss(config,[
 		"bulid/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
 		,"bulid/js/lib/colorbox/expample1/colorbox.min.css"
-		,"bulid/js/lib/jcrop/jquery.Jcrop.min.css"
+		,"bulid/js/lib/jquery-jcrop/jquery.Jcrop.min.css"
 		,"bulid/js/lib/nanoscroller/nanoscroller.min.css"
-		,"bulid/js/lib/jquery-ui/1.10.4/css/jquery-ui.min.css"
+		,"bulid/js/lib/jquery-ui/css/jquery-ui.min.css"
 		,"bulid/css/main.min.css"
 	]) }}
 </head>
@@ -38,6 +38,7 @@
 		,"bulid/js/lib/cheditor/ckeditor.min.js"
 		,"bulid/js/lib/colorbox/jquery.colorbox.min.js"
 		,"bulid/js/lib/dragsort/jquery.dragsort-0.4.min.js"
+		,"bulid/js/lib/jquery-ui/jquery-ui.min.js"
 		,"bulid/js/lib/widget/jquery.ui.widget.min.js"
 		,"bulid/js/lib/fileupload/jquery.iframe-transport.min.js"
 		,"bulid/js/lib/fileupload/jquery.fileupload.min.js"
@@ -45,7 +46,6 @@
 		,"bulid/js/lib/fileupload/jquery.fileupload-validate.min.js"
 		,"bulid/js/lib/jquery-jcrop/jquery.Jcrop.min.js"
 		,"bulid/js/lib/nanoscroller/jquery.nanoscroller.min.js"
-		,"bulid/js/lib/jquery-ui/1.10.4/jquery-ui.min.js"
 		,"bulid/js/lib/qrcode/jquery.qrcode.min.js"
 		,"bulid/js/lib/require/require.min.js"
 	]) }}
