@@ -8,8 +8,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
-var relativePath = './static';
-var mainPath = './static/';
+var relativePath = './';
+var mainPath = './';
 
 var paths = {
 	scriptsrc: mainPath+'src/js/**',
