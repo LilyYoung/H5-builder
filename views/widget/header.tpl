@@ -13,7 +13,7 @@
         </li>
         <li class="comp-draggable music ui-draggable">
             <span class="eqf-top-music eqf-btn"></span>
-            <span class="tip">音乐</span>
+            <span class="tip">音乐ddd</span>
         </li>
         <li class="comp-draggable vedio ui-draggable">
             <span class="eqf-top-video eqf-btn"></span>
