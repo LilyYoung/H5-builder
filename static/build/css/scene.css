@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* 场景 */
+.workspace .eq-block-grid, .workspace .eq-block-grid-inner, .workspace .eq-block-guides { pointer-events: none; }
+
+.workspace #nr, .workspace .eq-block-grid, .workspace .eq-block-guides { position: absolute; height: 486px; top: 17px; left: 27px; }
+
+.workspace .edit-workspace { -webkit-transform-origin: 0px 0px 0px; -ms-transform-origin: 0px 0px 0px; transform-origin: 0px 0px 0px; height: 100%; width: 100%; overflow: hidden; }
+
+.workspace .container { position: absolute; height: 520px; width: 374px; top: 50%; left: 50%; margin-top: -260px; margin-left: -187px; background-color: yellow; }
+
+.workspace .nr { width: 320px; }

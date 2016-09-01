@@ -6,6 +6,7 @@ $header-bgc: #31364a; //头部背景颜色
 $main-color-one: #76838f;//页面主字体颜色
 $main-color-two: #fff;//白色字体颜色
 $outline-bgc: red;//视图大纲背景色
+$outline-w: 184px;//视图大纲宽度
 
 body {
   font:14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,sans-serif;
@@ -25,14 +26,33 @@ body {
 
 //场景layout
 .scene {
+	background-color: $main-bgc;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
 	margin-top: 50px;
+
+	//视图大纲layout样式
 	.outline {
 		position: fixed;
 		left: 0;
 		top: 50px;
 		bottom: 0;
-		width: 184px;
+		width: $outline-w;
 		z-index: 10000;
 		background-color: $outline-bgc;
 	}
+
+	//手机场景layout样式
+	.workspace {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: $outline-w;
+		right: 0;
+	}
+
 }
