@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* =========================== 通用样式========================= */
+/* 文字排版 */
+.f12 { font-size: 12px; }
+
+.f14 { font-size: 14px; }
+
+.f16 { font-size: 16px; }
+
+.f18 { font-size: 18px; }
+
+.fb { font-weight: bold; }
+
+.fn { font-weight: normal; }
+
+.unl { text-decoration: underline; }
+
+.no_unl { text-decoration: none; }
+
+/* 边距 */
+.m10 { margin: 10px; }
+
+/* 背景色 */
+
+/*# sourceMappingURL=static/src/css/base.css.map */

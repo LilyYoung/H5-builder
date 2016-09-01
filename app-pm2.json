@@ -1,0 +1,26 @@
+{
+  "apps" : [{
+    "name"       : "gome-cart-front1.0.0",
+    "script"     : "app.js",
+    "instances"  : 4,
+    "error_file" : "/app/weblogic/logs/err.log",
+    "out_file"   : "/app/weblogic/logs/out.log",
+    "pid_file"   : "/app/weblogic/logs/pid.log",
+    "max_memory_restart":"200M",
+    "merge_logs":true,
+    "watch":false,
+    "exec_mode"  : "cluster_mode",
+    "env":{
+      "GOMECARTFRONT":"production"
+    },
+    "env_dev":{
+       "GOMECARTFRONT":"dev"
+    },
+    "env_uat":{
+       "GOMECARTFRONT":"uat"
+    },
+    "env_pre":{
+       "GOMECARTFRONT":"pre"
+    }
+  }]
+}

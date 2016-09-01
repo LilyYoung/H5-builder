@@ -1,0 +1,31 @@
+{
+  "name": "gome-gront-cart",
+  "version": "1.0.0",
+  "description": "国美在线前端购物车",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.ds.gome.com.cn:front-cart/front-cart.git"
+  },
+  "author": "qinzhenlong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

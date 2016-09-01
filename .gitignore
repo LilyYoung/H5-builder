@@ -1,3 +1,23 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+.idea
+.tern-port
+.DS_Store
+pids
+logs
+results
+WEB-INF
+npm-debug.log
+dev-cart
+node_modules
+!static/src
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
