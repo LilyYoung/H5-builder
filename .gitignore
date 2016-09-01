@@ -16,7 +16,6 @@ WEB-INF
 npm-debug.log
 dev-cart
 node_modules
-build
 
 # Windows image file caches
 Thumbs.db
