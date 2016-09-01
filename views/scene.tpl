@@ -10,15 +10,10 @@
 		,"bulid/js/lib/colorbox/expample1/colorbox.min.css"
 		,"bulid/js/lib/jcrop/jquery.Jcrop.min.css"
 		,"bulid/js/lib/nanoscroller/nanoscroller.min.css"
-		,"bulid/css/header.min.css"
-		,"bulid/css/modal.min.css"
-		,"bulid/css/comp_setting.min.css"
-		,"bulid/css/outline.min.css"
-		,"bulid/css/scene.min.css"
+		,"bulid/css/main.min.css"
 	]) }}
 </head>
 <body>
-<div style="background:red;height: 200px;"></div>
 	<!-- 头部模板 -->
 	<header class="nav-header">
 		{% include "widget/header.tpl" %}

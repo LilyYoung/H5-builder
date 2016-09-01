@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/*
+ *  base:公用样式文件
+ *  header:头部导航样式文件
+ *  scene:手机场景样式文件
+ *  outline:视图大纲样式文件
+ *  comp_setting: 组件设置样式文件
+ *  modal:弹窗样式文件
+*/
 /* =========================== 通用样式========================= */
 body { font: 14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,sans-serif; background-color: #f1f4f5; }
 
@@ -8,4 +16,11 @@ body { font: 14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,s
 
 .scene .outline { position: fixed; left: 0; top: 50px; bottom: 0; width: 184px; z-index: 10000; background-color: red; }
 
-/*# sourceMappingURL=static/src/css/base.css.map */
+/* ==== start 头部 ==== */
+/* ==== end 头部 ==== */
+/* 场景 */
+/* 视图 */
+/* 组件设置 */
+/* 弹框样式 */
+
+/*# sourceMappingURL=static/src/css/main.css.map */

@@ -1,17 +1,38 @@
 @charset "utf-8";
 /* =========================== 通用样式========================= */
+$body-bgc: #f1f4f5;//body背景色
+$main-bgc: #d0cfd8;//主背景色
+$header-bgc: #31364a; //头部背景颜色
+$main-color-one: #76838f;//页面主字体颜色
+$main-color-two: #fff;//白色字体颜色
+$outline-bgc: red;//视图大纲背景色
 
-/* 文字排版 */
-.f12 { font-size: 12px;}
-.f14 { font-size: 14px;}
-.f16 { font-size: 16px;}
-.f18 { font-size: 18px;}
-.fb {font-weight: bold;}
-.fn {font-weight: normal;}
-.unl {text-decoration: underline;}
-.no_unl {text-decoration: none;}
+body {
+  font:14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,sans-serif;
+  background-color: $body-bgc;
+}
 
-/* 边距 */
-.m10 {margin: 10px;}
+//头部layout
+.nav-header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10001;
+	width: 100%;
+	height: 50px;
+	background-color: $header-bgc;
+}
 
-/* 背景色 */
+//场景layout
+.scene {
+	margin-top: 50px;
+	.outline {
+		position: fixed;
+		left: 0;
+		top: 50px;
+		bottom: 0;
+		width: 184px;
+		z-index: 10000;
+		background-color: $outline-bgc;
+	}
+}
