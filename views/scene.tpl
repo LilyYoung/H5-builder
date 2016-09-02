@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.min.css" />
 	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/jquery-ui/css/jquery-ui.min.css" />
 	{{ macroset.linkcsss(config,[
-		"build/css/main.min.css"
+		"build/css/scene.min.css"
 	]) }}
 </head>
 <body>

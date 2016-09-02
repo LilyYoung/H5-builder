@@ -1,24 +1,14 @@
-/* 场景 */
-.workspace .eq-block-grid,.workspace .eq-block-grid-inner,.workspace .eq-block-guides{pointer-events:none}
-.workspace #nr,.workspace .eq-block-grid,.workspace .eq-block-guides{position:absolute;height:486px;top:17px;left:27px}
-.workspace {
-	.edit-workspace {
-		transform-origin: 0px 0px 0px;
-		height: 100%;
-		width: 100%;
-		overflow: hidden;
-	}
-	.container {
-		position: absolute;
-		height: 520px;
-		width: 374px;
-		top: 50%;
-		left: 50%;
-		margin-top: -260px;
-		margin-left: -187px;
-		background-color: yellow;
-	}
-	.nr {
-		width: 320px;
-	}
-}
+/*
+ *  base:公用样式文件
+ *  header:头部导航样式文件
+ *  workspace:手机场景样式文件
+ *  outline:视图大纲样式文件
+ *  comp_setting: 组件设置样式文件
+ *  modal:弹窗样式文件
+*/
+@import 'base';
+@import 'header';
+@import 'workspace';
+@import 'outline';
+@import 'comp_setting';
+@import 'modal';
