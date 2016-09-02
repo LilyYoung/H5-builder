@@ -1,1 +1,1 @@
-build/js/lib/bootstrap/bootstrap.min.css
+build/js/lib/bootstrap/css/bootstrap.min.css
