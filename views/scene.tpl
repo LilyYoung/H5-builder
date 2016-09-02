@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
 	{{ macroset.normalHead(config,"微海报")}}
-	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}/{% include 'widget/common-css.tpl' %}" />
+	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/colorbox/expample1/colorbox.css" />
+	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/jquery-ui/css/jquery-ui.min.css" />
 	{{ macroset.linkcsss(config,[
-		"build/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
-		,"build/js/lib/colorbox/expample1/colorbox.min.css"
-		,"build/js/lib/jquery-jcrop/jquery.Jcrop.min.css"
-		,"build/js/lib/nanoscroller/nanoscroller.min.css"
-		,"build/js/lib/jquery-ui/css/jquery-ui.min.css"
-		,"build/css/main.min.css"
+		"build/css/main.min.css"
 	]) }}
 </head>
 <body>
@@ -31,23 +31,25 @@
 		</div><!-- end 工作区 -->
 	</div>
 	{% include "widget/global.tpl" %}
-	<script src="{{ config.jsServer }}/??/{% include 'widget/common-js.tpl' %}"></script>
-	{{ macroset.scripts(config,[
-		"build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"
-		,"build/js/lib/cheditor/ckeditor.min.js"
-		,"build/js/lib/colorbox/jquery.colorbox.min.js"
-		,"build/js/lib/dragsort/jquery.dragsort-0.4.min.js"
-		,"build/js/lib/jquery-ui/jquery-ui.min.js"
-		,"build/js/lib/widget/jquery.ui.widget.min.js"
-		,"build/js/lib/fileupload/jquery.iframe-transport.min.js"
-		,"build/js/lib/fileupload/jquery.fileupload.min.js"
-		,"build/js/lib/fileupload/jquery.fileupload-process.min.js"
-		,"build/js/lib/fileupload/jquery.fileupload-validate.min.js"
-		,"build/js/lib/jquery-jcrop/jquery.Jcrop.min.js"
-		,"build/js/lib/nanoscroller/jquery.nanoscroller.min.js"
-		,"build/js/lib/qrcode/jquery.qrcode.min.js"
-		,"build/js/lib/require/require.min.js"
-	]) }}
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/jquery/js/jquery-1.11.2.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/bootstrap/js/bootstrap.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/cheditor/ckeditor.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/colorbox/jquery.colorbox.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/dragsort/jquery.dragsort-0.4.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/jquery-ui/jquery-ui.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/fileupload/jquery.iframe-transport.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-process.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-validate.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/nanoscroller/jquery.nanoscroller.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/qrcode/jquery.qrcode.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js" />
+	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/require/require.js" />
+
 </body>
 </html>
 

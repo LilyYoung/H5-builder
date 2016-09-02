@@ -1,1 +1,0 @@
-build/js/lib/jquery/jquery-1.11.2.min.js,build/js/lib/bootstrap/js/bootstrap.min.js
