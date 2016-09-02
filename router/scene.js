@@ -14,7 +14,7 @@ router.use(function(req,res,next){
 });
 
 
-function fnindex(req,res){
+function scene(req,res){
 	res.render("scene.tpl",{
 		name: 'aaa',
 		id:req.params.id||'',
@@ -24,5 +24,5 @@ function fnindex(req,res){
 	});
 }
 
-router.get("/",fnindex); 
+router.get("/",scene);
 module.exports=router;

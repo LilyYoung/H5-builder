@@ -5,7 +5,7 @@
     <ul class="comp_panel clearfix">
         <li class="comp-draggable text ui-draggable">
             <span class="eqf-text-word eqf-btn"></span>
-            <span class="tip">文本</span>
+            <span class="tip">文本dddddd</span>
         </li>
         <li class="comp-draggable bg ui-draggable">
             <span class="eqf-top-background eqf-btn"></span>
@@ -17,11 +17,11 @@
         </li>
         <li class="comp-draggable vedio ui-draggable">
             <span class="eqf-top-video eqf-btn"></span>
-            <span class="tip">视频</span>
+            <span class="tip">视频ddd</span>
         </li>
         <li class="comp-draggable image ui-draggable">
             <span class="eqf-top-pic eqf-btn"></span>
-            <span class="tip">图片</span>
+            <span class="tip">图片ddd</span>
         </li>
         <li class="comp-draggable image ui-draggable">
             <span class="eqf-shape eqf-btn"></span>

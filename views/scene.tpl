@@ -3,8 +3,7 @@
 <html lang="en">
 <head>
 	{{ macroset.normalHead(config,"微海报")}}
-
-	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}/??/{% include 'widget/common-css.tpl' %}" />
+	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}/{% include 'widget/common-css.tpl' %}" />
 	{{ macroset.linkcsss(config,[
 		"build/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
 		,"build/js/lib/colorbox/expample1/colorbox.min.css"
