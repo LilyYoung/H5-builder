@@ -1,6 +1,15 @@
 /* 场景 */
 .workspace .eq-block-grid,.workspace .eq-block-grid-inner,.workspace .eq-block-guides{pointer-events:none}
 .workspace #nr,.workspace .eq-block-grid,.workspace .eq-block-guides{position:absolute;height:486px;top:17px;left:27px}
+.workspace .history .psdUploadButton div, .workspace .history a{
+	width: 40px;
+	height: 40px;
+	line-height: 42px;
+	display: block;
+	text-align: center;
+	-webkit-user-select: none;
+}
+
 .workspace {
 	.edit-workspace {
 		transform-origin: 0px 0px 0px;
@@ -20,5 +29,65 @@
 	}
 	.nr {
 		width: 320px;
+		.edit_wrapper{
+			overflow: hidden;
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+		.edit_area {
+			position: absolute;
+			top: 0;
+			text-align: left;
+			width: 320px;
+			height: 486px;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.phone {
+		border: 0;
+		position: absolute;
+		left: 24px;
+		top: -80px;
+		background-image: url(build/css/i/phone.svg);
+		width: 326px;
+		height: 620px;
+		z-index: 1040;
+		pointer-events: none;
+		.name {
+			position: absolute;
+			top: 65px;
+			width: 80%;
+			left: 10%;
+			text-align: center;
+			color: #fff;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			height: 20px;
+			margin: 0;
+		}
+	}
+
+	.history {
+		position: absolute;
+		left: 374px;
+		z-index: 1040;
+		transform-origin: 0 0;
+		a {
+			background-color: rgba(0,0,0,.5);
+			color: #999;
+			i {font-size: 22px;}
+		}
+	}
+	.history2 {
+		left: 350px;
+		top: 0;
 	}
 }

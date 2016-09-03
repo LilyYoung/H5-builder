@@ -3,12 +3,13 @@
 <html lang="en">
 <head>
 	{{ macroset.normalHead(config,"微海报")}}
-	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" />
-	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/colorbox/expample1/colorbox.css" />
-	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.css" />
-	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.min.css" />
-	<link rel="stylesheet" type="text/css" href="{{ config.cssServer }}build/js/lib/jquery-ui/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/Font-Awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/colorbox/expample1/colorbox.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-ui/jquery-ui.min.css" />
 	{{ macroset.linkcsss(config,[
 		"build/css/scene.min.css"
 	]) }}
@@ -31,25 +32,30 @@
 		</div><!-- end 工作区 -->
 	</div>
 	{% include "widget/global.tpl" %}
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/jquery/js/jquery-1.11.2.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/bootstrap/js/bootstrap.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/cheditor/ckeditor.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/colorbox/jquery.colorbox.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/dragsort/jquery.dragsort-0.4.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/jquery-ui/jquery-ui.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/fileupload/jquery.iframe-transport.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-process.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-validate.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/nanoscroller/jquery.nanoscroller.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/qrcode/jquery.qrcode.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js" />
-	<link rel="stylesheet" type="text/css" href="{{ config.jsServer }}build/js/lib/require/require.js" />
+	<script src="{{ config.jsServer }}build/js/lib/jquery/jquery-1.11.2.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/cheditor/ckeditor.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/colorbox/jquery.colorbox.min.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/dragsort/jquery.dragsort-0.4.min.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/jquery-ui/jquery-ui.min.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.iframe-transport.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-process.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-validate.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/nanoscroller/jquery.nanoscroller.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/qrcode/jquery.qrcode.min.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js" ></script>
+	<srcript src="{{ config.jsServer }}build/js/lib/require/require.js" ></script>
 
+	<script>
+		$(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
 </body>
 </html>
 
