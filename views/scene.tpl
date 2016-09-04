@@ -33,12 +33,12 @@
 	</div>
 	{% include "widget/global.tpl" %}
 	<script src="{{ config.jsServer }}build/js/lib/jquery/jquery-1.11.2.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/cheditor/ckeditor.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/colorbox/jquery.colorbox.min.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/dragsort/jquery.dragsort-0.4.min.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/jquery-ui/jquery-ui.min.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.iframe-transport.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload.js" ></script>
@@ -49,13 +49,14 @@
 	<script src="{{ config.jsServer }}build/js/lib/qrcode/jquery.qrcode.min.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js" ></script>
-	<srcript src="{{ config.jsServer }}build/js/lib/require/require.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/require/require.js" ></script>
 
 	<script>
 		$(function(){
-			$('[data-toggle="tooltip"]').tooltip();
-		});
+			$( document ).tooltip({ position: { my: "left+5 center", at: "right center" } });
+   		});
 	</script>
+		
 </body>
 </html>
 

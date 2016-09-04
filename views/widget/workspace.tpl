@@ -17,11 +17,16 @@
 
             <!-- 手机场景右侧的工具 -->
             <div class="history history2">
-                <div></div>
-                <a href="javascript:;" class="btn btn-primary"
-                   data-toggle="tooltip"
-                   data-placement="right"
-                   title="提示框在居右"><i class="icon-warning-sign"></i></a>
+                <a href="javascript:;"  title="撤消(ctrl+z)"><i class="fa fa-reply fa-lg" aria-hidden="true"></i></a>
+                <a href="javascript:;"  title="恢复(ctrl+y)"><i class="fa fa-share fa-lg" aria-hidden="true"></i></a>
+                <a href="javascript:;" class="active"  title="刷新预览"><i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i></a>
+                <a href="javascript:;" class="active"  title="复制当前页"><i class="fa fa-files-o fa-lg" aria-hidden="true"></i></a>
+                <a href="javascript:;" class="active"  title="背景"><i class="fa fa-th-large fa-lg" aria-hidden="true"></i></a>
+                <a href="javascript:;" class="active"  title="音乐"><i class="fa fa-music fa-lg" aria-hidden="true"></i></a>
+                <a href="javascript:;"  title="特效"><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></a>
+                <a href="javascript:;" class="active"  title="网格设置"><i class="fa fa-table fa-lg" aria-hidden="true"></i></a>
+                <a href="javascript:;" class="active"  title="手机边框"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></a>
+                <a href="javascript:;" id="warn" class="active"  title="警告"><i class="fa fa-exclamation-circle fa-lg" aria-hidden="true"></i></a>
             </div>
 
         </div>

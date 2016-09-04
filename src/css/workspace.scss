@@ -83,8 +83,13 @@
 		a {
 			background-color: rgba(0,0,0,.5);
 			color: #999;
-			i {font-size: 22px;}
+			&:hover {
+		        background-color: rgba(0,0,0,.8);
+				color: #fff;
+			}
 		}
+		.active {color: #fff;}
+		#warn {background-color: rgb(242, 166, 83); }
 	}
 	.history2 {
 		left: 350px;
