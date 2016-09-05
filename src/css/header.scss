@@ -1,4 +1,95 @@
 /* ==== start 头部 ==== */
+$headerColor: #fff;
+$headBtnColor: #76838f;
+$headerOpacity: .8;
+header {
+    .creat_logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 50px;
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            display: inline-block;
+            width: 168px;
+            height: 50px;
+            margin-left: 15px;
+            opacity: $headerOpacity;
+            background: url(http://js.gomein.net.cn/images/ui/gomelogoW.png) no-repeat;
+            cursor: pointer;
+        }
+        a:link, a:visited, a:active, a:hover, a:link, a:visited {
+            text-decoration: none;
+        }
+    }
 
+    li, ol, ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .creat_con {
+        width: 660px;
+        margin: 0 auto;
+    }
+    .create-action {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $headerColor;
+    }
+    .comp_panel li {
+        float: left;
+        color: $headerColor;
+        height: 50px;
+        width: 60px;
+        cursor: pointer;
+        padding-top: 7px;
+        text-align: center;
+        opacity: $headerOpacity;
+        position: relative;
+
+        .tip {
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            bottom: 7px;
+            width: 60px;
+        }
+    }
+    .comp_panel li:hover{
+        background-color: $headBtnColor;
+    }
+    .gray-dark {
+        background-color: $headBtnColor;
+    }
+
+    .out-red {
+        background-color: #FF5448;
+    }
+    .create-action li{
+        height: 30px;
+        width: 40px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 6px;
+        text-align: center;
+        border-radius: 3px;
+        float: left;
+        text-align: center;
+
+        .tip{
+            font-size: 12px;
+            line-height: 30px;
+            color: $headerColor;
+        }
+}
+
+
+}
 
 /* ==== end 头部 ==== */
