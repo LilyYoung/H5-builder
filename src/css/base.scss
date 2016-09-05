@@ -1,12 +1,12 @@
 @charset "utf-8";
 /* =========================== 通用样式========================= */
-$body-bgc: #f1f4f5;//body背景色
-$main-bgc: #d0cfd8;//主背景色
-$header-bgc: #31364a; //头部背景颜色
-$main-color-one: #76838f;//页面主字体颜色
-$main-color-two: #fff;//白色字体颜色
-$outline-bgc: red;//视图大纲背景色
-$outline-w: 184px;//视图大纲宽度
+$body-bgc: #f1f4f5;	//body背景色
+$main-bgc: #d0cfd8;	//主背景色
+$header-bgc: #31364a;	//头部背景颜色
+$main-color-one: #76838f;	//页面主字体颜色
+$main-color-two: #ffffff;	//白色字体颜色
+$outline-bgc: #f0f3f4;	//视图大纲背景色
+$outline-w: 184px;	//视图大纲宽度
 
 body {
   font:14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,sans-serif;

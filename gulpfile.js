@@ -56,7 +56,7 @@ gulp.task('css', function () {
             cascade: false
         }))
         .pipe(gulp.dest(paths.outputcss));
-})
+});
 
 // 在命令行输入 gulp images 启动此任务
 gulp.task('images', function () {
@@ -114,7 +114,8 @@ gulp.task('serve', ['script','sass','move','spite','css','images'], function() {
     gulp.watch(paths.imgsrc, ['images']);
     //gulp.watch('./views/**.tpl', ['templates']);
    if(onOff) {
-        gulp.watch("./views/**").on('change', reload);
+        //gulp.watch("./views/**").on('change', reload);
+        gulp.watch(["./src/**","./views/**"]).on('change', reload);
    }else {
         gulp.watch('./static/*.html').on('change', reload)
    }
@@ -124,4 +125,4 @@ gulp.task('build', ['clean'], function(){
    gulp.start('script','sass','move','spite','css','images');
 });
 
-gulp.task('default', ['serve'])
+gulp.task('default', ['serve']);
