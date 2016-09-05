@@ -1,1 +1,42 @@
-/* 视图 */
+/* 视图大纲 */
+
+.outline {
+    .view-space {
+        position: fixed;
+        right: 0;
+        top: 50px;
+        bottom: 0;
+        width: 184px;
+        z-index: 1040;
+        background-color: $outline-bgc;
+
+        .nav-top {
+            height: 44px;
+            background-color: $main-color-one;
+
+            .nav_top_list {
+                position: relative;
+
+                .save-template {
+                    .operate {
+                        float: right;
+
+                        .nav_top .delete {
+                            height: 30px;
+                            width: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            color: #fff;
+                            border-radius: 3px;
+                            margin-top: 7px;
+                            background-color: rgba(0,0,0,.3);
+                            float: left;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

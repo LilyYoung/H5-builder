@@ -56,7 +56,7 @@ gulp.task('css', function () {
             cascade: false
         }))
         .pipe(gulp.dest(paths.outputcss));
-})
+});
 
 // 在命令行输入 gulp images 启动此任务
 gulp.task('images', function () {
@@ -125,4 +125,4 @@ gulp.task('build', ['clean'], function(){
    gulp.start('script','sass','move','spite','css','images');
 });
 
-gulp.task('default', ['serve'])
+gulp.task('default', ['serve']);
