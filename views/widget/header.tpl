@@ -1,52 +1,49 @@
 <div class="creat_logo">
     <h1><a herf="http://www.gome.com.cn/"></a></h1>
 </div>
-<div class="create-action">
+<div class="creat_con clearfix">
     <ul class="comp_panel clearfix">
         <li class="comp-draggable text ui-draggable">
-            <span class="eqf-text-word eqf-btn"></span>
-            <span class="tip">文本dddddd</span>
+            <span class="fa fa-text-height" aria-hidden="true"></span>
+            <span class="tip">文本</span>
         </li>
         <li class="comp-draggable bg ui-draggable">
-            <span class="eqf-top-background eqf-btn"></span>
+            <span class="fa fa-th-large" aria-hidden="true"></span>
             <span class="tip">背景</span>
         </li>
         <li class="comp-draggable music ui-draggable">
-            <span class="eqf-top-music eqf-btn"></span>
-            <span class="tip">音乐ddd</span>
+            <span class="fa fa-music" aria-hidden="true"></span>
+            <span class="tip">音乐</span>
         </li>
         <li class="comp-draggable vedio ui-draggable">
-            <span class="eqf-top-video eqf-btn"></span>
-            <span class="tip">视频ddd</span>
+            <span class="fa fa-video-camera" aria-hidden="true"></span>
+            <span class="tip">视频</span>
         </li>
         <li class="comp-draggable image ui-draggable">
-            <span class="eqf-top-pic eqf-btn"></span>
-            <span class="tip">图片ddd</span>
+            <span class="fa fa-picture-o" aria-hidden="true"></span>
+            <span class="tip">图片</span>
         </li>
         <li class="comp-draggable image ui-draggable">
-            <span class="eqf-shape eqf-btn"></span>
+            <span class="fa fa-th-large"></span>
             <span class="tip">形状</span>
         </li>
         <li class="comp-draggable images ui-draggable">
-            <span class="eqf-top-pics eqf-btn"></span>
+            <span class="fa fa-file-image-o"  aria-hidden="true"></span>
             <span class="tip">图集</span>
         </li>
         <li class="interaction hint--bottom hint--rounded">
-            <span class="eqf-refresh eqf-btn"></span>
+            <span class="fa fa-refresh" aria-hidden="true"></span>
             <span class="tip">互动</span>
         </li>
         <li class="form hint--bottom hint--rounded">
-            <span class="eqf-top-list eqf-btn"></span>
+            <span class="fa fa-list-ul" aria-hidden="true"></span>
             <span class="tip">表单</span>
         </li>
         <li class="comp-draggable images">
-            <span class="eqf-top-star eqf-btn"></span>
+            <span class="fa fa-star-o"></span>
             <span class="tip">特效</span>
         </li>
-        <li class="comp-draggable images">
-            <span class="glyphicon glyphicon-search" style="font-family:'Glyphicons Halflings' !important;" aria-hidden="true"></span>
-            <span class="tip">测试</span>
-        </li>
+
     </ul>
 </div>
 <div class="create-action">
