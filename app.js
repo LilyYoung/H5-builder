@@ -12,7 +12,7 @@ if(process.env.GOMECARTFRONT==="dev"){
 	var devconfig=require('./dev-cart/devconfig.js');
 	var devcart=require('./dev-cart/gomeCartNative');
 	devcart.gomeCartNative(app,devconfig.gomeCartNative);
-	httpapp.listen(8090,function(){
+	httpapp.listen(80,function(){
 		console.log(U.formatLong(new Date-0)+"gome-cart-front app run on port 80");
 	});
 }else{
