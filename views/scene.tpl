@@ -10,8 +10,16 @@
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-ui/jquery-ui.min.css" />
-	{{ macroset.linkcsss(config,[
+	<!--{{ macroset.linkcsss(config,[
 		"build/css/scene.min.css"
+	]) }}-->
+	{{ macroset.linkcsss(config,[
+		"build/css/base.min.css"
+		,"build/css/header.min.css"
+		,"build/css/outline.min.css"
+		,"build/css/workspace.min.css"
+		,"build/css/comp_setting.min.css"
+		,"build/css/modal.min.css"
 	]) }}
 </head>
 <body>

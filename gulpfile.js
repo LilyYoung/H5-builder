@@ -114,7 +114,8 @@ gulp.task('serve', ['script','sass','move','spite','css','images'], function() {
     gulp.watch(paths.imgsrc, ['images']);
     //gulp.watch('./views/**.tpl', ['templates']);
    if(onOff) {
-        gulp.watch("./views/**").on('change', reload);
+        //gulp.watch("./views/**").on('change', reload);
+        gulp.watch(["./src/**","./views/**"]).on('change', reload);
    }else {
         gulp.watch('./static/*.html').on('change', reload)
    }
