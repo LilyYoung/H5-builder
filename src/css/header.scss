@@ -1,8 +1,22 @@
 /* ==== start 头部 ==== */
 $headerColor: #fff;
 $headBtnColor: #76838f;
+$headBtnGreenColor: #48d5b2;
+$headBtnRedColor: #FF5448;
 $headerOpacity: .8;
-header {
+a:active,a:hover {
+    outline: 0
+}
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+li, ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header{
+    position: relative;
     .creat_logo {
         position: absolute;
         left: 0;
@@ -12,7 +26,7 @@ header {
             margin: 0;
             padding: 0;
         }
-        a {
+        a{
             display: inline-block;
             width: 168px;
             height: 50px;
@@ -21,75 +35,88 @@ header {
             background: url(http://js.gomein.net.cn/images/ui/gomelogoW.png) no-repeat;
             cursor: pointer;
         }
-        a:link, a:visited, a:active, a:hover, a:link, a:visited {
-            text-decoration: none;
-        }
-    }
-
-    li, ol, ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
     }
 
     .creat_con {
         width: 660px;
         margin: 0 auto;
+
+        .comp_panel li {
+            float: left;
+            color: $headerColor;
+            height: 50px;
+            width: 60px;
+            cursor: pointer;
+            padding-top: 7px;
+            text-align: center;
+            opacity: $headerOpacity;
+            position: relative;
+
+            .tip {
+                font-size: 12px;
+                position: absolute;
+                left: 0;
+                bottom: 7px;
+                width: 60px;
+            }
+            .effect-tip{
+                background-color: red;
+                height: 6px;
+                width: 6px;
+                position: absolute;
+                right: 6px;
+                top: 6px;
+                border-radius: 6px;
+            }
+        }
     }
+
     .create-action {
         position: absolute;
         top: 0;
         right: 0;
         color: $headerColor;
-    }
-    .comp_panel li {
-        float: left;
-        color: $headerColor;
-        height: 50px;
-        width: 60px;
-        cursor: pointer;
-        padding-top: 7px;
-        text-align: center;
-        opacity: $headerOpacity;
-        position: relative;
 
-        .tip {
-            font-size: 12px;
-            position: absolute;
-            left: 0;
-            bottom: 7px;
-            width: 60px;
+        li{
+            height: 30px;
+            width: 40px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-right: 6px;
+            text-align: center;
+            border-radius: 3px;
+            float: left;
+            text-align: center;
+
+            .tip{
+                font-size: 12px;
+                line-height: 30px;
+                color: $headerColor;
+            }
         }
     }
+
     .comp_panel li:hover{
-        background-color: $headBtnColor;
+        background-color: #484d64;
+        opacity: 1;
     }
-    .gray-dark {
+    .gray-dark{
         background-color: $headBtnColor;
+
     }
 
     .out-red {
-        background-color: #FF5448;
+        background-color: $headBtnRedColor;
     }
-    .create-action li{
-        height: 30px;
-        width: 40px;
-        cursor: pointer;
-        margin-top: 10px;
-        margin-right: 6px;
-        text-align: center;
-        border-radius: 3px;
-        float: left;
-        text-align: center;
-
-        .tip{
-            font-size: 12px;
-            line-height: 30px;
-            color: $headerColor;
-        }
-}
-
 
 }
 
+@keyframes pound {
+    from { transform: none; }
+    50% { transform: scale(1.5); }
+    to { transform: none; }
+}
+.heart{
+    animation:pound 1s infinite;
+}
 /* ==== end 头部 ==== */

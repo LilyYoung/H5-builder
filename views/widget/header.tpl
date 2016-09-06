@@ -34,6 +34,7 @@
         <li class="interaction hint--bottom hint--rounded">
             <span class="fa fa-refresh" aria-hidden="true"></span>
             <span class="tip">互动</span>
+            <em ng-if="wechatWTip" class="effect-tip heart ng-scope"></em>
         </li>
         <li class="form hint--bottom hint--rounded">
             <span class="fa fa-list-ul" aria-hidden="true"></span>
