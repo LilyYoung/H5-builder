@@ -1,9 +1,9 @@
-@import 'base';
 /* 视图大纲 */
+@import "base";
 .outline {
     .view-space {
         position: fixed;
-        right: 0;
+        left: 0;
         top: 50px;
         bottom: 0;
         width: 184px;
@@ -14,14 +14,14 @@
             height: 44px;
             background-color: $main-color-one;
 
-            .nav_top_list {
+            .nav-top-list {
                 position: relative;
 
                 .save-template {
                     .operate {
                         float: right;
 
-                        .nav_top .delete {
+                         .delete , .copy {
                             height: 30px;
                             width: 30px;
                             line-height: 30px;
@@ -33,8 +33,163 @@
                             float: left;
                             margin-right: 5px;
                         }
+                        .delete:hover {
+                            background-color: #FF5448;
+                        }
+                        .copy:hover {
+                            background-color: #48d5b2;
+                        }
+                    }
+                    .my-tpl-title {
+                        position: absolute;
+                        top: 7px;
+                        left: 6px;
+                        color: #fff;
+                        height: 30px;
+                        line-height: 30px;
+                        font-size: 12px;
+                    }
+                    .btn-group {
+                        position: absolute;
+                        top: 7px;
+                        left: 32px;
+                        color: #fff;
+                        padding-left: 3px;
+
+                        .btn {
+                            padding: 0;
+                            background-color: transparent;
+                            height: 30px;
+
+                            a {
+                                height: 30px;
+                                font-size: 12px;
+                                line-height: 28px;
+                                color: inherit;
+                            }
+                            a:hover {
+                                color: #fff;
+                            }
+                        }
                     }
                 }
+            }
+        }
+
+        .nav-content {
+            position: absolute;
+            top: 44px;
+            left: 0;
+            right: 0;
+            bottom: 60px;
+
+            ul.page-uls {
+                list-style: none;
+                width: 100%;
+                position: absolute;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    height: 70px;
+                    color: #76838f;
+                    cursor: pointer;
+                    font-size: 12px;
+                    position: relative;
+                    border: 1px solid #ccd5db;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+
+                    .number {
+                        float: left;
+                        width: 0;
+                        height: 0;
+                        border-top: 35px solid #76838f;
+                        border-right: 35px solid transparent;
+
+                        em {
+                            position: absolute;
+                            top: 3px;
+                            color: #fff;
+                            left: 0;
+                            display: block;
+                            width: 20px;
+                            text-align: center;
+                        }
+                    }
+
+                    .pushXB {
+                        width: 20px;
+                        height: 20px;
+                        background: #59c7f9;
+                        color: #fff;
+                        line-height: 20px;
+                        border-top-left-radius: 6px;
+                        margin-top: 48px;
+                        text-align: center;
+                        position: absolute;
+                        right: 0;
+
+                        .small {
+                            width: 20px;
+                        }
+                        .normal {
+                            width: 60px;
+                            display: none;
+                        }
+                    }
+
+                    .page-name {
+                        width: 100px;
+                        margin-left: 2px;
+                        display: inline-block;
+                        line-height: 70px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+                li.current {
+                    color: #76838f;
+                    background-color: #fff!important;
+                    .number {
+                        border-top: 35px solid #59c7f9;
+                        border-right: 35px solid transparent;
+                    }
+                }
+                li:hover {
+                    color: #76838f;
+                    background-color: #fff!important;
+                }
+            }
+        }
+        .nav-bottom{
+            line-height: 50px;
+            width: 100%;
+            height: 50px;
+            background-color: #31364a;
+            font-size: 50px;
+            font-weight: 500;
+            position: absolute;
+            bottom: 0;
+
+            .eqf-more {
+                width: 20%;
+                float: left;
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+                line-height: 57px;
+                position: relative;
+            }
+            .insert {
+                width: 80%;
+                padding-left: 20%;
+                float: left;
+            }
+            .fade-color {
+                color: rgba(255,255,255,.8);
             }
         }
 
