@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" style="position: relative;top: 150px;left: 200px;z-index: 10003" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
+    图片弹框
 </button>
 
 <div id="myModal" class="modal fade gome-modal" style="z-index:10002" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -14,8 +14,15 @@
                <div class="gome-modal-bar">
                    <ul class="fix-nav">
                        <li class="active"><a href="javascript:;">图片库</a></li>
+                       <li><a href="javascript:;">我的图片</a></li>
                    </ul>
-                   <ul class="group-nav"></ul>
+                   <div class="nano">
+                       <ul class="group-nav content">
+                           <li><a href="javascript:;">图片库</a></li>
+                           <li><a href="javascript:;">我的图片</a></li>
+                       </ul>
+                   </div>
+
                    <ul class="add-tool"></ul>
                    <div class="uploading"></div>
                </div>

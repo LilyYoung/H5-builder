@@ -37,10 +37,7 @@ $Modalbg-2: #fff;
             margin: 0;
             padding: 0;
         }
-        li.active {
-            background-color: #fff;
-            border-bottom: 1px solid #ccd5db;
-
+        li {
             a {
                 height: 50px;
                 line-height: 50px;
@@ -52,7 +49,15 @@ $Modalbg-2: #fff;
                 overflow: hidden;
                 white-space: nowrap;
                 background: 0 0;
+                color: $main-color-one;
+                &:hover {
+                    color: #59c7f9;
+                }
             }
+        }
+        li.active {
+            background-color: #fff;
+            border-bottom: 1px solid #ccd5db;
         }
     }
     .gome-modal-list {

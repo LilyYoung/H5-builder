@@ -8,6 +8,15 @@ $main-color-two: #ffffff;	//白色字体颜色
 $outline-bgc: #f0f3f4;	//视图大纲背景色
 $outline-w: 184px;	//视图大纲宽度
 
+/* ========================= reset ============================== */
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin:0;padding:0;}
+em,i{font-style:normal}
+li{list-style:none}
+a,a:hover{text-decoration:none;}
+img{border:none; vertical-align:top;}
+table{border-collapse:collapse;}
+textarea{ resize:none;overflow:auto;}
+
 body {
   font:14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,sans-serif;
   background-color: $body-bgc;
