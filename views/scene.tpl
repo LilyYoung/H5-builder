@@ -58,10 +58,15 @@
 	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js" ></script>
 	<script src="{{ config.jsServer }}build/js/lib/require/require.js" ></script>
-
+	{{ macroset.scripts(config,[
+		"build/templatefn/modals.min.js"
+	]) }}
 	<script>
 		$(function(){
 			$( document ).tooltip({ position: { my: "left+5 center", at: "right center" } });
+
+			//模态框引用
+			$('body').append(GTPL.imgModal())
    		});
 	</script>
 		

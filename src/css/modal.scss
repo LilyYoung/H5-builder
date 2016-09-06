@@ -1,1 +1,64 @@
 /* 弹框样式 */
+@import 'base';
+$Modalbg-1: #f7f7f7;
+$Modalbg-2: #fff;
+
+
+//图片弹框
+.gome-modal.fade .modal-dialog {
+    opacity: 0;
+    transform: scale(.7);
+    transition: all .3s ease 0s;
+}
+.gome-modal.in .modal-dialog {
+    opacity:1;
+    transform: scale(1);
+}
+.gome-modal .modal-header {
+    padding: 17px 20px;
+    min-height: 21.43px;
+    background-color: $Modalbg-1;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.gome-modal {
+    color: $main-color-one;
+    .modal-dialog {
+        width: 960px;
+    }
+    .dialog-contain {
+        padding: 0;
+        background: $Modalbg-1;
+    }
+    .gome-modal-bar {
+        float: left;
+        width: 200px;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li.active {
+            background-color: #fff;
+            border-bottom: 1px solid #ccd5db;
+
+            a {
+                height: 50px;
+                line-height: 50px;
+                display: block;
+                padding: 0 20px;
+                border-radius: 0;
+                width: 200px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                background: 0 0;
+            }
+        }
+    }
+    .gome-modal-list {
+        float: left;
+        width: 757px;
+        background: $Modalbg-2;
+    }
+}
+
