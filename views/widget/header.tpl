@@ -33,6 +33,53 @@
         </li>
         <li class="interaction hint--bottom hint--rounded">
             <span class="fa fa-refresh" aria-hidden="true"></span>
+            <div class="form-menus">
+                <div class="popover bottom">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <ul class="menus">
+                            <li class="menu-item comp-draggable button hint--right hint--rounded ui-draggable" data-hint="点击添加链接">
+                                <span class="fa fa-cloud" aria-hidden="true"></span>
+                                <span class="menu-item-name">链接</span>
+                            </li>
+                            <li class="menu-item comp-draggable phone hint--right hint--rounded ui-draggable" data-hint="点击添加电话">
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                <span class="menu-item-name">电话</span>
+                            </li>
+                            <li class="menu-item">
+                                <span class="fa fa-gift" aria-hidden="true"></span>
+                                <span class="menu-item-name">计数</span>
+                                <span class="caret"></span>
+                                <div class="menu-item-menu">
+                                    <div class="popover right">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <ul class="menus">
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加计数器" font="eqf-love">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">喜欢</span>
+                                                </li>
+                                                <li comp-draggable="panel" ctype="i" class="menu-item comp-draggable radio-input hint--right hint--rounded ui-draggable" data-hint="点击添加喜欢" font="eqf-good" ng-click="createComp('i', 'eqf-good');" data-event="12009">
+                                                    <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">顶起</span>
+                                                </li>
+                                                <li comp-draggable="panel" ctype="i" class="menu-item comp-draggable radio-input hint--right hint--rounded ui-draggable" data-hint="点击添加投票" font="eqf-flower2" ng-click="createComp('i', 'eqf-flower2');" data-event="12009">
+                                                    <span class="fa fa-tree" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">送花</span>
+                                                </li>
+                                                <li comp-draggable="panel" ctype="i" class="menu-item comp-draggable radio-input hint--right hint--rounded ui-draggable" data-hint="点击添加一二三" font="eqf-vote" ng-click="createComp('i', 'eqf-vote');" data-event="12009">
+                                                    <span class="fa fa-tachometer" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">投票</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <span class="tip">互动</span>
             <em ng-if="wechatWTip" class="effect-tip heart ng-scope"></em>
         </li>

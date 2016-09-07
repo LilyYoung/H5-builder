@@ -17,6 +17,7 @@ li, ol, ul {
 }
 header{
     position: relative;
+
     .creat_logo {
         position: absolute;
         left: 0;
@@ -37,36 +38,115 @@ header{
         }
     }
 
-    .creat_con {
+    .creat_con{
         width: 660px;
         margin: 0 auto;
 
-        .comp_panel li {
-            float: left;
-            color: $headerColor;
-            height: 50px;
-            width: 60px;
-            cursor: pointer;
-            padding-top: 7px;
-            text-align: center;
-            opacity: $headerOpacity;
-            position: relative;
-
-            .tip {
-                font-size: 12px;
-                position: absolute;
-                left: 0;
-                bottom: 7px;
+        .comp_panel{
+            li{
+                float: left;
+                color: $headerColor;
+                height: 50px;
                 width: 60px;
+                cursor: pointer;
+                padding-top: 7px;
+                text-align: center;
+                opacity: $headerOpacity;
+                position: relative;
+
+                &:hover{
+                    background-color: #484d64;
+                    opacity: 1;
+                }
+
+                .tip{
+                    font-size: 12px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 7px;
+                    width: 60px;
+                }
+                .effect-tip{
+                    background-color: red;
+                    height: 6px;
+                    width: 6px;
+                    position: absolute;
+                    right: 6px;
+                    top: 6px;
+                    border-radius: 6px;
+                }
+
+
             }
-            .effect-tip{
-                background-color: red;
-                height: 6px;
-                width: 6px;
-                position: absolute;
-                right: 6px;
-                top: 6px;
-                border-radius: 6px;
+
+            .interaction:hover{
+                .form-menus {
+                    top: 50px;
+                    left: -40px;
+                    position: absolute;
+                    width: 142px;
+                    height: 10px;
+
+                    > .popover {
+                        display: block;
+                        border-radius: 0;
+                        .popover-content{
+                            padding: 0;
+                            .menus{
+                                margin-left: 0;
+                                .menu-item{
+                                    display: inline-block;
+                                    height: 30px;
+                                    color: #666;
+                                    text-align: left;
+                                    width: 142px;
+                                    padding: 3px 0 3px 12px;
+                                    position: relative;
+                                    &:hover{
+                                        background-color: #08a1ef;
+                                        color: #fff;
+                                        .menu-item-menu{
+                                            position: absolute;
+                                            top: 0;
+                                            left: 140px;
+                                            width: 10px;
+                                            height: 120px;
+                                            .popover{
+                                                display: block;
+                                                border-radius: 0;
+                                                .right {
+                                                    > .arrow{
+                                                        top:19px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    span {
+                                        display: inline-block;
+                                        font-size: 12px;
+                                        vertical-align: middle;
+                                        margin-bottom: 0;
+                                    }
+                                    .menu-item-name {
+                                        width: 90px;
+                                        text-align: left;
+                                        margin-left: 5px
+                                    }
+                                    .caret {
+                                        content: "";
+                                        border-left: 4px solid;
+                                        border-right: 0;
+                                        border-top: 4px solid transparent;
+                                        border-bottom: 4px solid transparent
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -96,21 +176,22 @@ header{
         }
     }
 
-    .comp_panel li:hover{
-        background-color: #484d64;
-        opacity: 1;
-    }
-    .gray-dark{
-        background-color: $headBtnColor;
-
-    }
-
-    .out-red {
-        background-color: $headBtnRedColor;
-    }
 
 }
+.gray-dark{
+    background-color: $headBtnColor;
 
+}
+.gray-dark:hover{
+    background-color: #48d5b2;
+}
+
+.out-red {
+    background-color: $headBtnRedColor;
+}
+.out-red:hover{
+    background-color: #2aabd2;
+}
 @keyframes pound {
     from { transform: none; }
     50% { transform: scale(1.5); }
@@ -119,4 +200,3 @@ header{
 .heart{
     animation:pound 1s infinite;
 }
-/* ==== end 头部 ==== */
