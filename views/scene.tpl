@@ -58,7 +58,7 @@
 	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/require/require.js" defer async="true"></script>
-	<script src="{{ config.jsServer }}build/js/lib/require/require.js" data-main="js/scene.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/require/require.js" data-main="{{ config.jsServer }}build/js/scene.js"></script>
 	{{ macroset.scripts(config,[
 		"build/templatefn/modals.min.js"
 	]) }}
