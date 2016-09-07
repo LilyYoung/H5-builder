@@ -63,10 +63,11 @@
                             height: 30px;
 
                             a {
+                                text-decoration: none;
                                 height: 30px;
                                 font-size: 12px;
                                 line-height: 28px;
-                                color: inherit;
+                                color: #fff;
                             }
                             a:hover {
                                 color: #fff;
@@ -163,6 +164,9 @@
                     color: #76838f;
                     background-color: #fff!important;
                 }
+                .ui-state-highlight {
+                    background:#fcfaf1;
+                }
             }
         }
         .nav-bottom{
@@ -184,12 +188,13 @@
                 text-align: center;
                 line-height: 57px;
                 position: relative;
-
+                text-decoration:none;
                 .fa-2 {
                     font-size: 2em;
                 }
             }
             .gome-more:hover {
+                text-decoration:none;
                 background:$main-color-one;
             }
             .insert {
