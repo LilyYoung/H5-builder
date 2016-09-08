@@ -58,6 +58,7 @@
 	<script src="{{ config.jsServer }}build/js/lib/qrcode/jquery.qrcode.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/laypage/laypage.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/require/require.js" defer async="true"></script>
 	<script src="{{ config.jsServer }}build/js/lib/require/require.js" data-main="{{ config.jsServer }}build/js/scene.js"></script>
 	{{ macroset.scripts(config,[
@@ -65,10 +66,36 @@
 	]) }}
 	<script>
 		$(function(){
-			$( document ).tooltip({ position: { my: "left+5 center", at: "right center" } });
-
 			//模态框引用
 			$('body').append(GTPL.imgModal());
+
+			//分页
+			function fnPagination(option) {
+				laypage({
+					cont: option.selector, //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
+					pages: option.pages, //通过后台拿到的总页数
+					curr: option.curr || 1, //当前页
+					skin: option.skin||'',//皮肤
+					groups: option.groups||5,//连续分页数
+					skip: false, //是否开启跳页
+					jump: function(obj, first){ //触发分页后的回调
+						option.callback(obj, first)
+					}
+				});
+			}
+
+			//分页引用
+			fnPagination({
+				selector: 'img-pagination',
+				pages: 800,
+				curr: 2,
+				groups: 4,
+				skin: '#59c7f9',
+				callback: function(obj, first) {
+
+				}
+			});
+
    		});
 	</script>
 		

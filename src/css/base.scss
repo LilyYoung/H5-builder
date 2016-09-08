@@ -12,7 +12,7 @@ $outline-w: 184px;	//视图大纲宽度
 body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin:0;padding:0;}
 em,i{font-style:normal}
 li{list-style:none}
-a,a:hover{text-decoration:none;}
+a,a:link,a:visited,a:hover,a:active{text-decoration:none;}
 img{border:none; vertical-align:top;}
 table{border-collapse:collapse;}
 textarea{ resize:none;overflow:auto;}
@@ -20,6 +20,12 @@ textarea{ resize:none;overflow:auto;}
 body {
   font:14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,sans-serif;
   background-color: $body-bgc;
+}
+
+//按钮颜色
+.btn-green,.btn-green:hover{
+	color: #fff;
+	background-color: #48d5b2;
 }
 
 //头部layout
