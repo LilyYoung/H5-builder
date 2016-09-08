@@ -205,6 +205,25 @@
             .fade-color {
                 color: rgba(255,255,255,.8);
             }
+            .hide-page {
+                display: none;
+            }
+            .show-page {
+                display: block;
+            }
+            ul {
+                position: absolute;
+                font-size: 12px;
+                top: -60px;
+                left: 0;
+                background-color: #fff;
+                li {
+                    width: 170px;
+                    height: 30px;
+                    line-height: 30px;
+                    padding-left: 10px;
+                }
+            }
         }
 
     }

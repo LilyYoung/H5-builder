@@ -14,7 +14,7 @@
                     <a class="delete _delete_page hint--right hint--rounded" data-hint="删除当前页">
                         <i class="eqf-scene-delete fa fa-trash-o" aria-hidden="true"></i>
                     </a>
-                    <a onclick="duplicatePage()" class="copy hint--right hint--rounded" data-hint="复制当前页">
+                    <a class="copy _copy_page hint--right hint--rounded" data-hint="复制当前页">
                         <i class="eqf-scene-copy fa fa-files-o" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -205,18 +205,18 @@
                     <h4>元素特性设置</h4>
                     <div>
                         <ul class="tpl-uls " ng-repeat="tplElement in textElements">
-                        <li hover-element="" id="tplElement.id" class="ng-isolate-scope">
-                            <span class="ng-binding">文字&nbsp;1</span>
-                            <span>类型</span>
-                            <select ng-model="tplElement.properties.type" class="ng-pristine ng-valid">
-                                <option value="? undefined:undefined ?"></option>
-                                <option value="0">无</option>
-                                <option value="1">收卡人</option>
-                                <option value="2">发卡人</option>
-                                <option value="3">祝福语</option>
-                            </select>
-                        </li>
-                    </ul>
+                            <li hover-element="" id="tplElement.id" class="ng-isolate-scope">
+                                <span class="ng-binding">文字&nbsp;1</span>
+                                <span>类型</span>
+                                <select ng-model="tplElement.properties.type" class="ng-pristine ng-valid">
+                                    <option value="? undefined:undefined ?"></option>
+                                    <option value="0">无</option>
+                                    <option value="1">收卡人</option>
+                                    <option value="2">发卡人</option>
+                                    <option value="3">祝福语</option>
+                                </select>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -224,14 +224,14 @@
         <div class="tpl-option"></div>
     </div>
     <div class="nav-bottom">
-        <a class="gome-more" onclick="hidePageTip();">
+        <a class="gome-more _add_more_page">
             <i class="fa fa-sort-desc fa-2" aria-hidden="true"></i>
         </a>
-        <a onclick="longAction()" class="insert hint--top hint--rounded fade-color" data-hint="添加一页">+</a>
-        <div style="display: none" class="ng-hide">
+        <a class="insert _insert_page hint--top hint--rounded fade-color" data-hint="添加一页">+</a>
+        <div class="hide-page _more_page_option">
             <ul>
-                <li onclick="insertPage();showPage=false;" data-event="12022">新建页面</li>
-                <li onclick="addLongPage()" data-event="12023">新建纵向长页面</li>
+                <li class="_insert_page" data-event="12022">新建页面</li>
+                <li class="_add_long_page">新建纵向长页面</li>
             </ul>
         </div>
     </div>
