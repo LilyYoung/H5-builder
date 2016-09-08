@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-ui/jquery-ui.min.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/hint/hint.min.css">
 	<!--{{ macroset.linkcsss(config,[
 		"build/css/scene.min.css"
 	]) }}-->
@@ -41,31 +42,30 @@
 	</div>
 	{% include "widget/global.tpl" %}
 	<script src="{{ config.jsServer }}build/js/lib/jquery/jquery-1.11.2.min.js"></script>
-	<script src="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-	<script src="{{ config.jsServer }}build/js/lib/cheditor/ckeditor.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/colorbox/jquery.colorbox.min.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/dragsort/jquery.dragsort-0.4.min.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/jquery-ui/jquery-ui.min.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.iframe-transport.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-process.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-validate.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/nanoscroller/jquery.nanoscroller.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/qrcode/jquery.qrcode.min.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/laypage/laypage.js" ></script>
-	<script src="{{ config.jsServer }}build/js/lib/require/require.js" ></script>
+	<script src="{{ config.jsServer }}build/js/lib/cheditor/ckeditor.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/colorbox/jquery.colorbox.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/dragsort/jquery.dragsort-0.4.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/jquery-ui/jquery-ui.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.iframe-transport.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-process.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-validate.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/nanoscroller/jquery.nanoscroller.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/qrcode/jquery.qrcode.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/laypage/laypage.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/require/require.js" defer async="true"></script>
+	<script src="{{ config.jsServer }}build/js/lib/require/require.js" data-main="{{ config.jsServer }}build/js/scene.js"></script>
 	{{ macroset.scripts(config,[
 		"build/templatefn/modals.min.js"
 	]) }}
 	<script>
 		$(function(){
-			$( document ).tooltip({ position: { my: "left+5 center", at: "right center" } });
-
 			//模态框引用
 			$('body').append(GTPL.imgModal());
 
@@ -83,13 +83,14 @@
 					}
 				});
 			}
+
 			//分页引用
 			fnPagination({
 				selector: 'img-pagination',
 				pages: 800,
 				curr: 2,
 				groups: 4,
-				skin: '#AF0000',
+				skin: '#59c7f9',
 				callback: function(obj, first) {
 
 				}

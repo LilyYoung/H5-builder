@@ -130,6 +130,7 @@ $Modalbg-2: #fff;
         background: $Modalbg-2;
         position: relative;
         padding-bottom: 76px;
+        border-bottom-right-radius: 6px;
         a{
             color: $main-color-one;
             &:hover {
@@ -243,6 +244,7 @@ $Modalbg-2: #fff;
         left: 200px;
         padding: 20px;
         border: none;
+        border-bottom-right-radius: 6px;
         .pagination-wrap {
             float: left;
         }

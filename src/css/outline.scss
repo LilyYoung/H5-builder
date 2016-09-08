@@ -22,6 +22,7 @@
                         float: right;
 
                          .delete , .copy {
+                             cursor: pointer;
                             height: 30px;
                             width: 30px;
                             line-height: 30px;
@@ -62,10 +63,11 @@
                             height: 30px;
 
                             a {
+                                text-decoration: none;
                                 height: 30px;
                                 font-size: 12px;
                                 line-height: 28px;
-                                color: inherit;
+                                color: #fff;
                             }
                             a:hover {
                                 color: #fff;
@@ -162,9 +164,13 @@
                     color: #76838f;
                     background-color: #fff!important;
                 }
+                .ui-state-highlight {
+                    background:#fcfaf1;
+                }
             }
         }
         .nav-bottom{
+            cursor: pointer;
             line-height: 50px;
             width: 100%;
             height: 50px;
@@ -174,7 +180,7 @@
             position: absolute;
             bottom: 0;
 
-            .eqf-more {
+            .gome-more {
                 width: 20%;
                 float: left;
                 color: #fff;
@@ -182,6 +188,14 @@
                 text-align: center;
                 line-height: 57px;
                 position: relative;
+                text-decoration:none;
+                .fa-2 {
+                    font-size: 2em;
+                }
+            }
+            .gome-more:hover {
+                text-decoration:none;
+                background:$main-color-one;
             }
             .insert {
                 width: 80%;

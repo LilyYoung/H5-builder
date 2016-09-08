@@ -41,7 +41,7 @@
                        </a>
                    </div>
                    <div class="uploading">
-                       <div class="upload-con">
+                       <div class="upload-con hint--top hint--rounded" data-hint="大小不超过3M，支持格式：jpg、gif、png、jpeg，一次最多上传6张">
                            <i class="fa fa-pencil" aria-hidden="true"></i>
                            <em>上传</em>
                        </div>
@@ -51,7 +51,7 @@
                 <div class="gome-modal-list">
                     <div>
                         <!-- 图片库分类所对应的title -->
-                        <div class="tab-pane active tab-head hidden">
+                        <div class="tab-pane active tab-head">
                             <ul class="category-list category-title clearfix">
                                 <li class="category-item active"><span>最新</span></li>
                                 <li class="category-item"><span>最新</span></li>
@@ -91,7 +91,7 @@
                         </div>
 
                         <!-- 分组分类所对应的title -->
-                        <div class="tab-pane active tab-head">
+                        <div class="tab-pane active tab-head hidden">
                             <div class="category-group">
                                 <span class="manage-box group-wrap">
                                     <a href="javascript:;" class="manage-all hidden">管理</a>
