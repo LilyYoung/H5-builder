@@ -1,53 +1,53 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" style="position: relative;top: 150px;left: 200px;z-index: 100" data-toggle="modal" data-target="#myModal">
-    图片弹框
-</button>
 
-<div id="myModal" class="modal fade gome-modal" style="z-index:10002" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade gome-modal ${selector}" style="z-index:10002" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">素材库</h4>
+                <h4 class="modal-title">
+                    素材库
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <span class="action">请您选择图片</span>
+                </h4>
             </div>
             <div class="modal-body dialog-contain clearfix">
                 <div class="gome-modal-bar">
-                   <ul class="fix-nav">
-                       <li class="active"><a href="javascript:;">图片库</a></li>
-                       <li><a href="javascript:;">我的图片</a></li>
-                   </ul>
-                   <ul class="group-nav">
-                       <li class="active"><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                       <li><a href="javascript:;">最近使用</a></li>
-                   </ul>
-                   <div class="add-tool clearfix">
-                       <a href="javascript:;">
-                           <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                           <em>添加分组</em>
-                       </a>
-                       <a href="javascript:;">
-                           <i class="fa fa-pencil" aria-hidden="true"></i>
-                           <em>在线制作</em>
-                       </a>
-                   </div>
-                   <div class="uploading">
-                       <div class="upload-con hint--top hint--rounded" data-hint="大小不超过3M，支持格式：jpg、gif、png、jpeg，一次最多上传6张">
-                           <i class="fa fa-pencil" aria-hidden="true"></i>
-                           <em>上传</em>
-                       </div>
-                       <div class="upload-tip"></div>
-                   </div>
-               </div>
+                    <ul class="fix-nav">
+                        <li class="active"><a href="javascript:;">图片库</a></li>
+                        <li><a href="javascript:;">我的图片</a></li>
+                    </ul>
+                    <ul class="group-nav">
+                        <li class="active"><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">最近使用</a></li>
+                    </ul>
+                    <div class="add-tool clearfix">
+                        <a href="javascript:;">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            <em>添加分组</em>
+                        </a>
+                        <a href="javascript:;">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <em>在线制作</em>
+                        </a>
+                    </div>
+                    <div class="uploading">
+                        <div class="upload-con hint--top hint--rounded" data-hint="大小不超过3M，支持格式：jpg、gif、png、jpeg，一次最多上传6张">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <em>上传</em>
+                        </div>
+                        <div class="upload-tip"></div>
+                    </div>
+                </div>
                 <div class="gome-modal-list">
                     <div>
                         <!-- 图片库分类所对应的title -->
@@ -224,13 +224,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer bg-pagination clearfix no-line">
-                    <div class="pagination-wrap" id="img-pagination">
+            </div>
+            <div class="modal-footer bg-pagination clearfix no-line">
+                <div class="pagination-wrap" id="img-pagination">
 
-                    </div>
-                    <a href="" class="modal-cancle" data-dismiss="modal">取消</a>
-                    <a href="" class="btn btn-green">确定</a>
                 </div>
+                <a href="" class="modal-cancle" >取消</a>
+                <a href="" class="btn btn-green">确定</a>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

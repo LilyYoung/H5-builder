@@ -66,8 +66,27 @@
 	]) }}
 	<script>
 		$(function(){
-			//模态框引用
-			$('body').append(GTPL.imgModal());
+			$('.comp_panel').on('click','li',function() {
+				var dataTarget = $(this).attr('data-target');
+				if(!dataTarget) return false;
+				if($('.modal').length>0) $('.modal').remove();
+				$('body').append(GTPL.imgModal({selector: dataTarget.substring(1)}));
+				fnPagination({
+					selector: 'img-pagination',
+					pages: 800,
+					curr: 2,
+					groups: 4,
+					skin: '#59c7f9',
+					callback: function(obj, first) {
+
+					}
+				});
+				$(dataTarget).modal({
+					keyboard: true,
+					backdrop: true,
+					show: true
+				});
+			})
 
 			//分页
 			function fnPagination(option) {
@@ -83,18 +102,6 @@
 					}
 				});
 			}
-
-			//分页引用
-			fnPagination({
-				selector: 'img-pagination',
-				pages: 800,
-				curr: 2,
-				groups: 4,
-				skin: '#59c7f9',
-				callback: function(obj, first) {
-
-				}
-			});
 
    		});
 	</script>
