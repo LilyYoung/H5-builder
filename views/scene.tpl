@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-ui/jquery-ui.min.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/hint/hint.min.css">
 	<!--{{ macroset.linkcsss(config,[
 		"build/css/scene.min.css"
 	]) }}-->
@@ -58,7 +59,7 @@
 	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/iScroll/iscroll.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/require/require.js" defer async="true"></script>
-	<script src="{{ config.jsServer }}build/js/lib/require/require.js" data-main="js/scene.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/require/require.js" data-main="{{ config.jsServer }}build/js/scene.js"></script>
 	{{ macroset.scripts(config,[
 		"build/templatefn/modals.min.js"
 	]) }}
@@ -67,7 +68,7 @@
 			$( document ).tooltip({ position: { my: "left+5 center", at: "right center" } });
 
 			//模态框引用
-			$('body').append(GTPL.imgModal())
+			$('body').append(GTPL.imgModal());
    		});
 	</script>
 		
