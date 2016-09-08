@@ -7,7 +7,7 @@
             <span class="fa fa-text-height" aria-hidden="true"></span>
             <span class="tip">文本</span>
         </li>
-        <li class="comp-draggable bg ui-draggable"  data-target=".img-modal">
+        <li class="comp-draggable bg ui-draggable">
             <span class="fa fa-th-large" aria-hidden="true"></span>
             <span class="tip">背景</span>
         </li>
@@ -19,7 +19,7 @@
             <span class="fa fa-video-camera" aria-hidden="true"></span>
             <span class="tip">视频</span>
         </li>
-        <li class="comp-draggable image ui-draggable" data-target=".img-modal">
+        <li class="comp-draggable image ui-draggable">
             <span class="fa fa-picture-o" aria-hidden="true"></span>
             <span class="tip">图片</span>
         </li>

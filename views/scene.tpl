@@ -29,7 +29,7 @@
 		{% include "widget/header.tpl" %}
 	</header>
 
-	<div class="scene">
+	<div class="scene" id="scene">
 		<!-- start 大纲视图 -->
 		<div class="outline">
 			{% include "widget/outline.tpl" %}
@@ -39,7 +39,13 @@
 		<div class="workspace">
 			{% include "widget/workspace.tpl" %}
 		</div><!-- end 工作区 -->
+
+		<!-- 面板 -->
+
 	</div>
+
+
+
 	{% include "widget/global.tpl" %}
 	<script src="{{ config.jsServer }}build/js/lib/jquery/jquery-1.11.2.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.js"></script>
@@ -62,15 +68,14 @@
 	<script src="{{ config.jsServer }}build/js/lib/require/require.js" defer async="true"></script>
 	<script src="{{ config.jsServer }}build/js/lib/require/require.js" data-main="{{ config.jsServer }}build/js/scene.js"></script>
 	{{ macroset.scripts(config,[
-		"build/templatefn/modals.min.js"
+		"build/templatefn/componentsTpl.min.js"
 	]) }}
 	<script>
 		$(function(){
+			/* 弹框 */
 			$('.comp_panel').on('click','li',function() {
-				var dataTarget = $(this).attr('data-target');
-				if(!dataTarget) return false;
 				if($('.modal').length>0) $('.modal').remove();
-				$('body').append(GTPL.imgModal({selector: dataTarget.substring(1)}));
+				$('body').append(GTPL.imgModal());
 				fnPagination({
 					selector: 'img-pagination',
 					pages: 800,
@@ -81,12 +86,15 @@
 
 					}
 				});
-				$(dataTarget).modal({
+				$('.modal').modal({
 					keyboard: true,
 					backdrop: true,
 					show: true
 				});
 			})
+
+			//comp-settings 组件设置
+			$('#scene').append(GTPL.compLayout());
 
 			//分页
 			function fnPagination(option) {
