@@ -69,7 +69,9 @@
                                                 </li>
                                                 <li comp-draggable="panel" ctype="i" class="menu-item comp-draggable radio-input hint--right hint--rounded ui-draggable" data-hint="点击添加一二三" font="eqf-vote" ng-click="createComp('i', 'eqf-vote');" data-event="12009">
                                                     <span class="fa fa-tachometer" aria-hidden="true"></span>
-                                                    <span class="menu-item-name">投票</span>
+                                                    <span class="menu-item-name">投票
+                                                        <span style="position: absolute;top: 1px;transform: scale(0.8);color: red;">beta</span>
+                                                    </span>
                                                 </li>
                                             </ul>
                                         </div>
