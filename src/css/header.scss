@@ -86,7 +86,7 @@ header{
                     position: absolute;
                     width: 142px;
                     height: 10px;
-
+                    /*下拉框*/
                     > .popover {
                         display: block;
                         border-radius: 0;
@@ -114,11 +114,9 @@ header{
                                             .popover{
                                                 display: block;
                                                 border-radius: 0;
-                                                .right {
-                                                    > .arrow{
-                                                        top:19px;
-                                                    }
-                                                }
+                                            }
+                                            .right > .arrow{
+                                                top:19px;
                                             }
                                         }
                                     }
@@ -144,7 +142,20 @@ header{
                                 }
                             }
                         }
+                        .arrow{
+                            border-width: 7px;
+                        }
+                        .right > .arrow{
+                            left: -7px;
+                            border-left-width: 0;
+                        }
+
                     }
+                    .bottom > .arrow{
+                        top: -7px;
+                        border-top-width: 0;
+                    }
+
                 }
 
             }
