@@ -23,12 +23,17 @@ $Modalbg-2: #fff;
 }
 .gome-modal {
     color: $main-color-one;
+    .modal-content {top: 50px;}
+
     .modal-dialog {
         width: 960px;
     }
     .dialog-contain {
+        position: relative;
         padding: 0;
         background: $Modalbg-1;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
     }
     .gome-modal-bar {
         float: left;
@@ -36,34 +41,219 @@ $Modalbg-2: #fff;
         ul {
             margin: 0;
             padding: 0;
+            li {
+                position: relative;
+            }
         }
-        li {
-            a {
-                height: 50px;
-                line-height: 50px;
-                display: block;
-                padding: 0 20px;
-                border-radius: 0;
-                width: 200px;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-                background: 0 0;
-                color: $main-color-one;
-                &:hover {
-                    color: #59c7f9;
-                }
+        a {
+            height: 50px;
+            line-height: 50px;
+            display: block;
+            padding: 0 20px;
+            border-radius: 0;
+            width: 200px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            background: 0 0;
+            color: $main-color-one;
+            &:hover {
+                color: #59c7f9;
             }
         }
         li.active {
             background-color: #fff;
             border-bottom: 1px solid #ccd5db;
         }
+
+        .group-nav {
+            height: 300px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-bottom: 20px;
+
+            a {
+
+                i {
+                    display: none;
+                    position: absolute;
+                    right: 5px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 16px;
+                    color: #ce8483;
+                }
+
+                &:hover i {
+                    display: block;
+                    color: #ff8484;
+                }
+            }
+        }
+        .add-tool {
+            text-align: center;
+            position: absolute;
+            bottom: 55px;
+            text-align: center;
+            a {
+                width: 100px;
+                border-top: 1px solid #ccd5db;
+                height: 55px;
+                line-height: 55px;
+                float: left;
+                padding: 0 10px;
+                &:last-child {
+                    border-left: 1px solid #e7e7e7;
+                }
+            }
+        }
+        .uploading {
+            position: absolute;
+            width: 194px;
+            height: 55px;
+            left: 2px;
+            bottom: 2px;
+            color: #fff;
+            text-align: center;
+            background-color: #59c7f9;
+
+            em {
+                padding-left: 15px;
+                line-height: 55px;
+            }
+        }
+
     }
     .gome-modal-list {
         float: left;
         width: 757px;
         background: $Modalbg-2;
+        position: relative;
+        padding-bottom: 76px;
+        a{
+            color: $main-color-one;
+            &:hover {
+                color: #59c7f9;
+            }
+        }
     }
+    .tab-head {
+        position: relative;
+        margin: 0 20px;
+
+        .category-group {
+            padding: 6px 0;
+            border-bottom: 1px solid #ccd5db;
+            font-size: 12px;
+            .group-wrap {
+                a {
+                    display: inline-block;
+                    text-align: center;
+                    padding: 10px;
+                }
+            }
+            .manage-box {
+                float: right;
+            }
+
+        }
+    }
+    .category-title {
+        li {
+            font-size: 12px;
+            margin-right: 20px;
+            float: left;
+            cursor: pointer;
+        }
+        li.active,li:hover {
+            color: #59c7f9;
+        }
+    }
+    .category-list{
+        border-bottom: 1px solid #ccc;
+        padding: 6px 0;
+
+        .category-item {
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+        }
+    }
+    .cat_two_list {
+        li {
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+    }
+
+    .img-list-container {
+        padding: 15px 7px 0 20px;
+        .img-box {
+            height: 380px;
+            overflow: hidden;
+        }
+        .imageList {
+            position: relative;
+            cursor: pointer;
+            float: left;
+            background-color: #e6ebed;
+            overflow: hidden;
+            width: 115px;
+            height: 115px;
+            margin: 0 5px 16px 0;
+            img {
+                position: absolute;
+                max-height: 100%;
+                max-width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            .img-mask {
+                position: absolute;
+                width: 100%;
+                height: 35px;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0,0,0,.7);
+
+                .sel-file {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    color: #fff;
+                    font-size: 24px;
+                    &:hover {
+                        color: #59c7f9;
+                    }
+                }
+                a.sel-file.active {
+                    color: #59c7f9;
+                }
+            }
+        }
+    }
+
+    .bg-pagination {
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        left: 200px;
+        padding: 20px;
+        border: none;
+        .pagination-wrap {
+            float: left;
+        }
+        .modal-cancle {
+            margin-right: 35px;
+            color: $main-color-one;
+            &:hover {
+                color: #59c7f9;
+            }
+        }
+    }
+
 }
 
