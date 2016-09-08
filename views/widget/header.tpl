@@ -1,5 +1,5 @@
 <div class="creat_logo">
-    <h1><a herf="http://www.gome.com.cn/"></a></h1>
+    <h1><a href="http://www.gome.com.cn/" target="_blank"></a></h1>
 </div>
 <div class="creat_con clearfix">
     <ul class="comp_panel clearfix">
@@ -26,6 +26,7 @@
         <li class="comp-draggable image ui-draggable">
             <span class="fa fa-th-large"></span>
             <span class="tip">形状</span>
+            <em ng-if="wechatWTip" class="effect-tip heart ng-scope"></em>
         </li>
         <li class="comp-draggable images ui-draggable">
             <span class="fa fa-file-image-o"  aria-hidden="true"></span>
@@ -44,7 +45,9 @@
                             </li>
                             <li class="menu-item comp-draggable phone hint--right hint--rounded ui-draggable" data-hint="点击添加电话">
                                 <span class="fa fa-phone" aria-hidden="true"></span>
-                                <span class="menu-item-name">电话</span>
+                                <span class="menu-item-name">电话
+                                    <span style="position: absolute;top: 1px;transform: scale(0.8);color: red;">new</span>
+                                </span>
                             </li>
                             <li class="menu-item">
                                 <span class="fa fa-gift" aria-hidden="true"></span>
