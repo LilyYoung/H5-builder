@@ -6,9 +6,9 @@
     </div>
 
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#comp-tab1" data-toggle="tab">样式</a></li>
-        <li><a href="#comp-tab2" data-toggle="tab">动画</a></li>
-        <li><a href="#comp-tab3" data-toggle="tab">触发</a></li>
+        <li class="active"><a href="javascript:;">样式</a></li>
+        <li><a href="javascript:;">动画</a></li>
+        <li><a href="javascript:;">触发</a></li>
     </ul>
 
     <div class="tab-content">
@@ -25,16 +25,12 @@
                     <section></section>
                 </div>
 
-                <div class="btn-option">
-                    <a class="btn btn-sm btn-green" href="javascript:;">确定</a>
-                    <a class="btn btn-sm btn-red" href="javascript:;">清除样式</a>
-                </div>
-            </div>
+        <div class="btn-option">
+            <a class="btn btn-sm btn-green" href="javascript:;">确定</a>
+            <a class="btn btn-sm btn-red" href="javascript:;">清除样式</a>
         </div>
         <div class="tab-pane fade" id="comp-tab2">aaaaaaaaaaaaaaaaaaaaaaa</div>
         <div class="tab-pane fade" id="comp-tab3">aaaaaaaaaaaaaaaaaaaaa</div>
     </div>
 
-
 </div>
-
