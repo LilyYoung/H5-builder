@@ -67,10 +67,6 @@
                     <span class="number">
                         <em class="page-num">1</em>
                     </span>
-                    <!--<span ng-show="page.properties.xb" class="pushXB">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name">第1页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -84,10 +80,6 @@
                     <span class="number">
                         <em class="page-num">3</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第3页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -95,10 +87,6 @@
                     <span class="number">
                         <em class="page-num">4</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第4页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -106,10 +94,6 @@
                     <span class="number">
                         <em class="page-num">5</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第5页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -117,10 +101,6 @@
                     <span class="number">
                         <em class="page-num">6</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第6页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -128,10 +108,6 @@
                     <span class="number">
                         <em class="page-num">7</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第7页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -139,10 +115,6 @@
                     <span class="number">
                         <em class="page-num">8</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第8页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -150,10 +122,6 @@
                     <span class="number">
                         <em class="page-num">9</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第9页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -161,10 +129,6 @@
                     <span class="number">
                         <em class="page-num">10</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第10页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -172,10 +136,6 @@
                     <span class="number">
                         <em class="page-num">11</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第11页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -183,10 +143,6 @@
                     <span class="number">
                         <em class="page-num">12</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第12页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
@@ -221,15 +177,6 @@
         <div class="tpl-option"></div>
     </div>
     <div class="nav-bottom">
-        <!--<a class="gome-more _add_more_page">-->
-            <!--<i class="fa fa-sort-desc fa-2" aria-hidden="true"></i>-->
-        <!--</a>-->
-        <a class="insert _insert_page hint--top hint--rounded fade-color" data-hint="添加一页">+</a>
-        <!--<div class="hide-page _more_page_option">-->
-            <!--<ul>-->
-                <!--<li class="_insert_page" data-event="12022">新建页面</li>-->
-                <!--<li class="_add_long_page">新建纵向长页面</li>-->
-            <!--</ul>-->
-        <!--</div>-->
+        <a class="_insert_page hint--top hint--rounded fade-color" data-hint="添加一页">+</a>
     </div>
 </div>
