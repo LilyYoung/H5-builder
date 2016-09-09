@@ -64,7 +64,9 @@
         <div eqd-scroll="" style="height: 100%; position: relative; overflow: hidden;overflow-y: auto;">
             <ul class="page-uls ui-sortable" id="pageList" ui-sortable="sortableOptions" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
                 <li class="blurClass current">
-                    <span class="number"><em>1</em></span>
+                    <span class="number">
+                        <em class="page-num">1</em>
+                    </span>
                     <!--<span ng-show="page.properties.xb" class="pushXB">-->
                         <!--<span class="small">推</span>-->
                         <!--<span class="normal">推客任务</span>-->
@@ -74,18 +76,13 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">2</em>
+                        <em class="page-num">2</em>
                     </span>
-                    <!--<span class="pushXB ng-hide">-->
-                        <!--<span class="small">推</span>-->
-                        <!--<span class="normal">推客任务</span>-->
-                    <!--</span>-->
                     <span class="page-name" >第2页</span>
-                    <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">3</em>
+                        <em class="page-num">3</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -96,7 +93,7 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">4</em>
+                        <em class="page-num">4</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -107,7 +104,7 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">5</em>
+                        <em class="page-num">5</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -118,7 +115,7 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">6</em>
+                        <em class="page-num">6</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -129,7 +126,7 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">7</em>
+                        <em class="page-num">7</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -140,7 +137,7 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">8</em>
+                        <em class="page-num">8</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -151,7 +148,7 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">9</em>
+                        <em class="page-num">9</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -162,7 +159,7 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">10</em>
+                        <em class="page-num">10</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -173,7 +170,7 @@
                 </li>
                 <li class="blurClass">
                     <span class="number">
-                        <em class="ng-binding">11</em>
+                        <em class="page-num">11</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -184,7 +181,7 @@
                 </li>
                 <li class="blurClass " >
                     <span class="number">
-                        <em class="ng-binding">12</em>
+                        <em class="page-num">12</em>
                     </span>
                     <!--<span class="pushXB ng-hide">-->
                         <!--<span class="small">推</span>-->
@@ -224,15 +221,15 @@
         <div class="tpl-option"></div>
     </div>
     <div class="nav-bottom">
-        <a class="gome-more _add_more_page">
-            <i class="fa fa-sort-desc fa-2" aria-hidden="true"></i>
-        </a>
+        <!--<a class="gome-more _add_more_page">-->
+            <!--<i class="fa fa-sort-desc fa-2" aria-hidden="true"></i>-->
+        <!--</a>-->
         <a class="insert _insert_page hint--top hint--rounded fade-color" data-hint="添加一页">+</a>
-        <div class="hide-page _more_page_option">
-            <ul>
-                <li class="_insert_page" data-event="12022">新建页面</li>
-                <li class="_add_long_page">新建纵向长页面</li>
-            </ul>
-        </div>
+        <!--<div class="hide-page _more_page_option">-->
+            <!--<ul>-->
+                <!--<li class="_insert_page" data-event="12022">新建页面</li>-->
+                <!--<li class="_add_long_page">新建纵向长页面</li>-->
+            <!--</ul>-->
+        <!--</div>-->
     </div>
 </div>
