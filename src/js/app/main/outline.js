@@ -28,9 +28,16 @@ define(['application'],function (_app) {
         });
         //删除当前选中的视图页面
         $('._delete_page').on('click',function () {
-            $('.blurClass').siblings('.current')
-                .next().addClass('current').end()
-                .remove();
+            if ($('.blurClass:last').is('.current')) {
+                $('.blurClass:last')
+                    .prev().addClass('current').end()
+                    .remove();
+            }
+            else {
+                $('.blurClass').siblings('.current')
+                    .next().addClass('current').end()
+                    .remove();
+            }
             //调用对应的右边手机场景的控件和组件
         });
         //复制当前视图页面
