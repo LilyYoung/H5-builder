@@ -18,23 +18,28 @@ define(['application'],function (_app) {
     };
     //视图操作
     outline.action = function () {
-        //视图列表当前页
-        var $current = $('.page-uls').find('.current');
+
         //选中当前视图页面
         $('.blurClass').on('click',function () {
-            $current.removeClass('current');
-            // $(this).addClass('current');
+            $(this).siblings()
+                .removeClass('current').end()
+                .addClass('current');
             //调用对应的右边手机场景的控件和组件
         });
         //删除当前选中的视图页面
         $('._delete_page').on('click',function () {
-            $current.remove();
-            $('.page-uls li:first').addClass('current');
+            $('.blurClass').siblings('.current')
+                .next().addClass('current').end()
+                .remove();
             //调用对应的右边手机场景的控件和组件
         });
         //复制当前视图页面
         $('._copy_page,._insert_page').on('click',function () {
+            //取最大值
             function  maxNum(numArr) {
+                if (!numArr.length) {
+                    return false;
+                }
                 var num = 0;
                 for (var i = 0;i <numArr.length; i++) {
                     if (numArr[i] > num) {
@@ -43,14 +48,15 @@ define(['application'],function (_app) {
                 }
                 return num;
             }
+            //获取复制的当前页码数
+            var curtNum = $('.blurClass').siblings('.current').find('.page-num').text();
             var temp = new Array();
             $('.blurClass .page-num').each(function (index) {
                 temp[index] = $(this).text()-0;
             });
+
             var nextNum = maxNum(temp)+1;
             $('.page-uls').append("<li class='blurClass'><span class='number'><em class='page-num'>"+nextNum+"</em></span> <span class='page-name'>第"+nextNum+"页</span></li>");
-            console.log(nextNum);
-
         });
         //弹出新建页面选项
         // $('._add_more_page').on('click',function (event) {
