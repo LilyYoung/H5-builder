@@ -23,9 +23,21 @@ body {
 }
 
 //按钮颜色
-.btn-green,.btn-green:hover{
+.btn-green{
 	color: #fff;
 	background-color: #48d5b2;
+}
+.btn-green:hover{
+	color: #fff;
+	background-color: #6fe29f;
+}
+.btn-red{
+	color: #fff;
+	background-color: #FF5448;
+}
+.btn-red:hover{
+	color: #fff;
+	background-color: #ff7267;
 }
 
 //头部layout
@@ -33,7 +45,7 @@ body {
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 10001;
+	z-index: 1041;
 	width: 100%;
 	height: 50px;
 	background-color: $header-bgc;
@@ -56,7 +68,7 @@ body {
 		top: 50px;
 		bottom: 0;
 		width: $outline-w;
-		z-index: 1000;
+		z-index: 1040;
 		background-color: $outline-bgc;
 	}
 
