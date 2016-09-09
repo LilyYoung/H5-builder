@@ -42,6 +42,11 @@ body {
 	background-color: #ff7267;
 }
 
+/* 公共样式 */
+.all-change {
+	transition: all .3s ease-in-out 0s;
+}
+
 //头部layout
 .nav-header {
 	position: fixed;

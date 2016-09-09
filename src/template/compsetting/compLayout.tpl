@@ -6,9 +6,9 @@
     </div>
 
     <ul class="nav nav-tabs">
-        <li class="active"><a href="javascript:;">样式</a></li>
-        <li><a href="javascript:;">动画</a></li>
-        <li><a href="javascript:;">触发</a></li>
+        <li class="active"><a class="all-change" href="javascript:;">样式</a></li>
+        <li><a class="all-change" href="javascript:;">动画</a></li>
+        <li><a class="all-change" href="javascript:;">触发</a></li>
     </ul>
 
     <div class="style-content">

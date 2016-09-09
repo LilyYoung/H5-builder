@@ -1,0 +1,38 @@
+/* ==== 模板区样式 ==== */
+@import "base";
+
+.template {
+    .nav-tabs {
+        background-color: #76838f;
+        border-bottom: none;
+        padding: 4px 10px 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        li {
+            margin-right: 1px;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            box-flex: 1;
+            line-height: 36px;
+            text-align: center;
+            width: 100%;
+            a {
+                font-size: 12px;
+                color: #fff;
+                cursor: pointer;
+                &:hover {
+                    background-color: #f0f3f4;
+                    border: 1px solid #f0f3f4;
+                    color: $main-color-one;
+                }
+            }
+
+        }
+        li.active a {
+            background-color: #f0f3f4;
+            border: 1px solid #f0f3f4;
+            color: $main-color-one;
+        }
+    }
+}

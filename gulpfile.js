@@ -40,7 +40,7 @@ gulp.task('sass', function() {
     	.pipe(sourcemaps.init())
 		.pipe(sass({ outputStyle: 'compact' }).on('error', sass.logError))
 		.pipe(autoprefixer({
-            browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
+            browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4','Firefox < 20'],
             cascade: false
         }))
         //.pipe(sourcemaps.write(mainPath+'src/css'))
