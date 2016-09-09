@@ -21,6 +21,7 @@
 		,"build/css/workspace.min.css"
 		,"build/css/comp_setting.min.css"
 		,"build/css/modal.min.css"
+		,"build/css/template.min.css"
 	]) }}
 </head>
 <body>
@@ -40,7 +41,10 @@
 			{% include "widget/workspace.tpl" %}
 		</div><!-- end 工作区 -->
 
-		<!-- 面板 -->
+		<!-- start 模板区 -->
+		<div class="template">
+			{% include "widget/template.tpl" %}
+		</div><!-- end 模板区 -->
 
 	</div>
 

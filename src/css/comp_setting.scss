@@ -18,7 +18,7 @@
     width: 260px;
     background-color: #fff;
     top: 100px;
-    right: 180px;
+    right: 288px;
     z-index: 1040;
     box-shadow: 0 0 20px #000;
     box-shadow: 2px 2px 12px 4px rgba(51,51,102,.3);
@@ -46,6 +46,9 @@
             right: 0;
             font-size: 18px;
             font-weight: normal;
+            &:hover {
+                background-color: #FF5448;
+            }
         }
     }
 

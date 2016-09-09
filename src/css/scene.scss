@@ -5,6 +5,7 @@
  *  outline:视图大纲样式文件
  *  comp_setting: 组件设置样式文件
  *  modal:弹窗样式文件
+ * template:模板样式文件
 */
 @import 'base';
 @import 'header';
@@ -12,3 +13,4 @@
 @import 'outline';
 @import 'comp_setting';
 @import 'modal';
+@import 'template';

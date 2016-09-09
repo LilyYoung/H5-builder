@@ -7,6 +7,8 @@ $main-color-one: #76838f;	//页面主字体颜色
 $main-color-two: #ffffff;	//白色字体颜色
 $outline-bgc: #f0f3f4;	//视图大纲背景色
 $outline-w: 184px;	//视图大纲宽度
+$template-w: 288px; //模板层的宽度
+
 
 /* ========================= reset ============================== */
 body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin:0;padding:0;}
@@ -79,7 +81,16 @@ body {
 		top: 0;
 		bottom: 0;
 		left: $outline-w;
-		right: 0;
+		right: $template-w;
 	}
 
+	.template {
+		position: fixed;
+		right: 0;
+		top: 50px;
+		bottom: 0;
+		width: $template-w;
+		z-index: 1040;
+		background-color: #76828e;
+	}
 }
