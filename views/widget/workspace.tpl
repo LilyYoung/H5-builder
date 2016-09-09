@@ -3,6 +3,9 @@
         <div class="edit-common">
             <div class="nr" id="nr">
                 <div class="edit_wrapper">
+                    <!-- 背景元素 -->
+                    <div class="wrapper-background"></div>
+
                     <!-- 手机编辑区 -->
                     <ul class="edit_area weebly-content-area weebly-area-active">
 
@@ -31,7 +34,9 @@
 
         </div>
         <!--此处放栅格线-->
-        <!--<div class="eq-block-guides"></div>
-        <div class="eq-block-grid"></div>-->
+        <div class="eq-block-guides"></div>
+        <div class="eq-block-grid">
+            <canvas class="eq-block-grid-inner" width="320" height="486"></canvas>
+        </div>
     </div>
 </div>

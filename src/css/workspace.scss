@@ -38,6 +38,13 @@
 			background-size: cover;
 			background-color: #fff;
 		}
+		.wrapper-background {
+			width: 100%;
+			height: 100%;
+			/*background-color: red;*/
+			/*background-size: cover;
+			background-position: 50% 50%;*/
+		}
 		.edit_area {
 			position: absolute;
 			top: 0;
@@ -107,4 +114,6 @@
 		left: 350px;
 		top: 0;
 	}
+
+
 }
