@@ -36,7 +36,7 @@
         <!--此处放栅格线-->
         <div class="eq-block-guides"></div>
         <div class="eq-block-grid">
-            <canvas class="eq-block-grid-inner" width="320" height="486"></canvas>
+            <canvas class="eq-block-grid-inner" id="grid" width="320" height="486"></canvas>
         </div>
     </div>
 </div>

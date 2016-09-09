@@ -14,12 +14,14 @@ require.config({
         'application' : 'app/main/application',
         'outline' : 'app/main/outline',
         'header' : 'app/main/header',
-        'workspace' : 'app/main/workspace'
+        'workspace' : 'app/main/workspace',
         /*公共类*/
 
         /*组件类*/
+        'compGrid' : 'app/components/comp-grid',
 
         /*插件类*/
+        'grid' : 'app/plugin/grid'
     },
     //没有使用 define() 声明依赖项、没有设置模块值,暴露出全局变量
     shim: {
