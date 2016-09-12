@@ -6,42 +6,59 @@ define(['application'],function (_app) {
     var outline = {};
     //初始化加载
     outline.init = function () {
-        console.log('outline，我进来啦！');
         //拖动
-        $(".ui-sortable").sortable({
-            placeholder: "ui-state-highlight",
-            axis: "y"
-        });
-        $(".ui-sortable").disableSelection();
+        _app.init();
 
+        outline.hideDelete();
         outline.action();
+    };
+    //是否隐藏删除按钮
+    outline.hideDelete = function () {
+        var isLi = $('.page-uls .blurClass').length;
+        var isShow = 0;
+        if (isLi >1) {
+            $('._delete_page').show();
+            isShow = 0;
+        }
+        else {
+            $('._delete_page').hide();
+            isShow = 1;
+        }
+        return isShow;
     };
     //视图操作
     outline.action = function () {
-
         //选中当前视图页面
-        $('.blurClass').on('click',function () {
+        $('body').on('click','.blurClass',function () {
             $(this).siblings()
                 .removeClass('current').end()
                 .addClass('current');
             //调用对应的右边手机场景的控件和组件
         });
+
         //删除当前选中的视图页面
         $('._delete_page').on('click',function () {
-            if ($('.blurClass:last').is('.current')) {
-                $('.blurClass:last')
-                    .prev().addClass('current').end()
-                    .remove();
+            if (outline.hideDelete() ==0) {
+                // alert('当删除视图页面的时候，是否做个toast提示？');
+                if ($('.blurClass:last').is('.current')) {
+                    $('.blurClass:last')
+                        .prev().addClass('current').end()
+                        .remove();
+                    outline.hideDelete();
+                }
+                else {
+                    $('.blurClass').siblings('.current')
+                        .next().addClass('current').end()
+                        .remove();
+                    outline.hideDelete();
+                }
             }
-            else {
-                $('.blurClass').siblings('.current')
-                    .next().addClass('current').end()
-                    .remove();
-            }
+            else {}
+
             //调用对应的右边手机场景的控件和组件
         });
         //复制当前视图页面
-        $('._copy_page,._insert_page').on('click',function () {
+        $('._copy_page').on('click',function () {
             //取最大值
             function  maxNum(numArr) {
                 if (!numArr.length) {
@@ -61,28 +78,42 @@ define(['application'],function (_app) {
             $('.blurClass .page-num').each(function (index) {
                 temp[index] = $(this).text()-0;
             });
-
             var nextNum = maxNum(temp)+1;
             $('.page-uls').append("<li class='blurClass'><span class='number'><em class='page-num'>"+nextNum+"</em></span> <span class='page-name'>第"+nextNum+"页</span></li>");
+            $('._delete_page').show();
         });
-        //弹出新建页面选项
-        // $('._add_more_page').on('click',function (event) {
-        //     //取消事件冒泡
-        //     event.stopPropagation();
-        //     $('._more_page_option')
-        //         .removeClass('hide-page')
-        //         .end()
-        //         .addClass('show-page');
-        //
-        // });
-        // $(document).click(function (event) {
-        //     $('._more_page_option').removeClass('show-page');
-        //     $('._more_page_option').addClass('hide-page');
-        // });
-        // $('._more_page_option').click(function (event) {
-        //     $(this).removeClass('show-page');
-        //     $(this).addClass('hide-page');
-        // });
+        //添加一页
+        $('._insert_page').on('click',function () {
+            //获取当前视图页数
+            var curtNum = $('.page-uls .blurClass').length;
+            if (curtNum>15) {
+                alert('当视图页面到达一个数量时，是否做个toast提示？');
+                return false;
+            }
+            else {
+                //取最大值
+                function  maxNum(numArr) {
+                    if (!numArr.length) {
+                        return false;
+                    }
+                    var num = 0;
+                    for (var i = 0;i <numArr.length; i++) {
+                        if (numArr[i] > num) {
+                            num = numArr[i];
+                        }
+                    }
+                    return num;
+                }
+                var temp = new Array();
+                $('.blurClass .page-num').each(function (index) {
+                    temp[index] = $(this).text()-0;
+                });
+                var nextNum = maxNum(temp)+1;
+                $('.page-uls').append("<li class='blurClass'><span class='number'><em class='page-num'>"+nextNum+"</em></span> <span class='page-name'>第"+nextNum+"页</span></li>");
+            }
+            $('._delete_page').show();
+
+        });
 
     };
 

@@ -4,7 +4,12 @@
 define(function () {
     var _app = {};
     _app.init = function () {
-        console.log("application 我来啦！");
+        //拖动
+        $(".ui-sortable").sortable({
+            placeholder: "ui-state-highlight",
+            axis: "y"
+        });
+        $(".ui-sortable").disableSelection();
     };
     return _app;
 });
