@@ -83,16 +83,24 @@
                 color: $main-color-one;
                 font-size: 12px;
             }
-            .caret { margin-left: 160px;}
-            .caret.off {
-                border-left: 4px solid;
-                border-top: 4px solid transparent;
-                border-bottom: 4px solid transparent;
+            .caret{
+                margin-left: 160px;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 4px dashed;
+                display: inline-block;
+                height: 0;
+                vertical-align: middle;
+                width: 0;
             }
             &:hover {background-color: #f6f9fa;}
         }
         .style-list.active {background-color: #f6f9fa;}
-
+        .collapsed > .off {
+            border-left: 4px solid;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
         .btn-option {
             height: 60px;
             padding: 15px 20px;

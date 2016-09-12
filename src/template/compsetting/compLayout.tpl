@@ -16,13 +16,32 @@
             <div class="style-content">
                 <div class="style-setting">
                     <section>
-                        <div class="style-list active">
+                        <div class="style-list active " data-toggle="collapse" data-target="#base-style">
                             <span>基础样式</span>
                             <span class="caret off"></span>
                         </div>
+                        <div class="collapse in"  id="base-style"  >
+                            aaaaaa
+                        </div>
                     </section>
-                    <section></section>
-                    <section></section>
+                    <section>
+                        <div class="style-list active collapsed" data-toggle="collapse" data-target="#base-border-style">
+                            <span>边框样式</span>
+                            <span class="caret off"></span>
+                        </div>
+                        <div class="collapse"  id="base-border-style"  >
+                            bbb
+                        </div>
+                    </section>
+                    <section>
+                        <div class="style-list active collapsed" data-toggle="collapse" data-target="#base-shadow-style">
+                            <span>阴影样式</span>
+                            <span class="caret off"></span>
+                        </div>
+                        <div class="collapse"  id="base-shadow-style"  >
+                            ccccccccc
+                        </div>
+                    </section>
                 </div>
 
                 <div class="btn-option">
@@ -37,4 +56,6 @@
 
 
 </div>
-
+<script type="text/javascript">
+    $("#comp_setting").draggable();
+</script>
