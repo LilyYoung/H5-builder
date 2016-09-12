@@ -1,5 +1,5 @@
 <!-- 面板框架布局 -->
-<div id="comp_setting">
+<div id="comp_setting" class="comp-drag">
     <div class="cancel">
         <span class="set-title">组件设置</span>
         <i class="fa fa-times set-close" aria-hidden="true"></i>
@@ -54,8 +54,4 @@
         <div class="tab-pane fade" id="comp-tab3">aaaaaaaaaaaaaaaaaaaaa</div>
     </div>
 
-
 </div>
-<script type="text/javascript">
-    $("#comp_setting").draggable();
-</script>

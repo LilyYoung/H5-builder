@@ -7,7 +7,11 @@ define(['application'],function (_app) {
     //初始化加载
     outline.init = function () {
         //拖动
-        _app.init();
+        $(".ui-sortable").sortable({
+            placeholder: "ui-state-highlight",
+            axis: "y"
+        });
+        $(".ui-sortable").disableSelection();
 
         outline.hideDelete();
         outline.action();
@@ -35,7 +39,6 @@ define(['application'],function (_app) {
                 .addClass('current');
             //调用对应的右边手机场景的控件和组件
         });
-
         //删除当前选中的视图页面
         $('._delete_page').on('click',function () {
             if (outline.hideDelete() ==0) {
