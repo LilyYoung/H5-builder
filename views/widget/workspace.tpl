@@ -30,6 +30,51 @@
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="网格设置"><i class="fa fa-table" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="手机边框"><em class="imp heart"></em><i class="fa fa-mobile" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" id="warn" data-hint="警告"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>
+
+                <div class="grid-guide-container on">
+                    <div class="grid-guide-setting">
+                        <div class="setting-group">
+                            <span>网络开关</span>
+                            <div class="setting-choice">
+                                <div class="switch switch-open">
+                                    <div class="circle-con">
+                                        <i class="circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting-group">
+                            <label>网格颜色</label>
+                        </div>
+                        <div class="setting-group choose-color-box">
+                            <div class="eqc-input-color">
+                                <input type="text" value="#000" class="form-control hide">
+                                <span class="input-group-addon"><i style="background-color: rgba(0, 0, 0,0);"></i></span>
+                            </div>
+                        </div>
+                        <div class="setting-group">
+                            <span>智能参考</span>
+                            <div class="setting-choice">
+                                <div class="switch switch-open">
+                                    <div class="circle-con">
+                                        <i class="circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting-group">
+                            <span>吸附效果</span>
+                            <div class="setting-choice">
+                                <div class="switch switch-open">
+                                    <div class="circle-con">
+                                        <i class="circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>

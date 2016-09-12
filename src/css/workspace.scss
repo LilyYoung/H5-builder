@@ -98,7 +98,7 @@
 			i {font-size: 16px;}
 		}
 		.active {color: #fff;}
-		#warn {background-color: rgb(242, 166, 83); }
+		#warn {background-color: red; }
 
 		.imp {
 			background-color: red;
@@ -115,5 +115,116 @@
 		top: 0;
 	}
 
+	.grid-guide-container {
+		.grid-guide-setting {
+			top: 211px;
+			width: 178px;
+			opacity: 0;
+			background-color: rgba(0,0,0,.8);
+			color: #fff;
+			position: absolute;
+			left: -179px;
+			z-index: 1;
+			padding: 1px;
+			transform-origin: 100% 0;
+			transform: rotateY(-90deg);
+			transition: all .3s ease;
+			.setting-group {
+				height: 30px;
+				padding: 8px 16px;
+				font-size: 12px;
+				span {
+					float: left;
+				}
+				.setting-choice {
+					float: left;
+					position: relative;
+					margin-left: 40px;
+				}
+				label  {height: 24px;}
+			}
+			.choose-color-box {
+				height: 44px;
+				.eqc-input-color {
+					width: 142px;
+					height: 28px;
+					cursor: pointer;
+					border: 1px solid #ccc;
+					.input-group-addon {
+						display: block;
+						width: 100%;
+						height:100%;
+						border: 0;
+						padding:0;
+						background: none;
+						border-radius: 0;
+						i {
+							display: block;
+							width: 100%;
+							height:100%;
+						}
+					}
+				}
+			}
+		}
 
+	}
+	.grid-guide-container.on {
+		.grid-guide-setting {
+			opacity: 1;
+			transform: none;
+		}
+	}
+	.gridColorPicker {
+		position: absolute;
+		left: -48px;
+		top: 96px;
+		width: 208px;
+	}
+}
+
+.switch .circle-con {
+	cursor: pointer;
+	width: 40px;
+	height: 20px;
+	border-radius: 10px;
+	position: relative;
+}
+.switch.switch-open .circle-con {
+	background-color: #44cb83;
+}
+.switch.switch-close .circle-con {
+	background-color: #ff5448;
+}
+.switch .circle-con i {
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	border-radius: 8px;
+	display: block;
+	position: absolute;
+	top: 2px;
+}
+.switch.switch-disable .circle-con i, .switch.switch-open .circle-con i {
+	right: 2px;
+}
+
+.colorpicker-2x .colorpicker-saturation {
+	width: 150px;
+	height: 180px;
+}
+
+.colorpicker-2x .colorpicker-hue,
+.colorpicker-2x .colorpicker-alpha {
+	width: 20px;
+	height: 180px;
+}
+
+.colorpicker-2x .colorpicker-color,
+.colorpicker-2x .colorpicker-color div {
+	height: 20px;
+}
+.colorpicker-2x .colorpicker-selectors i {
+	width: 20px;
+	height:20px;
 }
