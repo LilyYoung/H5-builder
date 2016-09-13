@@ -18,7 +18,7 @@ require.config({
         /*公共类*/
 
         /*组件类*/
-        'compGrid' : 'app/components/comp-grid',
+        'compShortcut' : 'app/components/comp-shortcut',
 
         /*插件类*/
         'grid' : 'app/plugin/grid'
