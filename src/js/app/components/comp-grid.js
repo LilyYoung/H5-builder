@@ -50,14 +50,12 @@ define(['grid'],function (grid) {
 				if($('.grid-guide-setting .switch').eq(0).hasClass('switch-open')) {
 					grid.draw(that.gridColor);
 				}
-
 			});
-
 		},
 
 		//事件集合
 		events: function() {
-			this.gridBtnEvent();
+			this.btnEvent();
 			this.gridColorEvent();
 			this.switchEvent();
 			this.documentEvent();
@@ -99,21 +97,25 @@ define(['grid'],function (grid) {
 		},
 
 		//网格按钮事件
-		gridBtnEvent: function() {
+		btnEvent: function() {
 			var that = this;
 			$('#speedy-toolbar .grid-guide').on('click',function() {
-				if($('.grid-guide-container').hasClass('on')){
-					$('.grid-guide-container').removeClass('on');
-				}else {
-					$('.grid-guide-container').addClass('on');
-				}
+				that.fnBtnEvent($('#speedy-toolbar .grid-guide-container'));
 			})
+			$('#speedy-toolbar .background-tool').on('click',function() {
+				that.fnBtnEvent($('#speedy-toolbar .background-container'));
+			})
+		},
+
+		//工具栏按钮弹窗事件函数
+		fnBtnEvent: function(obj) {
+			obj.hasClass('on') ? obj.removeClass('on') : obj.addClass('on');
 		},
 
 		//document对应事件
 		documentEvent: function() {
 			//此处用mousedown而不用click，是因为颜色选择的插件是消失的事件是mousedown，为了同步消失，所以用mousedown
-			$(document).on('mousedown.grid',function(ev) {
+			$(document).on('mousedown.tool',function(ev) {
 				if(ev.target.closest('.gridColorPicker') ) {
 					ev.preventDefault();
 					ev.stopPropagation();
@@ -124,7 +126,7 @@ define(['grid'],function (grid) {
 				}
 			});
 
-			$(document).on('click.grid',function(ev) {
+			$(document).on('click.tool',function(ev) {
 				if(ev.target.closest('.grid-guide-container') ) {
 					ev.preventDefault();
 					ev.stopPropagation();
@@ -133,6 +135,14 @@ define(['grid'],function (grid) {
 						if($('.gridColorPicker').is(':hidden')) {
 							$('.grid-guide-container').removeClass('on');
 						}
+					}
+				}
+				if(ev.target.closest('.background-container') ) {
+					ev.preventDefault();
+					ev.stopPropagation();
+				}else {
+					if(!ev.target.closest('#speedy-toolbar .background-tool')){
+						$('.background-container').removeClass('on');
 					}
 				}
 			});

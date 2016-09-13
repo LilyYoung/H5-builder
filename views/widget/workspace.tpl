@@ -24,7 +24,7 @@
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="恢复(ctrl+y)"><i class="fa fa-share" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="刷新预览"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="复制当前页"><i class="fa fa-files-o" aria-hidden="true"></i></a>
-                <a class="active hint--right hint--rounded" href="javascript:;" data-hint="背景"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+                <a class="active hint--right hint--rounded background-tool" href="javascript:;" data-hint="背景"><i class="fa fa-th-large" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="音乐"><i class="fa fa-music" aria-hidden="true"></i></a>
                 <a class="hint--right hint--rounded" href="javascript:;"  data-hint="特效"><i class="fa fa-star-o" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded grid-guide" href="javascript:;" data-hint="网格设置"><i class="fa fa-table" aria-hidden="true"></i></a>
@@ -75,7 +75,7 @@
 
                     </div>
                 </div>
-                <div class="background-container on">
+                <div class="background-container">
                     <div class="background-pane">
                         <div class="setting-group">
                             <div class="setting-btn"><i class="fa fa-scissors" aria-hidden="true"></i></div>

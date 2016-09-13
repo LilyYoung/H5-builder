@@ -193,6 +193,10 @@
 				height: 30px;
 				padding: 8px 15px;
 				font-size: 12px;
+				cursor: pointer;
+				&:hover {
+					background-color: #59c7f9;
+				}
 				i {font-size: 14px;}
 				span {float: right;}
 			}
