@@ -3,18 +3,20 @@
  */
 define(function () {
 	var grid = {
-		init: function(selector) {
+		init: function(selector,color) {
 			var oC = $(selector);
+			if(!oC.length) return false;
 			this.oGC = oC[0].getContext('2d');
 			this.width = oC.width();
 			this.height = oC.height();
 
-			this.draw('rgba(0,0,0,0)');
+			this.draw((color||'#ccc'));
 		},
 
 		//绘制
 		draw: function(color) {
-			this.oGC.clearRect(0,0,this.width,this.height);
+			if(color && !this.oGC) return false;
+			this.clearRect();
 			this.oGC.save();
 			this.oGC.strokeStyle = color;
 			this.oGC.lineWidth = 1;
@@ -30,6 +32,11 @@ define(function () {
 			this.oGC.closePath();
 			this.oGC.stroke();
 			this.oGC.restore();
+		},
+
+		//清屏
+		clearRect: function() {
+			this.oGC.clearRect(0,0,this.width,this.height);
 		}
 	};
 

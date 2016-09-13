@@ -70,48 +70,48 @@
                     <span class="page-name">第1页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
-                <li class="blurClass " >
+                <li class="blurClass">
                     <span class="number">
                         <em class="page-num">2</em>
                     </span>
                     <span class="page-name" >第2页</span>
                 </li>
-                <li class="blurClass " >
+                <li class="blurClass">
                     <span class="number">
                         <em class="page-num">3</em>
                     </span>
                     <span class="page-name" >第3页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
-                <li class="blurClass " >
+                <li class="blurClass">
                     <span class="number">
                         <em class="page-num">4</em>
                     </span>
                     <span class="page-name" >第4页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
-                <li class="blurClass " >
+                <li class="blurClass">
                     <span class="number">
                         <em class="page-num">5</em>
                     </span>
                     <span class="page-name" >第5页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
-                <li class="blurClass " >
+                <li class="blurClass">
                     <span class="number">
                         <em class="page-num">6</em>
                     </span>
                     <span class="page-name" >第6页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
-                <li class="blurClass " >
+                <li class="blurClass">
                     <span class="number">
                         <em class="page-num">7</em>
                     </span>
                     <span class="page-name" >第7页</span>
                     <!--<input style="width: 110px;display:inline-block; height: 25px; line-height: 25px; color: #999;margin-top:22px;margin-left:2px;box-shadow:none;" type="text" class="ng-pristine ng-valid">-->
                 </li>
-                <li class="blurClass " >
+                <li class="blurClass">
                     <span class="number">
                         <em class="page-num">8</em>
                     </span>

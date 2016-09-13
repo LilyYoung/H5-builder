@@ -46,7 +46,6 @@ require.config({
 });
 //入口
 require(['application','outline','header','workspace'], function (_app,outline,header,workspace) {
-    console.log('scene 我进来啦！');
     _app.init();
     outline.init();
     header.init();

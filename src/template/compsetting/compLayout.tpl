@@ -92,4 +92,6 @@
 
 
 </div>
-
+<script type="text/javascript">
+    $("#comp_setting").draggable();
+</script>

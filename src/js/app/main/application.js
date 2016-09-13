@@ -4,7 +4,8 @@
 define(function () {
     var _app = {};
     _app.init = function () {
-        console.log("application 我来啦！");
+        //拖动
+        $(".comp-drag").draggable();
     };
     return _app;
 });

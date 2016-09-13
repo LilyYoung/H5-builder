@@ -31,7 +31,7 @@ gulp.task('script', function() {
     // 1. 找到文件
     gulp.src(paths.scriptsrc)
         .pipe(gulp.dest(paths.outputjs));
-})
+});
 
 // 编译sass
 // 在命令行输入 gulp sass 启动此任务{ style: 'expanded',sourcemap: true }
