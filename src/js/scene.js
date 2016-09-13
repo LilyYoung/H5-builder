@@ -19,7 +19,7 @@ require.config({
 
         /*组件类*/
         'compGrid' : 'app/components/comp-grid',
-
+        'compSet' : 'app/components/comp-setting',
         /*插件类*/
         'grid' : 'app/plugin/grid'
     },

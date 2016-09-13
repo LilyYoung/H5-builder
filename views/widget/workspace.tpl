@@ -108,6 +108,9 @@
        <div class="edit_wrapper">
            <!-- 背景元素 -->
            <div class="wrapper-background"></div>
+           <ul class="edit_area weebly-content-area weebly-area-active">
+
+           </ul>
        </div>
    </div>
 </div>
