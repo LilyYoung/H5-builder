@@ -1,11 +1,11 @@
 /**
  * Created by wangyongqiang-ds1 on 2016/9/6.
  */
-define(['application','compGrid','compSet'],function (_app,compGrid,compSet) {
+define(['application','compShortcut','compSet'],function (_app,compShortcut,compSet) {
     var workspace = {};
 
     workspace.init = function () {
-        compGrid.init();
+	    compShortcut.init();
         compSet.init();
         _app.init();
         console.log('workspace 我进来啦！');
