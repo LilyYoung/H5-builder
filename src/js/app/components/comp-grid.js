@@ -6,6 +6,8 @@ define(['grid'],function (grid) {
 		init: function() {
 			grid.init('#grid');
 			compGrid.chooseColorWay();
+			compGrid.chooseBgColorWay();
+			compGrid.getOpacity();
 		},
 
 		//网格颜色选择器初始化
@@ -39,6 +41,21 @@ define(['grid'],function (grid) {
 				var color = $('.grid-guide-container .input-group-addon i').css('background-color')
 				grid.draw(color)
 			});
+		},
+
+		//背景颜色选择器初始化
+		chooseBgColorWay:function() {
+			$('#color-select-bg').colorpicker({
+				color: '#eee', format: 'rgba'
+			}).on('changeColor', function(e){
+				$('.scene .workspace .nr .edit_wrapper .wrapper-background')[0].style.backgroundColor = e.color.toHex();
+				// $('body')[0].style.backgroundColor = e.color.toHex();
+			})
+		},
+
+		//设置透明度
+		getOpacity:function () {
+
 		}
 
 

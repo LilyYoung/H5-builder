@@ -21,7 +21,43 @@
                             <span class="caret off"></span>
                         </div>
                         <div class="collapse in"  id="base-style"  >
-                            aaaaaa
+                            <ul class="base-style-list">
+                                <li>
+                                    <label>背景颜色</label>
+                                    <div class="color-select clearfix" id="color-select-bg">
+                                        <div class="input-group-addon color-select-bg"></div>
+                                        <input  class="form-control" type="text" value="rgba(0,0,0,0)">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>文字颜色</label>
+                                    <div class="color-select clearfix" id="color-select-text">
+                                        <div class="input-group-addon color-select-text"></div>
+                                        <input class="form-control" type="text" value="rgba(0,0,0,0)">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>透明度</label>
+                                    <div class="base-select clearfix">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                            </div>
+                                        </div>
+                                        <p class="name">
+                                            <input type="number"  name="points" min="0" max="100" step="1" value="40" >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>边距</label>
+
+                                </li>
+                                <li>
+                                    <label>行高</label>
+
+                                </li>
+                            </ul>
                         </div>
                     </section>
                     <section>
@@ -56,6 +92,4 @@
 
 
 </div>
-<script type="text/javascript">
-    $("#comp_setting").draggable();
-</script>
+

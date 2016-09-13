@@ -70,6 +70,58 @@
         .style-setting {
             height: 430px;
             padding-top: 10px;
+            .base-style-list{
+                background-color: #fff;
+                padding: 0 20px;
+                > li{
+                    border-bottom: 1px solid #ccd5db;
+                    font-size: 12px;
+                    padding: 7px 0;
+                    > label{
+                        float: left;
+                        font-size: 12px;
+                        font-weight: lighter;
+                        padding-top: 3px;
+                        width: 65px;
+                    }
+                    .color-select{
+                        .color-select-bg,.color-select-text{
+                            height: 20px;
+                            width: 35px;
+                            cursor: pointer;
+                            border: 1px solid #ccc;
+                            border-radius: 0;
+                            float: left;
+                        }
+                        .form-control{
+                            float: right;
+                            width: 100px;
+                            height: 20px;
+                            line-height: 20px;
+                            padding: 0;
+                            font-size: 12px;
+
+
+                        }
+
+                    }
+                    .base-select{
+                        .progress{
+                            float: left;
+                            width: 100px;
+                        }
+                        .name{
+                            float: right;
+                            margin-top: 0;
+                            input{
+                                width: 48px;
+                                height:20px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
         }
         .style-list {
             border-bottom: 1px solid #ccd5db;

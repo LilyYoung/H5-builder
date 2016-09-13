@@ -84,4 +84,10 @@
             <canvas class="eq-block-grid-inner" id="grid" width="320" height="486"></canvas>
         </div>
     </div>
+   <div class="demo">
+       <div class="edit_wrapper">
+           <!-- 背景元素 -->
+           <div class="wrapper-background"></div>
+       </div>
+   </div>
 </div>
