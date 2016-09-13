@@ -5,7 +5,7 @@ define(['grid'],function (grid) {
 
 	var compGrid = {
 		init: function() {
-			this.gridColor = '#ccc';//默认颜色值
+			this.gridColor = '#76828e';//默认颜色值
 			this.chooseColorWay();
 			this.events();
 		},
@@ -61,7 +61,7 @@ define(['grid'],function (grid) {
 			this.documentEvent();
 		},
 
-		//有网格颜色事件
+		//网格颜色事件
 		gridColorEvent: function() {
 			$('.grid-guide-setting .eqc-input-color').on('mousedown',function() {
 				if($('.gridColorPicker').is(':hidden')) {
@@ -99,11 +99,15 @@ define(['grid'],function (grid) {
 		//网格按钮事件
 		btnEvent: function() {
 			var that = this;
+			//网格按钮事件
 			$('#speedy-toolbar .grid-guide').on('click',function() {
 				that.fnBtnEvent($('#speedy-toolbar .grid-guide-container'));
 			})
+			//背景按钮事件
 			$('#speedy-toolbar .background-tool').on('click',function() {
-				that.fnBtnEvent($('#speedy-toolbar .background-container'));
+				if($('.wrapper-background').length>0) {
+					that.fnBtnEvent($('#speedy-toolbar .background-container'));
+				}
 			})
 		},
 

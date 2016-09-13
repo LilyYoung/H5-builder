@@ -36,14 +36,13 @@
 			margin: 0 auto;
 			background-position: 50% 50%;
 			background-size: cover;
-			background-color: #fff;
 		}
 		.wrapper-background {
 			width: 100%;
 			height: 100%;
-			background-color: red;
-			/*background-size: cover;
-			background-position: 50% 50%;*/
+			background-image: url("build/css/i/1.jpg");
+			background-size: cover;
+			background-position: 50% 50%;
 		}
 		.edit_area {
 			position: absolute;
