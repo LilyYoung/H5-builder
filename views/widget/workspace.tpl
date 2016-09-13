@@ -19,7 +19,7 @@
             </div>
 
             <!-- 手机场景右侧的工具 -->
-            <div class="history history2">
+            <div class="history history2" id="speedy-toolbar">
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="撤消(ctrl+z)"><i class="fa fa-reply" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="恢复(ctrl+y)"><i class="fa fa-share" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="刷新预览"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
@@ -27,11 +27,11 @@
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="背景"><i class="fa fa-th-large" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="音乐"><i class="fa fa-music" aria-hidden="true"></i></a>
                 <a class="hint--right hint--rounded" href="javascript:;"  data-hint="特效"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                <a class="active hint--right hint--rounded" href="javascript:;" data-hint="网格设置"><i class="fa fa-table" aria-hidden="true"></i></a>
+                <a class="active hint--right hint--rounded grid-guide" href="javascript:;" data-hint="网格设置"><i class="fa fa-table" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="手机边框"><em class="imp heart"></em><i class="fa fa-mobile" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" id="warn" data-hint="警告"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>
 
-                <div class="grid-guide-container on">
+                <div class="grid-guide-container">
                     <div class="grid-guide-setting">
                         <div class="setting-group">
                             <span>网络开关</span>
@@ -48,8 +48,8 @@
                         </div>
                         <div class="setting-group choose-color-box">
                             <div class="eqc-input-color">
-                                <input type="text" value="#000" class="form-control hide">
-                                <span class="input-group-addon"><i style="background-color: rgba(0, 0, 0,0);"></i></span>
+                                <input type="text" value="" class="form-control hide">
+                                <span class="input-group-addon"><i ></i></span>
                             </div>
                         </div>
                         <div class="setting-group">
@@ -73,6 +73,26 @@
                             </div>
                         </div>
 
+                    </div>
+                </div>
+                <div class="background-container on">
+                    <div class="background-pane">
+                        <div class="setting-group">
+                            <div class="setting-btn"><i class="fa fa-scissors" aria-hidden="true"></i></div>
+                            <span>裁剪</span>
+                        </div>
+                        <div class="setting-group">
+                            <div class="setting-btn"><i class="fa fa-repeat" aria-hidden="true"></i></div>
+                            <span>更换</span>
+                        </div>
+                        <div class="setting-group">
+                            <div class="setting-btn"><i class="fa fa-moon-o" aria-hidden="true"></i></div>
+                            <span>效果</span>
+                        </div>
+                        <div class="setting-group">
+                            <div class="setting-btn"><i class="fa fa-trash" aria-hidden="true"></i></div>
+                            <span>删除</span>
+                        </div>
                     </div>
                 </div>
             </div>

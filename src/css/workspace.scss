@@ -175,12 +175,40 @@
 			transform: none;
 		}
 	}
-	.gridColorPicker {
-		position: absolute;
-		left: -48px;
-		top: 96px;
-		width: 208px;
+
+	.background-container {
+		.background-pane {
+			opacity: 0;
+			background-color: rgba(0,0,0,.8);
+			color: #fff;
+			position: absolute;
+			z-index: 1;
+			padding: 1px;
+			transform-origin: 100% 0;
+			transform: rotateY(-90deg);
+			transition: all .3s ease;
+			top: 161px;
+			left: -98px;
+			.setting-group {
+				height: 30px;
+				padding: 8px 15px;
+				font-size: 12px;
+				i {font-size: 14px;}
+				span {float: right;}
+			}
+			.setting-btn {
+				cursor: pointer;
+				margin-right: 26px;
+				margin-left: 0;
+				float: left;
+			}
+		}
 	}
+	.background-container.on .background-pane {
+		opacity: 1;
+		transform: none;
+	}
+
 }
 
 .switch .circle-con {
@@ -208,23 +236,65 @@
 .switch.switch-disable .circle-con i, .switch.switch-open .circle-con i {
 	right: 2px;
 }
-
+.switch.switch-close .circle-con i {
+	left: 2px;
+}
+.colorpicker-2x {
+	border-radius: 0;
+	box-shadow: 0 0;
+	border: 0;
+	cursor: auto;
+}
+.colorpicker-2x.colorpicker-right:before,.colorpicker-2x.colorpicker-right:after {
+	border: 0;
+}
 .colorpicker-2x .colorpicker-saturation {
 	width: 150px;
-	height: 180px;
+	height: 150px;
+
 }
 
 .colorpicker-2x .colorpicker-hue,
 .colorpicker-2x .colorpicker-alpha {
 	width: 20px;
-	height: 180px;
+	height: 150px;
 }
 
 .colorpicker-2x .colorpicker-color,
 .colorpicker-2x .colorpicker-color div {
 	height: 20px;
+
 }
-.colorpicker-2x .colorpicker-selectors i {
-	width: 20px;
+.colorpicker-2x .colorpicker-selectors  {
 	height:20px;
+	i {
+		width: 20px;
+		height:20px;
+	}
+
 }
+.gridColorPicker {
+	position: absolute;
+	z-index: 1040;
+	position: fixed;
+	width: 218px;
+	height: 219px;
+	padding: 10px;
+	font-size: 14px;
+	font-family: Microsoft Yahei,sans-serif,Arial;
+	color: #76838f;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	transition: height .3s;
+	overflow: hidden;
+	z-index: 1050;
+	cursor: move;
+	-webkit-user-select: none;
+	.colorpicker-2x {
+		position: relative;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
