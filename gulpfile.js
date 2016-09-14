@@ -15,7 +15,7 @@ var paths = {
 	scriptsrc: mainPath+'src/js/**',
 	scsssrc:mainPath+'src/css/**/*.scss',
 	csssrc:mainPath+'src/css/**/*.css',
-	imgsrc:mainPath+'src/img/**/*',
+	imgsrc:mainPath+'src/img/**/*.*',
     move:mainPath+'src/css',
     spitesrc:mainPath+'src/css/i/**',
 	outputjs: mainPath+'build/js',
