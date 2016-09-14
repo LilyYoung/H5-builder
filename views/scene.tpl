@@ -90,11 +90,7 @@
 
 					}
 				});
-				$('.modal').modal({
-					keyboard: true,
-					backdrop: true,
-					show: true
-				});
+				$('.modal').modal();
 			})
 
 			//comp-settings 组件设置

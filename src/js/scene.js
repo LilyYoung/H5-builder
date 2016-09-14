@@ -21,6 +21,8 @@ require.config({
         'compGrid' : 'app/components/comp-grid',
         'compSet' : 'app/components/comp-setting',
         'compShortcut' : 'app/components/comp-shortcut',
+        'compTemplate' : 'app/components/comp-template',
+
 
         /*插件类*/
         'grid' : 'app/plugin/grid'
