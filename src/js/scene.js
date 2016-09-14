@@ -19,6 +19,8 @@ require.config({
 
         /*组件类*/
         'compShortcut' : 'app/components/comp-shortcut',
+        'compTemplate' : 'app/components/comp-template',
+
 
         /*插件类*/
         'grid' : 'app/plugin/grid'
