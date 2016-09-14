@@ -106,9 +106,39 @@
 
                     }
                     .base-select{
-                        .progress{
+                        .base-select-style{
                             float: left;
                             width: 100px;
+                            height:20px;
+                            cursor: e-resize;
+                            background-color: #eee;
+                            .ui-widget-header{
+                                background-color: #08a1ef;
+                            }
+                            &:hover{
+                                .ui-widget-header{
+                                    background-color: #56c6ff;
+                                }
+
+                            }
+                            .ui-slider-horizontal{
+                                height: 20px;
+                                line-height: 20px;
+                            }
+                            .ui-slider-handle{
+                                border: none;
+                                width: 1px;
+                                height: 20px;
+                                margin-left:0;
+                                top:-1px;
+                                cursor: e-resize;
+                            }
+                        }
+                        .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+                            border-radius: 0;
+                        }
+                        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+                            background-color: transparent;
                         }
                         .name{
                             float: right;

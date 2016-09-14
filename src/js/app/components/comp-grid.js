@@ -7,8 +7,6 @@ define(['grid'],function (grid) {
 		init: function() {
 			this.gridColor = '#76828e';//默认颜色值
 			this.chooseColorWay();
-			this.chooseBgColorWay();
-			this.getOpacity();
 			this.events();
 		},
 

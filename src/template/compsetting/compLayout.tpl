@@ -26,35 +26,43 @@
                                     <label>背景颜色</label>
                                     <div class="color-select clearfix" id="color-select-bg">
                                         <div class="input-group-addon color-select-bg"></div>
-                                        <input  class="form-control" type="text" value="rgba(0,0,0,0)">
+                                        <input  class="form-control" type="text" value="rgba(0,0,0,0.5)">
                                     </div>
                                 </li>
                                 <li>
                                     <label>文字颜色</label>
                                     <div class="color-select clearfix" id="color-select-text">
                                         <div class="input-group-addon color-select-text"></div>
-                                        <input class="form-control" type="text" value="rgba(0,0,0,0)">
+                                        <input class="form-control" type="text" value="rgba(0,0,0,0.8)">
                                     </div>
                                 </li>
                                 <li>
                                     <label>透明度</label>
                                     <div class="base-select clearfix">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                                            </div>
-                                        </div>
+                                        <div class="base-select-style" id="base-select-opacity"></div>
                                         <p class="name">
-                                            <input type="number"  name="points" min="0" max="100" step="1" value="40" >
+                                            <input id="base-select-opacity-input" type="number"  name="points" min="0" max="100" step="1" value="0"  >
                                         </p>
                                     </div>
                                 </li>
                                 <li>
                                     <label>边距</label>
+                                    <div class="base-select clearfix">
+                                        <div class="base-select-style" id="base-select-border"></div>
+                                        <p class="name">
+                                            <input id="base-select-border-input" type="number"  name="points" min="0" max="20" step="1" value="0"  >
+                                        </p>
+                                    </div>
 
                                 </li>
                                 <li>
                                     <label>行高</label>
+                                    <div class="base-select clearfix">
+                                        <div class="base-select-style" id="base-select-height"></div>
+                                        <p class="name">
+                                            <input id="base-select-height-input" type="number"  name="points" min="0" max="3" step="0.1" value="1"  >
+                                        </p>
+                                    </div>
 
                                 </li>
                             </ul>
@@ -92,6 +100,5 @@
 
 
 </div>
-<script type="text/javascript">
-    $("#comp_setting").draggable();
-</script>
+
+
