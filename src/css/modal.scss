@@ -267,5 +267,54 @@ $Modalbg-2: #fff;
             }
         }
     }
+
+    /* 确认提示框样式 */
+    .confirm-modal-dialog {
+        width: 460px;
+        .modal-body {
+            position: relative;
+            padding: 20px;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+        .confirm-tip {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: $main-color-one;
+        }
+        .btn-contain {
+            text-align: center;
+            padding: 26px 0;
+        }
+        .btn-small  {
+            a {
+                display: inline-block;
+                width: 100px;
+                height: 36px;
+                line-height: 36px;
+                padding: 0;
+                border-radius: 3px;
+                color: #fff;
+                &:first-child {
+                    margin-right: 10px;
+                }
+
+            }
+            .btn-blue {
+                background-color: #59c7f9;
+
+                &:hover{
+                    background-color: #08a1ef;
+                }
+            }
+            .btn-grey {
+                background-color: #ccc;
+                &:hover{
+                    background-color: #b4b4b4;
+                }
+            }
+        }
+    }
 }
 

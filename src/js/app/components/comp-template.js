@@ -19,6 +19,8 @@ define(function () {
 			this.selectBtnEvent();
 			this.selectEvent();
 			this.searchEvent();
+			this.templateListEvent();
+			this.modalSureCancelEvent();
 			this.documentEvent();
 		},
 
@@ -92,6 +94,34 @@ define(function () {
 				$(this).siblings('input').val('');
 				$(this).addClass('hide').prev().removeClass('hide');
 			})
+		},
+
+		//模板列表点击出现弹窗
+		templateListEvent: function() {
+			$('.template').on('click','.tpl-container li',function(){
+				if($('.modal').length>0) $('.modal').remove();
+				$('body').append(GTPL.confirm());
+				$('.modal').modal({
+					backdrop: 'static'
+				});
+			});
+		},
+
+		//模板列表弹框确定取消事件
+		modalSureCancelEvent: function() {
+			$('body').on('click','.confirm-modeal .btn-contain a',function() {
+				var confirmObj = $(this).parents('.confirm-modeal');
+				var $index = $(this).index();
+				confirmObj.removeClass('in');
+				setTimeout(function() {
+					confirmObj.hide();
+				},150)
+				$('.modal-backdrop').remove();
+				if($index == 0) {
+
+				}
+			})
+
 		},
 
 		//document对应事件
