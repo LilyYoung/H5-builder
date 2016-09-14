@@ -4,7 +4,12 @@
 define(function () {
 	var compTemplate = {
 		init: function() {
+			this.initStyle();
 			this.events();
+		},
+		//初始化样式
+		initStyle: function() {
+			$('.template .tpl-container li:nth-of-type(3n+1)').removeClass('hint--left').addClass('hint--right');
 		},
 
 		//事件集合

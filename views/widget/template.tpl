@@ -98,7 +98,7 @@
     </form>
 
     <div class="page_tpl_container clearfix" style="top:90px;">
-        <ul class="tpl-container">
+        <ul class="tpl-container ">
             <li class="page_tpl_item comp-draggable animation-zoom ng-scope my-tpl-self hint--left hint--rounded" data-hint="科技感封面">
                 <img src="build/img/t1.png">
             </li>
