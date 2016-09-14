@@ -146,8 +146,16 @@
                             input{
                                 width: 48px;
                                 height:20px;
-                                line-height: 20px;
+                                padding-left: 2px;
                             }
+                        }
+                        .select-box{
+                            select{
+                                border: 1px solid #ccc;
+                                height: 20px;
+                                width: 155px;
+                            }
+
                         }
                     }
                 }
