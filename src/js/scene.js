@@ -18,6 +18,8 @@ require.config({
         /*公共类*/
 
         /*组件类*/
+        'compGrid' : 'app/components/comp-grid',
+        'compSet' : 'app/components/comp-setting',
         'compShortcut' : 'app/components/comp-shortcut',
         'compTemplate' : 'app/components/comp-template',
 
