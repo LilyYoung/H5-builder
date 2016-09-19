@@ -70,6 +70,10 @@
         .style-setting {
             height: 430px;
             padding-top: 10px;
+            .panel{
+                margin-top: 0;
+                border: none;
+            }
             .base-style-list{
                 background-color: #fff;
                 padding: 0 20px;
@@ -159,6 +163,10 @@
                         }
                     }
                 }
+                > .no-border-bottom{
+                    border-bottom: none;
+                }
+
             }
         }
         .style-list {
