@@ -4,7 +4,7 @@
 define(['application'],function (_app) {
     var header = {};
     header.init = function () {
-        _app.init();
+        // _app.init();
         console.log('header 我进来啦');
     };
     return header;
