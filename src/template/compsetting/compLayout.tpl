@@ -1,5 +1,5 @@
 <!-- 面板框架布局 -->
-<div id="comp_setting">
+<div id="comp_setting" class="comp-drag">
     <div class="cancel">
         <span class="set-title">组件设置</span>
         <i class="fa fa-times set-close" aria-hidden="true"></i>
@@ -190,6 +190,7 @@
                     <section>
                         <div class="style-list active" data-toggle="collapse" data-target="#base-animate1">
                             <span>动画1</span>
+                            <a class="fa fa-trash-o"  href="javascript:;" aria-hidden="true"></a>
                             <span class="caret off"></span>
                         </div>
                         <div class="collapse in"  id="base-animate1">
@@ -199,20 +200,52 @@
                                     <div class="base-select clearfix">
                                         <div class="select-box">
                                             <select id="base-select-animate-style" >
-                                                <option value="solid">直线</option>
-                                                <option value="dashed">破折线</option>
-                                                <option value="dotted">点状线</option>
-                                                <option value="double">双划线</option>
-                                                <option value="groove">3D凹槽</option>
-                                                <option value="ridge">3D垄状</option>
-                                                <option value="inset">3D内嵌</option>
-                                                <option value="outset">3D外嵌</option>
+                                                <option value="no">无</option>
+                                                <optgroup label="进入" class="show">
+                                                    <option value="bounceIn">弹入</option>
+                                                    <option value="flipInX">翻转进入（水平）</option>
+                                                    <option value="flipInY">翻转进入（垂直）</option>
+                                                    <option value="fadeIn">淡入</option>
+                                                    <option value="slideInUp">滑动进入</option>
+                                                    <option value="wqdZoomin">放大进入</option>
+                                                    <option value="rotateIn">旋转进入</option>
+                                                    <option value="rollIn">滚入</option>
+                                                    <option value="lightSpeedIn">飞入</option>
+                                                </optgroup>
+                                                <optgroup label="强调" class="accentuate">
+                                                    <option value="wqdZoomin">中心放大</option>
+                                                    <option value="bounceIn">震动</option>
+                                                    <option value="bounce">弹跳</option>
+                                                    <option value="flash">闪烁</option>
+                                                    <option value="pulse">脉搏</option>
+                                                    <option value="rubberBand">橡皮筋</option>
+                                                    <option value="shake">晃动</option>
+                                                    <option value="swing">摇摆</option>
+                                                    <option value="tada">中心摆动</option>
+                                                    <option value="wobble">颤动</option>
+                                                    <option value="jello">果冻</option>
+                                                    <option value="flip">3D旋转</option>
+                                                </optgroup>
+                                                <optgroup label="退出">
+                                                    <option value="popOut">弹出</option>
+                                                    <option value="flipOutX">翻转退出（水平）</option>
+                                                    <option value="flipOutY">翻转退出（垂直）</option>
+                                                    <option value="wqdFadeOut">淡出</option>
+                                                    <option value="wqdSlideOutUp">滑动退出（上）</option>
+                                                    <option value="zoomOut">缩小退出</option>
+                                                    <option value="wqdRollout">滚出</option>
+                                                    <option value="wqdLightSpeedout">飞出</option>
+                                                    <option value="hinge">悬挂退出</option>
+                                                    <option value="wqdRotateOut">旋转退出</option>
+                                                </optgroup>
+
                                             </select>
                                         </div>
                                     </div>
+
                                 </li>
                                 <li>
-                                    <label>尺寸</label>
+                                    <label>时间</label>
                                     <div class="base-select clearfix">
                                         <div class="base-select-style" id="base-select-animate-time"></div>
                                         <p class="name">
@@ -220,9 +253,33 @@
                                         </p>
                                     </div>
                                 </li>
+                                <li>
+                                    <label>延迟</label>
+                                    <div class="base-select clearfix">
+                                        <div class="base-select-style" id="base-select-animate-defer"></div>
+                                        <p class="name">
+                                            <input id="base-select-animate-defer-input" type="number"  name="points" min="0" max="20" step="1" value="0"  >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>次数</label>
+                                    <div class="base-select clearfix">
+                                        <input id="base-select-animate-number-input" type="number"  name="points" min="0" max="20" step="1" value="0"  >
+                                    </div>
+                                </li>
+
                             </ul>
                         </div>
                     </section>
+                    <div class="animate-btn">
+                        <a class="btn btn-sm btn-green animate-btn-add" href="javascript:;"><i class="fa fa-plus-square" aria-hidden="true"></i>添加动画</a>
+                        <a class="btn btn-sm btn-blue animate-btn-preview" href="javascript:;"><i class="fa fa-play-circle-o" aria-hidden="true"></i>预览动画</a>
+                    </div>
+                </div>
+                <div class="btn-option">
+                    <a class="btn btn-sm btn-green" href="javascript:;">确定</a>
+                    <a class="btn btn-sm btn-red" href="javascript:;">清除动画</a>
                 </div>
             </div>
         </div>
