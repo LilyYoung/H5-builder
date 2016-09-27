@@ -17,9 +17,10 @@ require.config({
         'workspace' : 'app/main/workspace',
         /*公共类*/
         /*组件类*/
-        'compGrid' : 'app/components/comp-grid',
         'compSet' : 'app/components/comp-setting',
-        'compShortcut' : 'app/components/comp-shortcut',
+        'compShortcut' : 'app/components/shortcut/comp-shortcut',
+        'compShortcutGrid':'app/components/shortcut/comp-shortcut-grid',
+        'compShortcutCache':'app/components/shortcut/comp-shortcut-cache',
         'compTemplate' : 'app/components/comp-template',
 
 

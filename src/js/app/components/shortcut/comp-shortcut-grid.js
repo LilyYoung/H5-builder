@@ -1,5 +1,5 @@
 /**
- * Created by liusuling on 2016/9/9.
+ * Created by duanning on 2016/9/22.
  */
 define(['grid'],function (grid) {
 
@@ -96,7 +96,7 @@ define(['grid'],function (grid) {
 			})
 		},
 
-		//网格按钮事件
+		//快捷区按钮事件
 		btnEvent: function() {
 			var that = this;
 			//网格按钮事件
@@ -111,7 +111,7 @@ define(['grid'],function (grid) {
 			})
 		},
 
-		//工具栏按钮弹窗事件函数
+		//快捷区按钮事件函数
 		fnBtnEvent: function(obj) {
 			obj.hasClass('on') ? obj.removeClass('on') : obj.addClass('on');
 		},
@@ -156,4 +156,4 @@ define(['grid'],function (grid) {
 	};
 
 	return compGrid;
-});
+})

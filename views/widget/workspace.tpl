@@ -8,7 +8,7 @@
 
                     <!-- 手机编辑区 -->
                     <ul class="edit_area weebly-content-area weebly-area-active">
-
+                        <h1>段宁duan</h1>
                     </ul>
                 </div>
             </div>
@@ -105,13 +105,14 @@
         </div>
     </div>
    <div class="demo">
+       <button type="button" class="btn btn-cache-test btn-default" style="position: absolute;z-index: 99;">点击写入缓存</button>
        <div class="edit_wrapper">
            <!-- 背景元素 -->
            <div class="wrapper-background"></div>
-           <ul class="edit-area">
+           <ul class="edit_area edit-area  weebly-content-area weebly-area-active ">
                 <li class="demo-area" contenteditable="true">
                     <div class="demo-area-box">
-                        aaa
+                        <h1>缓存测试块</h1>
                     </div>
                 </li>
            </ul>

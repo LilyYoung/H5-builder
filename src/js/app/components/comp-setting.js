@@ -148,6 +148,8 @@ define(function () {
         },
         getElementValue:function (element,value,div) {
             div.css(element,value);
+            console.log(element+"==="+value+"----");
+            console.log(div);
         }
 
         

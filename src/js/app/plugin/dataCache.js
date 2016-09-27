@@ -40,6 +40,10 @@ define(function () {
         },
         'getBackLength':function () {
             return userActionCacheBack.length;
+        },
+        'testCatchPush':function () {
+            var action = new userAction($(".demo .edit_wrapper").html());
+            userActionCacheCancel .push(action);
         }
     }
     return userPhoneCache;
