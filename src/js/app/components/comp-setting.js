@@ -6,10 +6,10 @@ define(function () {
         init:function () {
             var _this =this;
             _this.DemoInit();
+            _this.getElementAnimate();
         },
         DemoInit:function () {
             //可拖拽
-            $("#comp_setting").draggable();
             $(".demo .edit-area li").draggable();
             //使div可调节大小
             $(".demo .edit-area li").resizable();
@@ -148,9 +148,17 @@ define(function () {
         },
         getElementValue:function (element,value,div) {
             div.css(element,value);
+        },
+        //获取动画
+        getElementAnimate:function () {
+            $(".animate-btn-add").on("click",function () {
+                $("#comp-tab2 .style-setting").append('<div>aaaa</div>');
+            });
+            $(".style-list .fa-trash-o").on("click",function () {
+                $("#comp-tab2 .style-setting section").remove();
+            });
         }
 
-        
     };
     return compSet;
 

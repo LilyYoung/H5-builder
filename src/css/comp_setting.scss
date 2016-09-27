@@ -69,6 +69,7 @@
         color: $main-color-one;
         .style-setting {
             height: 430px;
+            overflow-y: hidden;
             padding-top: 10px;
             .panel{
                 margin-top: 0;
@@ -110,6 +111,7 @@
 
                     }
                     .base-select{
+                        position: relative;
                         .base-select-style{
                             float: left;
                             width: 100px;
@@ -153,14 +155,12 @@
                                 padding-left: 2px;
                             }
                         }
-                        .select-box{
-                            select{
-                                border: 1px solid #ccc;
-                                height: 20px;
-                                width: 155px;
-                            }
-
+                        >input{
+                            border: 1px solid #ccc;
+                            height: 20px;
+                            width: 155px;
                         }
+
                     }
                 }
                 > .no-border-bottom{
@@ -168,6 +168,26 @@
                 }
 
             }
+            .animate-btn{
+                padding: 10px 20px;
+                .btn{
+                    display: block;
+                    float: left;
+                    width: 100px;
+                    color: #fff;
+                    padding-left: 22px;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        left: 10px;
+                        line-height: 18px;
+                    }
+                }
+                .animate-btn-preview{
+                    float: right;
+                }
+            }
+
         }
         .style-list {
             border-bottom: 1px solid #ccd5db;
@@ -176,10 +196,19 @@
             line-height: 40px;
             cursor: pointer;
             padding-left: 20px;
+            position: relative;
 
             span {
                 color: $main-color-one;
                 font-size: 12px;
+                position: relative;
+            }
+            .fa-trash-o{
+                position: absolute;
+                color: $main-color-one;
+                right: 10px;
+                top:10px;
+                font-size: 20px;
             }
             .caret{
                 margin-left: 160px;
