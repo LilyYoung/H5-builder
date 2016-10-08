@@ -1,12 +1,4 @@
 <div id="containment" class="view-space">
-    <ul class="nav nav-tabs" style="display: none;">
-        <li ng-class="{active:pagetab=='page'}" class="active">
-            <a onclick="pagetab='page'">页面模板</a>
-        </li>
-        <li ng-class="{active:pagetab=='comp'}">
-            <a onclick="pagetab='comp'">组件管理</a>
-        </li>
-    </ul>
     <div class="nav-top">
         <div class="nav-top-list">
             <div class="save-template">
@@ -19,42 +11,9 @@
                     </a>
                 </div>
                 <div class="my-tpl-title">存为</div>
-                <!--<div class="btn-group" style="display: none;">-->
-                    <!--<button type="button" class="btn" style="border-right: 0;">-->
-                        <!--<a onclick="creatMyTemplate()" title="当前页存为我的模板">-->
-                            <!--<span>我的模板</span>-->
-                        <!--</a>-->
-                        <!--<a style="display: none;" title="当前页存为企业模板">-->
-                            <!--<span>企业模板</span>-->
-                        <!--</a>-->
-                        <!--<a style="display: none;" title="当前页存为我的秀版">-->
-                            <!--<span>我的秀版</span>-->
-                        <!--</a>-->
-                    <!--</button>-->
-                    <!--<button type="button" class="btn dropdown-toggle" style="border-left: 0;" onclick="openMenu()">-->
-                        <!--<span class="caret"></span>-->
-                    <!--</button>-->
-                    <!--<ul class="dropdown-menu" style="display: none;">-->
-                        <!--<li>-->
-                        <!--<a class="hint&#45;&#45;left hint&#45;&#45;rounded template-active">-->
-                            <!--<span>企业模板</span>-->
-                        <!--</a>-->
-                        <!--</li>-->
-                        <!--<li onclick="creatMyTemplate();selectedTemplate('myTemplate');btnGroup.caretSwitch = false">-->
-                            <!--<a class="hint&#45;&#45;left hint&#45;&#45;rounded">-->
-                                <!--<span>我的模板</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a class="hint&#45;&#45;left hint&#45;&#45;rounded">-->
-                                <!--<span>我的秀版</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
                 <div class="btn-group">
                     <div class="btn">
-                        <a onclick="creatMyTemplate()" class="hint--right hint--rounded" data-hint="保存到我的模板">我的模板</a>
+                        <a class="_save_myTemplate hint--right hint--rounded" data-hint="保存到我的模板">我的模板</a>
                     </div>
                 </div>
             </div>
@@ -152,29 +111,6 @@
             <!--</div>-->
         </div>
         <!--每个页面视图对应的右侧页面-->
-        <div class="page-list-label ui-draggable page-label-hide" panel-draggable="" style="left: 1476px; top: 50px;display:none;">
-            <div ng-include="'scene/page/page-tpl.tpl.html'" ng-controller="PageTplController" class="">
-                <div ng-show="scene.isTpl==2 || isTplEditor" class=" ng-hide">
-                    <h4>元素特性设置</h4>
-                    <div>
-                        <ul class="tpl-uls " ng-repeat="tplElement in textElements">
-                            <li hover-element="" id="tplElement.id" class="ng-isolate-scope">
-                                <span class="ng-binding">文字&nbsp;1</span>
-                                <span>类型</span>
-                                <select ng-model="tplElement.properties.type" class="ng-pristine ng-valid">
-                                    <option value="? undefined:undefined ?"></option>
-                                    <option value="0">无</option>
-                                    <option value="1">收卡人</option>
-                                    <option value="2">发卡人</option>
-                                    <option value="3">祝福语</option>
-                                </select>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tpl-option"></div>
     </div>
     <div class="nav-bottom">
         <a class="_insert_page hint--top hint--rounded fade-color" data-hint="添加一页">+</a>

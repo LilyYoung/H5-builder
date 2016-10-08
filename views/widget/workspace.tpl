@@ -7,7 +7,7 @@
                     <div class="wrapper-background"></div>
 
                     <!-- 手机编辑区 -->
-                    <ul class="edit_area weebly-content-area weebly-area-active">
+                    <ul class="edit_area _edit_area weebly-content-area weebly-area-active">
 
                     </ul>
                 </div>

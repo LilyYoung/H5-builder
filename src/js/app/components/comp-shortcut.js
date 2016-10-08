@@ -1,5 +1,6 @@
 /**
  * Created by liusuling on 2016/9/9.
+ * param:快捷区
  */
 define(['grid'],function (grid) {
 

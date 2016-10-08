@@ -16,14 +16,20 @@ require.config({
         'header' : 'app/main/header',
         'workspace' : 'app/main/workspace',
         /*公共类*/
+        'tools' : 'app/public/tools',
 
         /*组件类*/
         'compGrid' : 'app/components/comp-grid',
         'compSet' : 'app/components/comp-setting',
         'compShortcut' : 'app/components/comp-shortcut',
+        'compText' : 'app/components/comp-text',
 
         /*插件类*/
-        'grid' : 'app/plugin/grid'
+        'grid' : 'app/plugin/grid',
+        'dynamicStyle' : 'app/plugin/dynamicStyle',
+        'rotate' : 'app/plugin/rotate',
+        'drag' : 'app/plugin/drag',
+        'adsorbConfig' : 'app/plugin/adsorbConfig'
     },
     //没有使用 define() 声明依赖项、没有设置模块值,暴露出全局变量
     shim: {

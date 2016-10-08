@@ -22,6 +22,7 @@
 		,"build/css/comp_setting.min.css"
 		,"build/css/modal.min.css"
 		,"build/css/template.min.css"
+		,"build/css/drag_rotate.min.css"
 	]) }}
 </head>
 <body>
@@ -95,10 +96,12 @@
 					backdrop: true,
 					show: true
 				});
-			})
+			});
 
 			//comp-settings 组件设置
 			$('#scene').append(GTPL.compLayout());
+			//拖拽、旋转组件
+			$('._edit_area').append(GTPL.dragRotate());
 
 			//分页
 			function fnPagination(option) {
@@ -114,6 +117,7 @@
 					}
 				});
 			}
+
 
    		});
 	</script>
