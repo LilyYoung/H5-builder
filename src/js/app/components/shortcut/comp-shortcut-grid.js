@@ -1,5 +1,6 @@
 /**
- * Created by duanning on 2016/9/22.
+ * Created by liusuling on 2016/9/9.
+ * param:快捷区
  */
 define(['grid'],function (grid) {
 
@@ -156,4 +157,4 @@ define(['grid'],function (grid) {
 	};
 
 	return compGrid;
-})
+});

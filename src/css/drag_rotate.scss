@@ -1,0 +1,214 @@
+/*可拖拽、旋转组件*/
+.edit_area {
+    li{
+        width: 320px;
+        height: 38px;
+        position: absolute;
+        color: #676767;
+        line-height: 1;
+        background: 0 0;
+        list-style: none!important;
+        margin: 0!important;
+        padding: 0;
+        -webkit-transition: padding .5s;
+        -moz-transition: padding .5s;
+        transition: padding .5s;
+        min-height: 1px;
+        min-width: 1px;
+        -webkit-user-select: none;
+        .element-box {
+            top: 100px;
+            left: 0px;
+            z-index: 101;
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+            transform: none;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            overflow: hidden;
+            box-shadow: 0 0 0 1px transparent;
+            .element-box-contents {
+                width: 100%;
+                height: 100%;
+
+                .comp-paragraph {
+                    cursor: default;
+                    font-size: 24px;
+                    width: 320px;
+                    height: 38px;
+                    min-width: 1px;
+                    min-height: 1px;
+                    color: #404449;
+                    line-height: inherit;
+                    padding: .3em 15px;
+                    margin: 0;
+                    word-wrap: break-word;
+                }
+            }
+        }
+    }
+    li * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .comp-resize {
+        .bar {
+            position: absolute;
+            z-index: 998;
+        }
+        .radius-s3 {
+            width: 12px;
+            height: 12px;
+        }
+        .bar-radius {
+            background-color: #fff;
+            border: 1px solid #59c7f9;
+            border-radius: 12px;
+        }
+        .bar-n {
+            width: 100%;
+            height: 5px;
+            top: 0;
+            cursor: n-resize;
+            background: url(build/img/bar-1px.png) repeat-x;
+
+            cursor: n-resize;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            div {
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                left: 50%;
+                top: -6px;
+                margin-left: -6px;
+            }
+        }
+        .bar-s {
+            width: 100%;
+            height: 5px;
+            bottom: 0;
+            cursor: s-resize;
+            background: url(build/img/bar-1px.png) bottom repeat-x;
+
+            cursor: s-resize;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            div{
+                position: absolute;
+                left: 50%;
+                bottom: -6px;
+                margin-left: -6px;
+            }
+        }
+        .bar-e {
+            width: 5px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            cursor: e-resize;
+            background: url(build/img/bar-1px.png) right repeat-y;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            div {
+                position: absolute;
+                top: 50%;
+                right: -6px;
+                margin-top: -6px;
+            }
+        }
+        .bar-w {
+            width: 13px;
+            height: 100%;
+            top: 0;
+            cursor: w-resize;
+            background: url(build/img/bar-1px.png) repeat-y;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            div {
+                position: absolute;
+                top: 50%;
+                left: -6px;
+                margin-top: -6px;
+            }
+        }
+        .bar-nw3 {
+            top: -6px;
+            left: -6px;
+            cursor: nw-resize;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .bar-se3 {
+            bottom: -6px;
+            right: -6px;
+            cursor: se-resize;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .bar-sw3 {
+            bottom: -6px;
+            left: -6px;
+            cursor: sw-resize;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .bar-ne3 {
+            top: -6px;
+            right: -6px;
+            cursor: ne-resize;
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    }
+    .comp-rotate {
+        .bar-rotate {
+            touch-action: pan-x pan-y;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            top: -30px;
+            position: absolute;
+            z-index: 998;
+            width: 12px;
+            height: 12px;
+            left: 50%;
+            margin-left: -6px;
+            background-color: #44cb83;
+            border: none;
+            cursor: url(build/img/mouserotate.ico) 10 10,default;
+        }
+        .bar-line {
+            width: 1px;
+            height: 18px;
+            top: -18px;
+            left: 50%;
+            background-color: #44cb83;
+        }
+    }
+    .onRotating {
+    }
+
+}
