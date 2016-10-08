@@ -1,6 +1,6 @@
 /**
  * Created by wangyongqiang-ds1 on 2016/9/18.
- * @param:旋转
+ * @param:旋转控件
  */
 define(['dynamicStyle'],function (_css) {
     var rotate = {

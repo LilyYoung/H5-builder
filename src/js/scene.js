@@ -24,7 +24,8 @@ require.config({
         'compShortcutGrid':'app/components/shortcut/comp-shortcut-grid',
         'compShortcutCache':'app/components/shortcut/comp-shortcut-cache',
         'compTemplate' : 'app/components/comp-template',
-        'compText' : 'app/components/comp-text',
+        'compFuncAreas' : 'app/components/functionalAreas/comp-funcAreas',
+        'compText' : 'app/components/functionalAreas/comp-text',
 
 
         /*插件类*/
