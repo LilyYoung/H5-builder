@@ -1,5 +1,5 @@
 
-<div class="modal fade gome-modal" style="z-index:10000" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade gome-modal img-console" style="z-index:1050" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -229,9 +229,9 @@
                 <div class="pagination-wrap" id="img-pagination">
 
                 </div>
-                <a href="" class="modal-cancle" >取消</a>
-                <a href="" class="btn btn-green">确定</a>
+                <a href="javascript:;" class="modal-cancle" data-dismiss="modal" >取消</a>
+                <a href="javascript:;" class="btn btn-green" data-dismiss="modal" >确定</a>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>
+    </div>
+</div>

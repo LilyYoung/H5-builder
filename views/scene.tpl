@@ -77,7 +77,7 @@
 	<script>
 		$(function(){
 			/* 弹框 */
-			$('.comp_panel').on('click','li',function() {
+			$('.comp_panel').on('click','li.bg,li.music,li.image',function() {
 				if($('.modal').length>0) $('.modal').remove();
 				$('body').append(GTPL.imgModal());
 				fnPagination({
@@ -90,8 +90,37 @@
 
 					}
 				});
-				$('.modal').modal();
-			})
+				$('.img-console').modal();
+			});
+			$('.comp_panel').on('click','li.images',function() {
+				if($('.modal').length>0) $('.modal').remove();
+				$('body').append(GTPL.pictures1());
+				$('.pictures1').modal();
+			});
+			$(document).on('click','.pictures1 .add-img',function() {
+				$('body').append(GTPL.imgModal());
+				fnPagination({
+					selector: 'img-pagination',
+					pages: 800,
+					curr: 2,
+					groups: 4,
+					skin: '#59c7f9',
+					callback: function(obj, first) {
+
+					}
+				});
+
+				$('.img-console').on('show.bs.modal', function () {
+
+					$('.modal-backdrop').eq(0).css('zIndex',1050);
+				});
+				$('.img-console').modal('show');
+				$('.modal-backdrop').eq(1).css('opacity',0);
+
+				$('.img-console').on('hidden.bs.modal', function () {
+					$('.modal-backdrop').eq(0).css('zIndex',1040);
+				});
+			});
 
 			//comp-settings 组件设置
 			$('#scene').append(GTPL.compLayout());

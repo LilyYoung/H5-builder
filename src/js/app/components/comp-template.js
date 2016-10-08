@@ -101,7 +101,7 @@ define(function () {
 			$('.template').on('click','.tpl-container li',function(){
 				if($('.modal').length>0) $('.modal').remove();
 				$('body').append(GTPL.confirm());
-				$('.modal').modal({
+				$('.confirm-modeal').modal({
 					backdrop: 'static'
 				});
 			});

@@ -17,6 +17,7 @@ $Modalbg-2: #fff;
 
 .gome-modal {
     color: $main-color-one;
+    .no-line { border: none!important;}
     .modal-content {top: 50px;}
     .modal-header {
         padding: 17px 20px;
@@ -316,5 +317,40 @@ $Modalbg-2: #fff;
             }
         }
     }
-}
 
+
+}
+/* 图集组件弹窗 */
+.pictures1 {
+    .modal-dialog {
+        width: 780px;
+    }
+    .cropimage {
+        padding: 20px 20px 0;
+        background-color: #fff;
+    }
+    .image-con {
+        width: 100%;
+        background-color: #ccc;
+        height: 430px;
+    }
+    .add-img {
+        height: 120px;
+        width: 270px;
+        background-color: #fff;
+        left: 50%;
+        margin-left: -135px;
+        padding-top: 38px;
+        top: 35%;
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        color: #666;
+        cursor: pointer;
+        p {
+            padding-top: 5px;
+            font-size: 14px;
+        }
+    }
+    .modal-footer {padding: 20px;}
+}
