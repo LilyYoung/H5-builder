@@ -19,13 +19,16 @@ require.config({
         'tools' : 'app/public/tools',
 
         /*组件类*/
-        'compGrid' : 'app/components/comp-grid',
         'compSet' : 'app/components/comp-setting',
-        'compShortcut' : 'app/components/comp-shortcut',
-        'compText' : 'app/components/comp-text',
+        'compShortcut' : 'app/components/shortcut/comp-shortcut',
+        'compShortcutGrid':'app/components/shortcut/comp-shortcut-grid',
+        'compShortcutCache':'app/components/shortcut/comp-shortcut-cache',
+        'compTemplate' : 'app/components/comp-template',
+
 
         /*插件类*/
         'grid' : 'app/plugin/grid',
+        'dataCache':'app/plugin/dataCache',
         'dynamicStyle' : 'app/plugin/dynamicStyle',
         'rotate' : 'app/plugin/rotate',
         'drag' : 'app/plugin/drag',

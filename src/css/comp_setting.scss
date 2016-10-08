@@ -69,7 +69,12 @@
         color: $main-color-one;
         .style-setting {
             height: 430px;
+            overflow-y: hidden;
             padding-top: 10px;
+            .panel{
+                margin-top: 0;
+                border: none;
+            }
             .base-style-list{
                 background-color: #fff;
                 padding: 0 20px;
@@ -106,9 +111,40 @@
 
                     }
                     .base-select{
-                        .progress{
+                        position: relative;
+                        .base-select-style{
                             float: left;
                             width: 100px;
+                            height:20px;
+                            cursor: e-resize;
+                            background-color: #eee;
+                            .ui-widget-header{
+                                background-color: #08a1ef;
+                            }
+                            &:hover{
+                                .ui-widget-header{
+                                    background-color: #56c6ff;
+                                }
+
+                            }
+                            .ui-slider-horizontal{
+                                height: 20px;
+                                line-height: 20px;
+                            }
+                            .ui-slider-handle{
+                                border: none;
+                                width: 1px;
+                                height: 20px;
+                                margin-left:0;
+                                top:-1px;
+                                cursor: e-resize;
+                            }
+                        }
+                        .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+                            border-radius: 0;
+                        }
+                        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+                            background-color: transparent;
                         }
                         .name{
                             float: right;
@@ -116,12 +152,42 @@
                             input{
                                 width: 48px;
                                 height:20px;
-                                line-height: 20px;
+                                padding-left: 2px;
                             }
                         }
+                        >input{
+                            border: 1px solid #ccc;
+                            height: 20px;
+                            width: 155px;
+                        }
+
                     }
                 }
+                > .no-border-bottom{
+                    border-bottom: none;
+                }
+
             }
+            .animate-btn{
+                padding: 10px 20px;
+                .btn{
+                    display: block;
+                    float: left;
+                    width: 100px;
+                    color: #fff;
+                    padding-left: 22px;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        left: 10px;
+                        line-height: 18px;
+                    }
+                }
+                .animate-btn-preview{
+                    float: right;
+                }
+            }
+
         }
         .style-list {
             border-bottom: 1px solid #ccd5db;
@@ -130,10 +196,19 @@
             line-height: 40px;
             cursor: pointer;
             padding-left: 20px;
+            position: relative;
 
             span {
                 color: $main-color-one;
                 font-size: 12px;
+                position: relative;
+            }
+            .fa-trash-o{
+                position: absolute;
+                color: $main-color-one;
+                right: 10px;
+                top:10px;
+                font-size: 20px;
             }
             .caret{
                 margin-left: 160px;

@@ -17,17 +17,17 @@
                         <li><a href="javascript:;">我的图片</a></li>
                     </ul>
                     <ul class="group-nav">
-                        <li class="active"><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组1<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组2<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组3<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组4<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组5<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组6<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组7<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组8<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:;">组9<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">最近使用</a></li>
                     </ul>
                     <div class="add-tool clearfix">
@@ -113,109 +113,109 @@
                         <div class="img-list-container">
                             <ul class="img-box clearfix">
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file active"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                                 <li class="imageList">
-                                    <img src="http://res.eqh5.com/a86f01fb-377a-4dc5-8dcd-57108406384d.png">
+                                    <img src="build/img/modal.png">
                                     <div class="img-mask">
                                         <a href="javascript:;" class="sel-file"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
                                     </div>
