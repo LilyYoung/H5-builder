@@ -352,5 +352,34 @@ $Modalbg-2: #fff;
             font-size: 14px;
         }
     }
+    /* 图集弹窗样式 */
+   .picture-images-wrap {
+        .picture-img {
+            float: left;
+
+            //图片裁剪区
+            .image_crop {
+                position: relative;
+                height: 340px;
+                line-height: 340px;
+                width: 580px;
+                background-color: #ccc;
+                text-align: center;
+            }
+
+            //添加图片区
+            .img-abbre {
+                margin-top: 10px;
+            }
+
+        }
+
+       /* 右侧比例样式 */
+       .picture-size {
+           float: left;
+           margin-left: 20px;
+           width: 135px;
+       }
+   }
     .modal-footer {padding: 20px;}
 }

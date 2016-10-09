@@ -11,16 +11,24 @@
                 </h4>
             </div>
             <div class="modal-body dialog-contain cropimage">
-                <div class="image-con">
+                <div class="image-con hide">
                     <div class="add-img">
                         <i>点击添加图片</i>
                         <p><i>（最多可添加6张图片）</i></p>
                     </div>
                 </div>
+                <div class="picture-images-wrap clearfix">
+                    <div class="picture-img">
+                        <div class="image_crop"></div>
+
+                        <div class="img-abbre"></div>
+                    </div>
+                    <div class="cut-size picture-size"></div>
+                </div>
             </div>
             <div class="modal-footer no-line">
                 <a href="javascript:;" class="modal-cancle" data-dismiss="modal" >取消</a>
-                <a href="javascript:;" class="btn btn-green hide"  data-dismiss="modal" >确定</a>
+                <a href="javascript:;" class="btn btn-green"  data-dismiss="modal" >确定</a>
             </div>
         </div>
     </div>
