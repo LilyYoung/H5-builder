@@ -4,6 +4,20 @@
  */
 define(function () {
     var tools = {};
+    //分页方法
+    tools.fnPagination = function(option) {
+        laypage({
+            cont: option.selector, //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
+            pages: option.pages, //通过后台拿到的总页数
+            curr: option.curr || 1, //当前页
+            skin: option.skin||'',//皮肤
+            groups: option.groups||5,//连续分页数
+            skip: false, //是否开启跳页
+            jump: function(obj, first){ //触发分页后的回调
+                option.callback(obj, first)
+            }
+        });
+    };
 
     tools.createID = function(msg){
         return msg ? msg + new Date().getTime() : new Date().getTime();

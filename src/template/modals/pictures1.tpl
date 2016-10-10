@@ -19,11 +19,135 @@
                 </div>
                 <div class="picture-images-wrap clearfix">
                     <div class="picture-img">
-                        <div class="image_crop"></div>
+                        <div class="image_crop">
+                            <img src="build/img/212.jpg" id="img_preview" style="">
+                        </div>
 
-                        <div class="img-abbre"></div>
+                        <div class="img-abbre">
+                            <ul class="clearfix">
+                                <li class="active">
+                                    <div class="img-set">
+                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                    </div>
+
+                                    <p class="eqf-plus2 hide">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <div class="img-set hide">
+                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                    </div>
+
+                                    <p class="eqf-plus2">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <div class="img-set hide">
+                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                    </div>
+
+                                    <p class="eqf-plus2">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <div class="img-set hide">
+                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                    </div>
+
+                                    <p class="eqf-plus2">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <div class="img-set hide">
+                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                    </div>
+
+                                    <p class="eqf-plus2">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <div class="img-set hide">
+                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                    </div>
+
+                                    <p class="eqf-plus2">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="cut-size picture-size"></div>
+                    <div class="picture-size">
+                        <ul>
+                            <li>
+                                <label class="icheck radio-square">
+                                    <input type="radio" checked name="ratio" value="1:1"><span><i></i></span>1:1
+                                </label>
+                            </li>
+                            <li>
+                                <label class="icheck radio-square">
+                                    <input type="radio" name="ratio" value="4:3"><span><i></i></span>4:3
+                                </label>
+                            </li>
+                            <li>
+                                <label class="icheck radio-square">
+                                    <input type="radio" name="ratio" value="3:4"><span><i></i></span>3:4
+                                </label>
+                            </li>
+                            <li>
+                                <label class="icheck radio-square">
+                                    <input type="radio" name="ratio" value="自定义"><span><i></i></span>自定义
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="picture-set">
+                            <li class="clearfix">
+                                <em>自动切换</em><span class="switch-circle on"><i></i></span>
+                            </li>
+                            <li>切换时间：<span>2</span>秒</li>
+                            <li class="switch-time">
+
+                            </li>
+                            <li>切换动画</li>
+                            <li>
+                                <div class="select-contain clearfix ">
+                                    <div class="eqc-mask">
+                                        <div class="eqc-name">轮播</div>
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="eqc-drop-down-list transform-change">
+                                        <div class="list">
+                                            <ul class="clearfix">
+                                                <li class="active">轮播</li>
+                                                <li>下落</li>
+                                                <li>百叶窗</li>
+                                                <li>消隐</li>
+                                                <li>渐变</li>
+                                                <li>梳理</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer no-line">

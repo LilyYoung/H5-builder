@@ -17,6 +17,7 @@ require.config({
         'workspace' : 'app/main/workspace',
         /*公共类*/
         'tools' : 'app/public/tools',
+        'modal' : 'app/public/modal',
 
         /*组件类*/
         'compSet' : 'app/components/comp-setting',
@@ -26,6 +27,9 @@ require.config({
         'compTemplate' : 'app/components/comp-template',
         'compFuncAreas' : 'app/components/functionalAreas/comp-funcAreas',
         'compText' : 'app/components/functionalAreas/comp-text',
+        'compPotoList':'app/components/functionalAreas/comp-photoList',
+        'compHeaderToolModal':'app/components/functionalAreas/comp-headerToolModal',
+        'compInputModal':'app/components/functionalAreas/comp-inputModal',
 
 
         /*插件类*/

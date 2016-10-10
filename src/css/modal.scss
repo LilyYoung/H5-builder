@@ -2,7 +2,125 @@
 @import 'base';
 $Modalbg-1: #f7f7f7;
 $Modalbg-2: #fff;
+.modal-footer {padding: 20px;}
+.modal-backdrop {  z-index: 1042;  }
 
+.switch-circle {
+    border-radius: 11px;
+    height: 22px;
+    line-height: 22px!important;
+    width: 40px;
+    margin-top: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: right;
+    i {
+        height: 15px;
+        width: 15px;
+        background-color: #FFF;
+        border-radius: 9px;
+        display: block;
+        margin: 3px 0 0 2px;
+    }
+}
+.switch-circle.on {
+    background-color: #59c7f9;
+    .i {
+        margin-left: 23px;
+    }
+}
+.switch-circle.off {
+    background-color: #ccc;
+}
+
+.select-contain {
+    position: relative;
+    width: 120px;
+    cursor: pointer;
+
+    .eqc-mask {
+        width: 120px;
+        border: 1px solid #ccd5db;
+        border-radius: 3px;
+        height: 30px;
+        line-height: 30px;
+        i.fa {font-size: 16px;}
+        &:hover {
+            border-color: #59c7f9;
+            color: #59c7f9;
+        }
+    }
+    .eqc-name {
+        height: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+        padding: 0 10px;
+        float: left;
+        width: 85%;
+
+    }
+
+    .eqc-drop-down-list {
+        position: absolute;
+        top: 30px;
+        width: 120px;
+        background-color: #fff;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+
+        left: 0;
+        cursor: pointer;
+        z-index: 5;
+        box-shadow: 2px 2px 20px rgba(0,0,0,.1);
+
+        .list {
+            padding: 1px;
+            overflow-y: auto;
+            max-height: 210px;
+
+            ul {
+                webkit-transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+                transform: translate(0px, 0px) translateZ(0px);
+                height: inherit;
+                line-height: inherit;
+
+                li {
+                    width: 100%;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0 15px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-size: 12px;
+                    &:nth-child(2n) {
+                        background-color: #F7F7F7;
+                    }
+                    &:hover {
+                        background-color: #59c7f9;
+                        color: #fff;
+                    }
+                }
+                li.active {
+                    background-color: #59c7f9;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .transform-change {
+        transition: transform .3s;
+    }
+
+    .visible  {
+        transform: scaleY(1);
+        transform-origin: 0 0;
+    }
+
+}
 
 //图片弹框
 .gome-modal.fade .modal-dialog {
@@ -251,7 +369,6 @@ $Modalbg-2: #fff;
         position: absolute;
         right: 0;
         left: 200px;
-        padding: 20px;
         border: none;
         border-bottom-right-radius: 6px;
         .pagination-wrap {
@@ -318,9 +435,8 @@ $Modalbg-2: #fff;
         }
     }
 
-
 }
-/* 图集组件弹窗 */
+/* 图集弹窗 */
 .pictures1 {
     .modal-dialog {
         width: 780px;
@@ -365,11 +481,57 @@ $Modalbg-2: #fff;
                 width: 580px;
                 background-color: #ccc;
                 text-align: center;
+
             }
 
             //添加图片区
             .img-abbre {
                 margin-top: 10px;
+
+                li {
+                    float: left;
+                    width: 80px;
+                    height: 80px;
+                    background: center center no-repeat #666;
+                    background-size: contain;
+                    text-align: center;
+                    margin-right: 20px;
+                    position: relative;
+                    cursor: pointer;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                li.active {
+                    border: 1px solid #fff;
+                    outline: #59c7f9 solid 1px;
+                }
+                .img-set {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    color: #f6f6f6;
+                    div {display: block;}
+                }
+                .delete-img {
+                    &:hover {
+                        color: #f66;
+                    }
+                }
+
+                .abbre {
+                    margin-top: 38px;
+                    &:hover {
+                        color: #08a1ef;
+                    }
+                }
+
+                .eqf-plus2 {
+                    color: #fff;
+                    font-size: 40px;
+                    height: 80px;
+                    line-height: 80px;
+                }
             }
 
         }
@@ -379,7 +541,136 @@ $Modalbg-2: #fff;
            float: left;
            margin-left: 20px;
            width: 135px;
+
+           ul {
+               border: 1px solid #e6e6e6;
+               padding: 5px;
+
+               li {
+                   height: 33px;
+                   line-height: 33px;
+                   label {
+                       font-size: 14px;
+                       height: 33px;
+                       line-height: 33px;
+                   }
+               }
+           }
+           .picture-set {
+               margin-top: 10px;
+
+           }
+           .switch-time {
+               padding-top: 5px;
+               line-height: 20px
+           }
        }
    }
-    .modal-footer {padding: 20px;}
 }
+
+/* 输入框弹窗 */
+.input-box-modal {
+    .modal-dialog {
+        width: 780px;
+    }
+
+    .dialog-contain {
+        background-color: #fff;
+    }
+
+    .form-contain {
+        position: relative;
+        width: 690px;
+        left: 50%;
+        margin-left: -345px;
+    }
+
+    .form-list {
+        margin-left: 70px;
+
+        .form-label {
+            width: 95px;
+            text-align: right;
+            padding-top: 12px;
+            float: left;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        .form-input {
+            input {
+                width: 350px;
+                float: left;
+                box-shadow: inherit;
+                border: 1px solid #ccd5db;
+                outline: 0;
+                border-radius:3px;
+                padding: 0 5px;
+                &:focus
+                {
+                    border-color:#59c7f9;
+                }
+            }
+
+        }
+        .tip {
+            color: red;
+            float: left;
+            line-height: 35px;
+            margin-left: 10px;
+            font-size:12px;
+        }
+    }
+    .customized_container {
+        margin-top: 10px;
+    }
+}
+.tab-same {
+    height: 50px;
+    background-color: #e1e1e1;
+    position: relative;
+    padding: 0 5px 0 30px;
+
+    .spanborder {
+        background-color: #fff;
+    }
+}
+.tab-same>span {
+    display: block;
+    float: left;
+    width: 119px;
+    margin-top: 5px;
+
+    a {
+        display: block;
+        width: 100px;
+        text-align: center;
+        margin: 5px 0 10px 10px;
+        line-height: 40px;
+
+        border: 1px solid #fff;
+        height: 40px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+    }
+}
+.dialog-contain .dialog-content {
+    margin-top: 20px;
+}
+.form_console {
+    text-align: center;
+}
+.form-contain .form-list .form-input {
+    height: 35px;
+    line-height: 35px;
+    margin-left: 20px;
+}
+.form-contain .form-list .form-input, .form-contain .form-list .form-label {
+    float: left;
+    display: inline-block;
+}
+
+
+
+

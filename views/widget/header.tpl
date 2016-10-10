@@ -62,7 +62,7 @@
                                                     <span class="fa fa-gratipay" aria-hidden="true"></span>
                                                     <span class="menu-item-name">喜欢</span>
                                                 </li>
-                                                <li comp-draggable="panel" ctype="i" class="menu-item comp-draggable radio-input hint--right hint--rounded ui-draggable" data-hint="点击添加喜欢" font="eqf-good" ng-click="createComp('i', 'eqf-good');" data-event="12009">
+                                                <li class="menu-item comp-draggable radio-input hint--right hint--rounded ui-draggable" data-hint="点击添加喜欢">
                                                     <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>
                                                     <span class="menu-item-name">顶起</span>
                                                 </li>
@@ -88,8 +88,118 @@
             <span class="tip">互动</span>
             <em ng-if="wechatWTip" class="effect-tip heart ng-scope"></em>
         </li>
-        <li class="form hint--bottom hint--rounded">
+        <li class="interaction form hint--bottom hint--rounded header-form">
             <span class="fa fa-list-ul" aria-hidden="true"></span>
+            <div class="form-menus">
+                <div class="popover bottom">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <ul class="menus">
+                            <li class="menu-item">
+                                <span class="fa fa-gift" aria-hidden="true"></span>
+                                <span class="menu-item-name">快捷表单</span>
+                                <span class="caret"></span>
+                                <div class="menu-item-menu">
+                                    <div class="popover right">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <ul class="menus">
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加联系人">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">联系人</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="menu-item">
+                                <span class="fa fa-check-square-o" aria-hidden="true"></span>
+                                <span class="menu-item-name">选项</span>
+                                <span class="caret"></span>
+                                <div class="menu-item-menu">
+                                    <div class="popover right">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <ul class="menus">
+                                                <li class="header-input menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加输入框">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">输入框</span>
+                                                </li>
+
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加单选按钮">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">单选</span>
+                                                </li>
+
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加多选按钮">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">多选</span>
+                                                </li>
+
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加下拉列表">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">下拉列表</span>
+                                                </li>
+
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加评分组件">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">评分</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="menu-item">
+                                <span class="fa fa-gift" aria-hidden="true"></span>
+                                <span class="menu-item-name">图表</span>
+                                <span class="caret"></span>
+                                <div class="menu-item-menu">
+                                    <div class="popover right">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <ul class="menus">
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加饼状图">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">饼状图</span>
+                                                </li>
+
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加柱状图">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">柱状图</span>
+                                                </li>
+
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加折线图">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">折线图</span>
+                                                </li>
+
+                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加曲线图">
+                                                    <span class="fa fa-gratipay" aria-hidden="true"></span>
+                                                    <span class="menu-item-name">曲线图</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="menu-item comp-draggable phone hint--right hint--rounded ui-draggable" data-hint="一个场景建议只添加一个">
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                <span class="menu-item-name">留言板</span>
+                            </li>
+
+                            <li class="menu-item comp-draggable phone hint--right hint--rounded ui-draggable" data-hint="一个场景建议只添加一个">
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                <span class="menu-item-name">提交按钮</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <span class="tip">表单</span>
         </li>
         <li class="comp-draggable images">
