@@ -188,7 +188,15 @@ header{
         }
     }
 
-
+    .interaction {
+        .caret {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin: 0;
+            margin-top: -2px;
+        }
+    }
 }
 .gray-dark{
     background-color: $headBtnColor;
