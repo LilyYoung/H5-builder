@@ -158,27 +158,31 @@ define(function () {
         },
         getElementValue:function (element,value,div) {
             div.css(element,value);
-            console.log(element,value);
+            console.log(element+"---"+value);
 
         },
         //获取动画
         getElementAnimate:function () {
             var _this = this;
-            $('#base-select-animate-style').change(function(){
-                var val = $(this).val();
-                $('.demo .edit-area li .demo-area-box').css("animation",val+" 5s");
-            });
+            // $('#base-select-animate-style').change(function(){
+            //     var val = $(this).val();
+            //     $('.demo .edit-area li .demo-area-box').css("animation",val+" 5s");
+            // });
             //点击添加动画
             $(".animate-btn-add").on("click",function () {
                 _this.getAddAnimate();
 
             });
+            //点击删除动画
+            // $("#comp-tab2 .style-setting").on("click",".fa-trash-o",function (){
+            //
+            // });
             _this.getDelAnimate();
             // _this.getSelectAnimate();
         },
         //添加动画
         getAddAnimate:function () {
-            if($("#comp-tab2 .style-setting section") && $("#comp-tab2 .style-setting section").length>0){
+            if($("#comp-tab2 .style-setting section")){
                 var  sLength=$("#comp-tab2 .style-setting section").length+1;
             }else{
                 var  sLength=1;
@@ -189,7 +193,7 @@ define(function () {
 
             $("#comp-tab2 .style-setting .animate-btn").before(GTPL.addAnimate(data));
             //选择动画事件
-            this.getSelectAnimate(sLength);
+            this.getSelectAnimate();
             //时间
             this.scrollBarControl($('#base-select-animate-time'+sLength),$('#base-select-animate-time-input'+sLength),0,20,0.1,"animation-duration",$('.demo .edit-area li .demo-area-box'));
 
@@ -201,76 +205,129 @@ define(function () {
         },
         //点击删除动画
         getDelAnimate:function () {
+            var _this =this;
             $("#comp-tab2 .style-setting").on("click",".fa-trash-o",function () {
                 var sIndex=$(this).parent().index();
                 var  sLength=$("#comp-tab2 .style-setting section").length;
+
                 if(sIndex-sLength <0){
-                    for(var i=-1; i>sIndex-sLength; i--){
+                    // for(var i=-1; i>sIndex-sLength; i--){
+                    for(var i=sIndex-sLength; i<0; i++){
                         var s_index=sLength-(-i);
                         var s_section = $("#comp-tab2 .style-setting section").eq(i);
                         s_section.find(".style-list").attr("data-target","#base-animate"+s_index);
                         s_section.find(".collapse").attr("id","base-animate"+s_index);
                         s_section.find(".collapse .select-box > select").attr("id","base-select-animate-style"+s_index);
+                        s_section.find(".collapse .base-select").eq(-4).find(" > .base-select-style").attr("id","base-select-animate-direction"+s_index);
                         s_section.find(".collapse .base-select").eq(-3).find(" > .base-select-style").attr("id","base-select-animate-time"+s_index);
                         s_section.find(".collapse .base-select").eq(-2).find(" > .base-select-style").attr("id","base-select-animate-defer"+s_index);
-                        s_section.find(".collapse .base-select").eq(-1).find(" > .base-select-style").attr("id","base-select-animate-number"+s_index);
+                        s_section.find(".collapse .base-select").eq(-1).find(" > .base-select-style").attr("id","base-select-animate-number-input"+s_index);
                         s_section.find(".collapse .base-select input[name='time']").attr("id","base-select-animate-time-input"+s_index);
                         s_section.find(".collapse .base-select input[name='defer']").attr("id","base-select-animate-defer-input"+s_index);
                         s_section.find(".collapse .base-select input[name='number']").attr("id","base-select-animate-number-input"+s_index);
                         s_section.find(".style-list span").eq(0).text("动画"+s_index);
+                        $(this).parent().remove();
+                        _this.getSelectAnimate(s_index);
+
                     }
                 }
-                $(this).parent().remove();
+
+                console.log("删除"+s_index);
+
+                //_this.getSelectAnimate(s_index-1);
+
+                //
+
 
             });
+
         },
         //选择动画
-        getSelectAnimate:function (i) {
+        getSelectAnimate:function () {
             var _this = this;
-            var select=$("#base-select-animate-style"+i);
-            if($("#comp-tab2 .style-setting section").length>0){
-                select.change(function(){
-                    _this.getAnimateValue($(this).val(),i);
-                });
+            // var select=$("#base-select-animate-style"+i);
+            var  sLength=0;
+            if($("#comp-tab2 .style-setting section")){
+                sLength=$("#comp-tab2 .style-setting section").length-1;
             }
+            var s_select=$("#comp-tab2 .style-setting section").eq(sLength).find("select").eq(0);
+
+            s_select.change(function(){
+                // _this.getAnimateValue($(this).val(),i);
+                var select=$("#"+$(this).attr("id")),
+                    direction=$("#"+$(this).parents(".base-style-list").find("select").eq(1).attr("id")),
+                    time = $("#"+$(this).parents(".base-style-list").find("input").eq(0).attr("id")),
+                    defer=$("#"+$(this).parents(".base-style-list").find("input").eq(1).attr("id")),
+                    circulation=$("#"+$(this).parents(".base-style-list").find("input").eq(2).attr("id")),
+                    value=$(this).val();
+                console.log(select+"--"+value);
+                //当动画为弹入、淡入、滑动进入、缩小进入、弹出、淡出、滑动退出、缩小退出时动画
+                if (value == "bounceIn" || value == "fadeIn" || value == "slideIn"  ||value == "zoomIn" | value == "bounceOut" || value == "fadeOut" || value=="slideOut" || value=="zoomOut"){
+                    direction.parents("li").show();
+                    time.parents("li").show();
+                    defer.parents("li").show();
+                    circulation.parents("li").show();
+                    var s_time = time.val(),
+                        s_defer =  defer.val();
+                    _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value+ direction.val(),$('.demo .edit-area li .demo-area-box'));
+                    // $('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value+ direction.val());
+                    _this.getAnimateDirection(value,direction,time,defer);
+                }else if(value == "no"){
+                    direction.parents("li").hide();
+                    time.parents("li").hide();
+                    defer.parents("li").hide();
+                    circulation.parents("li").hide();
+                }else{
+                    direction.parents("li").hide();
+                    time.parents("li").show();
+                    defer.parents("li").show();
+                    circulation.parents("li").show();
+                    var s_time = time.val(),
+                        s_defer =  defer.val();
+                    _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value,$('.demo .edit-area li .demo-area-box'));
+                }
+
+
+            });
 
         },
         //动画参数值
-        getAnimateValue:function(value,i){
-            var _this = this;
-            var select=$("#base-select-animate-style"+i),
-                direction=$("#base-select-animate-direction"+i),
-                time = $('#base-select-animate-time'+i),
-                defer=$('#base-select-animate-defer'+i),
-                circulation=$('#base-select-animate-number-input'+i);
-            //当动画为弹入、淡入、滑动进入、缩小进入、弹出、淡出、滑动退出、缩小退出时动画
-            if (value == "bounceIn" || value == "fadeIn" || value == "slideIn"  ||value == "zoomIn" | value == "bounceOut" || value == "fadeOut" || value=="slideOut" || value=="zoomOut"){
-                direction.parents("li").show();
-                time.parents("li").show();
-                defer.parents("li").show();
-                circulation.parents("li").show();
-                var s_time = time.next().find("input").val(),
-                    s_defer =  defer.next().find("input").val();
-                _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value+ direction.val(),$('.demo .edit-area li .demo-area-box'));
-                // $('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value+ direction.val());
-                _this.getAnimateDirection(value,direction,time,defer);
-            }else if(value == "no"){
-                direction.parents("li").hide();
-                time.parents("li").hide();
-                defer.parents("li").hide();
-                circulation.parents("li").hide();
-            }else{
-                direction.parents("li").hide();
-                time.parents("li").show();
-                defer.parents("li").show();
-                circulation.parents("li").show();
-                var s_time = time.next().find("input").val(),
-                    s_defer =  defer.next().find("input").val();
-                _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value,$('.demo .edit-area li .demo-area-box'));
-                //$('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value);
-
-            }
-        },
+        // getAnimateValue:function(value,i){
+        //     var _this = this;
+        //     console.log("动画参数值"+value+"---"+i);
+        //     var select=$("#base-select-animate-style"+i),
+        //         direction=$("#base-select-animate-direction"+i),
+        //         time = $('#base-select-animate-time'+i),
+        //         defer=$('#base-select-animate-defer'+i),
+        //         circulation=$('#base-select-animate-number-input'+i);
+        //     //当动画为弹入、淡入、滑动进入、缩小进入、弹出、淡出、滑动退出、缩小退出时动画
+        //     if (value == "bounceIn" || value == "fadeIn" || value == "slideIn"  ||value == "zoomIn" | value == "bounceOut" || value == "fadeOut" || value=="slideOut" || value=="zoomOut"){
+        //         direction.parents("li").show();
+        //         time.parents("li").show();
+        //         defer.parents("li").show();
+        //         circulation.parents("li").show();
+        //         var s_time = time.next().find("input").val(),
+        //             s_defer =  defer.next().find("input").val();
+        //         _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value+ direction.val(),$('.demo .edit-area li .demo-area-box'));
+        //         // $('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value+ direction.val());
+        //         _this.getAnimateDirection(value,direction,time,defer);
+        //     }else if(value == "no"){
+        //         direction.parents("li").hide();
+        //         time.parents("li").hide();
+        //         defer.parents("li").hide();
+        //         circulation.parents("li").hide();
+        //     }else{
+        //         direction.parents("li").hide();
+        //         time.parents("li").show();
+        //         defer.parents("li").show();
+        //         circulation.parents("li").show();
+        //         var s_time = time.next().find("input").val(),
+        //             s_defer =  defer.next().find("input").val();
+        //         _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value,$('.demo .edit-area li .demo-area-box'));
+        //         //$('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value);
+        //
+        //     }
+        // },
         //动画方向
         getAnimateDirection:function (value,direction,time,defer) {
             var _this=this;
