@@ -17,8 +17,6 @@
                         <li><a href="javascript:;">我的图片</a></li>
                     </ul>
                     <ul class="group-nav">
-                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">组1<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">组2<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">组3<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
