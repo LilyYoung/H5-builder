@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/Font-Awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/colorbox/expample1/colorbox.css" />
-	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.css" />
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-jcrop/css/jquery.Jcrop.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-ui/jquery-ui.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/hint/hint.min.css">
@@ -23,6 +23,7 @@
 		,"build/css/comp_setting.min.css"
 		,"build/css/modal.min.css"
 		,"build/css/template.min.css"
+		,"build/css/drag_rotate.min.css"
 	]) }}
 </head>
 <body>
@@ -64,7 +65,7 @@
 	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-process.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/fileupload/jquery.fileupload-validate.js"></script>
-	<script src="{{ config.jsServer }}build/js/lib/jquery-jcrop/jquery.Jcrop.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/jquery-jcrop/js/jquery.Jcrop.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/nanoscroller/jquery.nanoscroller.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/qrcode/jquery.qrcode.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/jquery-slides/jquery.slides.min.js"></script>
@@ -77,40 +78,10 @@
 	]) }}
 	<script>
 		$(function(){
-			/* 弹框 */
-			$('.comp_panel').on('click','li',function() {
-				if($('.modal').length>0) $('.modal').remove();
-				$('body').append(GTPL.imgModal());
-				fnPagination({
-					selector: 'img-pagination',
-					pages: 800,
-					curr: 2,
-					groups: 4,
-					skin: '#59c7f9',
-					callback: function(obj, first) {
-
-					}
-				});
-				$('.modal').modal();
-			})
-
 			//comp-settings 组件设置
 			$('#scene').append(GTPL.compLayout());
-
-			//分页
-			function fnPagination(option) {
-				laypage({
-					cont: option.selector, //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
-					pages: option.pages, //通过后台拿到的总页数
-					curr: option.curr || 1, //当前页
-					skin: option.skin||'',//皮肤
-					groups: option.groups||5,//连续分页数
-					skip: false, //是否开启跳页
-					jump: function(obj, first){ //触发分页后的回调
-						option.callback(obj, first)
-					}
-				});
-			}
+			//拖拽、旋转组件
+			$('._edit_area').append(GTPL.dragRotate());
 
    		});
 	</script>

@@ -1,5 +1,6 @@
 /**
  * Created by liusuling on 2016/9/13.
+ * @param:模板中心
  */
 define(function () {
 	var compTemplate = {
@@ -101,7 +102,7 @@ define(function () {
 			$('.template').on('click','.tpl-container li',function(){
 				if($('.modal').length>0) $('.modal').remove();
 				$('body').append(GTPL.confirm());
-				$('.modal').modal({
+				$('.confirm-modeal').modal({
 					backdrop: 'static'
 				});
 			});

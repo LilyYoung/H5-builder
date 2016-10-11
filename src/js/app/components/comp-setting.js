@@ -1,5 +1,6 @@
 /**
  * Created by yanglili on 2016-9-13.
+ * param:组件设置(弹窗)
  */
 define(function () {
     var compSet = {
