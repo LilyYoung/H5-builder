@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-ui/jquery-ui.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/hint/hint.min.css">
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/animate/animate.css">
 	<!--{{ macroset.linkcsss(config,[
 		"build/css/scene.min.css"
 	]) }}-->
