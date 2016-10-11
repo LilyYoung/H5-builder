@@ -107,9 +107,16 @@
    <div class="demo">
        <div class="edit_wrapper">
            <!-- 背景元素 -->
-           <div class="wrapper-background"></div>
-           <ul class="edit_area weebly-content-area weebly-area-active">
+           <!--<div class="wrapper-background"></div>-->
+           <!--<ul class="edit_area weebly-content-area weebly-area-active">-->
 
+           <!--</ul>-->
+           <ul class="edit_area edit-area  weebly-content-area weebly-area-active ">
+               <li class="demo-area ui-draggable ui-draggable-handle ui-resizable" contenteditable="true" style="position: relative; left: 79px; top: 86px; width: 160px; height: 165px;">
+                   <div class="demo-area-box">
+                       <h1>缓存测试块</h1>
+                   </div>
+                   <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></li>
            </ul>
        </div>
    </div>
