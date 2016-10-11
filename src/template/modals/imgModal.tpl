@@ -29,14 +29,14 @@
                         <li><a href="javascript:;">最近使用</a></li>
                     </ul>
                     <div class="add-tool clearfix">
-                        <a href="javascript:;">
+                        <a href="javascript:;" style="width: 200px;">
                             <i class="fa fa-plus-circle" aria-hidden="true"></i>
                             <em>添加分组</em>
                         </a>
-                        <a href="javascript:;">
+                        <!--<a href="javascript:;">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                             <em>在线制作</em>
-                        </a>
+                        </a>-->
                     </div>
                     <div class="uploading">
                         <div class="upload-con hint--top hint--rounded" data-hint="大小不超过3M，支持格式：jpg、gif、png、jpeg，一次最多上传6张">
