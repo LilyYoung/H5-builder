@@ -114,7 +114,7 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                 }).editingNode.trigger("element.change");
             });
             //双击编辑元素
-            _docu.on("dblclick",".wqdelementEdit",function (e) {
+            _docu.on("dblclick",".editable-text",function (e) {
                 var $group = $(this).closest(".wqdGroup");
                 // 如果是通条编辑界面下的非组合容器，不让里面内容可以选中,然后向上冒泡到容器本身
                 if($(this).parents(".elementsContainer").length > 1 && $("body").attr("data-carouseediting") != "true" && !$group.length) return;
@@ -151,19 +151,11 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                 maxLeft      = parentWidth - width,
                 maxTop       = parentHeight - height,
                 isFreeMove   = data.isFreeMove || this.isFreeMove($elm,data.isDrag),
-                // $parPrev     = $parent.parents(".yzmoveContent").prev().find("section.sectionV2"),
-                // $parNext     = $parent.parents(".yzmoveContent").next().find("section.sectionV2"),
                 canOverTop,canOverBottom;
-
-            if(data.isDrag && $elm.parent().hasClass('sectionV2')) {//切换通条，可以拖出上边缘，下边缘
-                canOverTop = $parPrev.length ? true : false;
-                canOverBottom = $parNext.length ? true : false;
-            }
 
             if(width < minWidth) width = minWidth;
             if(height < minHeight) height = minHeight;
             if($elm.attr('data-elementtype')=='line') height = 2;
-
 
             if(maxTop < 0) maxTop = 0;
             top = top ? top > 0 || (isFreeMove && $elm.parents(".wqd-carouseOverlay").length) || canOverTop ? top : 0 : 0;
@@ -194,36 +186,13 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
          */
         setNewPosition:function (data) {
             var $elm         = data.element,
-                $group       = $elm.parents(".wqdGroup"),
-                isDrag       = data.isDrag,
-                newElementId = tools.createID("elementId");
-            // 如果是刚创建分组,更新位置
-            if(data.group == "join") {
-                data.left = data.left - parseFloat($group.css("left"));
-                data.top  = data.top - parseFloat($group.css("top"));
-            } else if(!$elm.attr("elementId") && !$elm.hasClass("wqdGroup")){
-                $elm.attr({"elementId":newElementId,"id":newElementId});
-            }
-            // 解组时重新计算位置
-            if(data.group == "disjoin") {
-                data.left += data.groupleft;
-                data.top  += data.grouptop;
-            }
+                isDrag       = data.isDrag;
 
-            if($group.length) data.parent = $group;
             if(!data.parent.length) data.parent = this.getNode($elm).parent;
-            //悬浮容器改变父元素
-            if($elm.hasClass("wqdFixedContainer")) {
-                data.parent = $elm.parents(".wqdFixedContainerWrap");
-            }
+
             if(data.width === 0 || data.height === 0) return this;
             var newCss = this.getInfo(data);
             if(isDrag) {
-                if(data.parent.hasClass('sectionV2') && newCss.top < 0 || newCss.top > data.parent.height() - $elm.height() / 2) {
-                    data.top = newCss.top;
-                    this.changeSection(data);
-                    newCss.top = parseFloat(data.top);
-                }
                 css = {
                     left:newCss.left,
                     top:newCss.top
@@ -237,11 +206,7 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                 }
 
             }
-            if($elm.hasClass('dragMar')) {
-                delete css.top;
-                delete css.height;
-                css.marginTop = newCss.top;
-            }
+
             $elm.css(css);
 
             if(data.deg && typeof +data.deg === "number") {
@@ -255,38 +220,6 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
             if( data.isAdd || data.group === "joinGroup" || data.group === "disjoin" ) this.getElemZindex($elm,"top",data.parent,data.isAdd,data.group);
             data.elemKeyDown && this.showElemResizeInfo($elm);
             return this;
-        },
-
-        changeSection:function (data) {
-            var $elm  = data.element,
-                $clone= $elm.clone(),
-                $prev = $elm.parents(".yzmoveContent").prev().find(".sectionV2"),
-                $next = $elm.parents(".yzmoveContent").next().find(".sectionV2"),
-                $parent = this.getNode($elm).parent,
-                elemH = $elm.height(),isAppend = false,$newPar,top = data.top;
-            if(-top > elemH / 2 && $prev.length) {
-                $elm.css("top",$prev.height() + parseFloat($elm.css("top")) );
-                isAppend = true;
-                $newPar = $prev;
-                top = $prev.height() - elemH;
-            }else if(top > data.parent.height() - elemH / 2 && $next.length) {
-                $elm.css("top",parseFloat($elm.css("top")) - data.parent.height() );
-                isAppend = true;
-                $newPar = $next;
-                top = 0;
-            }
-
-            if(isAppend) {
-                var $siblings = $elm.siblings("[data-elemandgroup='true']") ,style = $('style.'+$elm.attr('id'));
-                $newPar.append($elm.css("top",top));
-                data.parent = $newPar;
-                data.isAdd = true;
-                data.top = top;
-                this.setNewPosition(data);
-                $("body").off("mousemove.elem");
-                style.length && $newPar.before(style[0]);
-                this.getElemZindex($siblings.eq(0),"reset",$siblings.length ? void 0 : $parent,void 0,void 0,true);
-            }
         },
 
         getNode:function ($this) {
@@ -422,7 +355,6 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
             var self = this;
 
             $(document).on("mousedown",elm,function (e) {
-                // $(".wqdNavMenuWrap").remove();  //删除手机导航自定义的菜单
                 if(e.button == 2) return false; //右键按下的时候阻止默认事件
                 var $elm          = $(this),
                     isEditable    = true,   //可编辑的
@@ -440,22 +372,6 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                         $elm = $(this).closest(".wqdelementEdit.elementsContainer");
                     }
                 }
-                //触发元素的设置编辑器
-                if(($elm.attr("data-unused") || '').indexOf("set") == -1){
-                    if($elm.attr("data-elementtype") != "img" && $elm.attr("data-elementtype") != "picture"){
-                        $(document).trigger("texteditor:close");
-                        $('#wqdpHeaderD .tool-list2').removeClass('have');
-                        $('body').data('exitId',$elm.attr('id'));
-                        isEditable && $(document).trigger("elmenentEdit",{element:$elm});
-                    }else{
-                        $('#elementSet').hide();
-                    }
-                }else{
-                    $('body').data('exitId','');
-                    $('#elementSet').hide();
-                }
-
-                $('.wqdelementEdit').removeClass('wqdselected wqdGroupmove');
 
                 //没有元素id的话主动添加一个新id
                 if(!$elm.attr("elementId") && !$elm.hasClass("wqdGroup")){
@@ -466,39 +382,18 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                 if($elm.attr("data-elementtype") == "articleListContainer") $elm = $elm.parents("[data-elementtype='article']").eq(0);//文章时拖动父节点
 
                 var unused = $elm.attr("data-unused") || "";
-                // 如果handle是分组中的元素并且是第一次点击，向上冒泡到分组元素
-                if($group.length && $group.attr("data-groupstatus") != "on") return;
-                // 如果是通条编辑界面下的非分组容器下元素，不允许拖动,向上冒泡到容器元素
-                if(unused.indexOf("bubble") == -1 && $elm.parents(".elementsContainer").length > 1 && $("body").attr("data-carouseediting") != "true" && !$group.length) return;
-                if($(e.target).closest("[data-slide]").length) return;// 如果点击的是轮播的按钮，return;
-
 
                 self.editingNode = $elm;
-
-                if(unused.indexOf("drag") != -1 || unused.indexOf("move") != -1) return false;//因为导航一级菜单禁止删除失效问题打开
 
                 var $parent = self.getNode($elm).parent;
                 var isFreeMove = false;
 
-                // 修改模式下容器可以拖动
-                if($elm.parent().hasClass('wqd-carouseOverlay-box')) {
-                    $elm = $elm.parent();
-                    $parent = $elm.parents(".wqd-carouseOverlay");
-                    isFreeMove = true;
-                }
-                //悬浮容器改变父元素
-                if($elm.hasClass("wqdFixedContainer")) {
-                    $parent = $elm.parents(".wqdFixedContainerWrap");
-                }
-
                 if(!$elm.length || !$parent.length) return false;
-                $elm.addClass("wqdselected");
+
                 var disX = e.clientX,disY = e.clientY;
                 e.stopPropagation();
                 this.setCapture && this.setCapture();
                 self.showElemResizeInfo($elm);
-                //初始化吸附线的坐标数据
-                adsorb.dataInit($elm);
 
                 var left = parseFloat($elm.css("left")),top = $elm.hasClass('dragMar') ? parseFloat($elm.css("marginTop")):parseFloat($elm.css("top"));
 
@@ -519,8 +414,6 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                     });
 
                     self.removeElementEditBtn({type:"move",toolbar:false});//拖动时也显示拖拽节点
-                    //拖拽吸附 参考线出现
-                    adsorb.moveAdsorb($elm, $elm.position().left, $elm.position().top,true);
                     // 拖拽结束时触发改动事件
                     $elm.trigger("element.change");
                     self.showElemResizeInfo($elm);
@@ -544,70 +437,27 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
             var self = this;
             $(document).on("mousedown",handle,function (e) {
                 if(e.button == 2) return false; //右键按下的时候阻止默认事件
-                var $group = $(this).parents(".wqdGroup");
-                if($group.length && $group.attr("data-groupstatus") != "on") return false;
                 e.stopPropagation();
                 var $this    = $(this),
                     $elm     = $this.parents(elm).eq(0),
                     $parent  = self.getNode($elm).parent,
-                    $editBox = $elm.children('.wqdelementEditBox'),
                     offLeft  = $(handle).offset().left, offTop = $(handle).offset().top,//当前相对文档left,top
                     clientX  = e.clientX, clientY = e.clientY, disX = clientX - offLeft, disY = clientY - offTop,//x,y,偏移x,偏移y
                     top      = $elm.hasClass('dragMar') ? parseFloat($elm.css("marginTop")):parseFloat($elm.css("top")), left = parseFloat($elm.css("left")),//元素离通条顶部、左边距离
                     width    = $elm.outerWidth(), height = $elm.outerHeight();//元素宽高
-                //悬浮容器改变父元素
-                if($elm.hasClass("wqdFixedContainer")) {
-                    $parent = $elm.parents(".wqdFixedContainerWrap");
-                }
-                //初始化吸附线的坐标数据
-                adsorb.dataInit($elm);
+
                 self.editingNode = $elm;
                 $("body").off("mousemove.elem").on("mousemove.elem.resize",function (e) {
                     e.stopPropagation();
                     var ndisX = e.clientX - disX, ndisY = e.clientY - disY,//偏移距离
                         addWidth   = isLeft ? offLeft - ndisX : e.clientX - clientX,//增加/减少的宽度
-                        parWidth   = $parent.width(),
-                        parHeight  = $parent.height(),
-                        maxWidth   = parWidth - left,
+                        addHeight  = isTop ? offTop - ndisY : e.clientY - clientY,
                         newLeft    = isLeft ? left-addWidth : left,
                         newWidth   = lockX ? width : width + (isLeft ? addWidth >= left ? left : addWidth:addWidth),//新宽度，如果为向左拉则不能超过元素离左边距离
-                        addHeight  = isTop ? offTop - ndisY : e.clientY - clientY,
-                        maxHeight  = parHeight - top,
+                        newHeight  = lockY ? height : height + (isTop ? addHeight >= top ? top : addHeight:addHeight),
                         newTop     = isTop ? top - addHeight : top,
-                        newHeight  = lockY ? height : height + (isTop ? addHeight >= top ? top : addHeight:addHeight),//新高度，如果为向上拉则不能超过元素离上边距离
-                        isPhone    = $("#wqdIphoneContainer").length > 0,
                         isFreeMove = self.isFreeMove($elm),minTop,maxTop,maxLeft;
 
-                    // 图片元素高度最大不超过图片的高度
-                    var $img = $elm.find(".wqd-img");
-                    if($elm.attr("data-elementtype") == "img" && $img.length && newHeight > $img.outerHeight()) {
-                        var $editBox = $elm.find(".wqdelementEditBox"),border = $editBox.css("border-width"),padding = $editBox.css("padding");
-                        newHeight = $img.outerHeight() + (border ? parseFloat(border) * 2 : "") + (padding ? parseFloat(padding) * 2 : "");
-                        minTop = top + height - newHeight;
-                        newTop < minTop && (newTop = minTop);
-                    }
-                    // 如果拖动的是左边框，距离左边最小left为0,向右最大left不能超过原right的距离
-                    if(isLeft && (!isFreeMove || isPhone)) {
-                        newLeft = newLeft >= 0 ? newLeft : 0;
-                        maxLeft = left + width - 10;
-                        newLeft = newLeft > maxLeft ? maxLeft : newLeft;
-                    }else if(newWidth >= maxWidth && (!isFreeMove || isPhone)) {//手机或自由拖动状态下可以拖出主区域
-                        newWidth = maxWidth;
-                    }
-                    // 如果拖动的是上边框，距离上边最小top为0
-                    if(isTop) {
-                        newTop = newTop >= 0 ? newTop :0;
-                        maxTop = top + height - 10;
-                        newTop = newTop > maxTop ? maxTop : newTop;
-                    }else if(newHeight >= maxHeight && !isFreeMove) {
-                        newHeight = maxHeight;
-                    }
-
-                    // 如果宽度达到97%,自动100%
-                    if(newWidth/parWidth > 0.97 && !isFreeMove) {
-                        newWidth = parWidth;
-                        newLeft = 0;
-                    }
                     var newPosition = {
                         element:$elm,
                         parent:$parent,
@@ -617,22 +467,10 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                         top:newTop,
                         isLeft:true
                     };
-                    // 兼容已使用百分比的容器 拉伸容器的时候子元素转换为px
-                    if($elm.hasClass("elementsContainer") && $elm[0].style.width.indexOf("%") != -1) {
-                        self.updateElements(self.getNode($elm.find(".wqdelementEdit").eq(0)).parent);
-                    }
 
-                    //拖拽吸附
-                    adsorb.moveAdsorb($elm, newLeft, newTop,false);
                     self.setNewPosition(newPosition).showElemResizeInfo($elm);
                     // 拖拽结束时触发改动事件 导航用到
                     $elm.trigger("element.change").trigger("element.resize");
-                    // 拖动时候其他元素透明
-                    $elm.addClass("onDragingElement").parents(".sectionV2,.wqd-carouseOverlay").addClass("onDraging");
-                    /*$(".elementToolbar").css({
-                     "top": $elm.offset().top+$elm.outerHeight(),
-                     "left":$elm.offset().left
-                     });*/
                 });
             });
         },

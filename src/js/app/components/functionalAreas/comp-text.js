@@ -1,6 +1,6 @@
 /**
  * Created by wangyongqiang-ds1 on 2016/9/14.
- * param:文本编辑
+ * param:文本可编辑状态切换
  */
 define(function () {
     var compText = {
@@ -12,6 +12,7 @@ define(function () {
                 event.preventDefault;
                 $('.comp-drag').draggable('disable');
                 $(this).attr('contenteditable','true');
+                $(this).addClass('contentEdit');
                 if (window.getSelection) {
                     var sel = window.getSelection();
                     sel.modify('move','left','documentboundary');
@@ -31,6 +32,7 @@ define(function () {
             });
             $(document).click(function () {
                 $('.editable-text').removeAttr('contenteditable','true');
+                $('.editable-text').removeClass('contentEdit');
                 $('.comp-drag').draggable('enable');
             });
         }
