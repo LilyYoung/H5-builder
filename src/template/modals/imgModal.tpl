@@ -45,7 +45,8 @@
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                             <em>上传</em>
                         </div>
-                        <div class="upload-tip"></div>
+                        <div class="upload-image" >
+                            <input type="file" multiple="" accept="image/jpeg,.jpg,image/gif,.gif,image/png,.png,.jpeg"></div>
                     </div>
                 </div>
                 <div class="gome-modal-list">
