@@ -8,6 +8,7 @@
         </li>
     </ul>
 </div>
+
 <div class="tab-panel tag-tpl-tab hide" id="my-template-nav">
     <ul class="nav nav-tabs my-self">
         <li class="active">
