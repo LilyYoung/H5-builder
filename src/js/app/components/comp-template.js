@@ -30,16 +30,8 @@ define(function () {
 			$('.template').on('click','#template-nav li',function() {
 				var $index = $(this).index();
 				$(this).addClass('active').siblings().removeClass('active');
-				$('.template .template-con').addClass('hide');
-				if($index == 0) {
-					$('#template-center').removeClass('hide');
-					$('#my-template-nav').addClass('hide');
-				}else {
-					$('#my-template-nav li').eq(0).addClass('active');
-					$('#my-template').removeClass('hide');
-					$('#template-center').addClass('hide');
-					$('#my-template-nav').removeClass('hide');
-				}
+				$('.tpl-tab-panel-wrap').children().addClass('hide').eq($index).removeClass('hide');
+
 			})
 		},
 
@@ -48,14 +40,7 @@ define(function () {
 			$('.template').on('click','#my-template-nav li',function() {
 				var $index = $(this).index();
 				$(this).addClass('active').siblings().removeClass('active');
-				$('.template .template-con').addClass('hide');
-				if($index == 0) {
-					$('#my-template').removeClass('hide');
-				}else if($index == 1){
-					$('#company-template').removeClass('hide');
-				}else {
-					$('#lately-template').removeClass('hide');
-				}
+				$('.tpl-panel-my .tag-tpl-tab-con').children().addClass('hide').eq($index).removeClass('hide');
 			})
 		},
 
