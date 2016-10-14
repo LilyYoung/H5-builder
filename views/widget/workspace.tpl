@@ -25,10 +25,10 @@
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="刷新预览"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="复制当前页"><i class="fa fa-files-o" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded background-tool" href="javascript:;" data-hint="背景"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-                <a class="active hint--right hint--rounded" href="javascript:;" data-hint="音乐"><i class="fa fa-music" aria-hidden="true"></i></a>
-                <a class="hint--right hint--rounded" href="javascript:;"  data-hint="特效"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                <!--<a class="active hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;" data-hint="音乐"><i class="fa fa-music" aria-hidden="true"></i></a>
+                <a class="hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;"  data-hint="特效"><i class="fa fa-star-o" aria-hidden="true"></i></a>-->
                 <a class="active hint--right hint--rounded grid-guide" href="javascript:;" data-hint="网格设置"><i class="fa fa-table" aria-hidden="true"></i></a>
-                <a class="active hint--right hint--rounded" href="javascript:;" data-hint="手机边框"><em class="imp heart"></em><i class="fa fa-mobile" aria-hidden="true"></i></a>
+               <!-- <a class="active hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;" data-hint="手机边框"><em class="imp heart"></em><i class="fa fa-mobile" aria-hidden="true"></i></a>-->
                 <a class="active hint--right hint--rounded" href="javascript:;" id="warn" data-hint="警告"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>
 
                 <div class="grid-guide-container">

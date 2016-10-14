@@ -202,10 +202,10 @@
             </div>
             <span class="tip">表单</span>
         </li>
-        <li class="comp-draggable images">
+        <!--<li class="comp-draggable images">
             <span class="fa fa-star-o"></span>
             <span class="tip">特效</span>
-        </li>
+        </li>-->
 
     </ul>
 </div>
