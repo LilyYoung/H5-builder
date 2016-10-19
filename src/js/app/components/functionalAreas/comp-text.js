@@ -10,14 +10,15 @@ define(function () {
         action: function () {
             $('body').on('dblclick','.editable-text',function (event) {
                 event.preventDefault;
+                $('.editable-text').editable();
                 $('.comp-drag').draggable('disable');
-                $(this).attr('contenteditable','true');
-                $(this).addClass('contentEdit');
+                $('.editable-text').attr('contenteditable','true');
+                $('.editable-text').addClass('contentEdit');
 
                 // 创建一个textarea元素
-                var textAreaElement = document.createElement("textarea");
-                var divElement = $(this);
-                $('.editable-text').editable();
+                // var textAreaElement = document.createElement("textarea");
+                // var divElement = $(this);
+
                 // // 把obj里面的元素以及文本内容赋值给新建的textAreaElement
                 // textAreaElement.value = divElement.innerHTML;
                 //
