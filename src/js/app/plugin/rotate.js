@@ -6,15 +6,7 @@ define(['dynamicStyle'],function (_css) {
     var rotate = {
         // 旋转
         init:function () {
-            var self = this;
             this.bindRotation("[data-elemandgroup='true']",".bar-rotate");//配置参数：旋转的dom对象
-            $(document).on("rotate.show",function (e,data) {
-                data.element.find(".bar-rotate").remove().end().append("<div class='bar bar-radius bar-rotate radius-s3 rotate3'></div>");
-                data.element.trigger("element.rotate");
-            });
-            $(document).on("element.rotate",function (e) {
-                self.updateAngleInfo($(e.target));
-            });
             // 清除角度
             $(document).on("click.rotate.clear",".rotationClear",function (e) {
                 var $elm = $(this).parents("[data-elemandgroup='true']").eq(0);
@@ -37,14 +29,12 @@ define(['dynamicStyle'],function (_css) {
          * @param  {[String]} handle           [触发的元素选择器]
          */
         bindRotation:function (elm,handle) {
-            var self = this;
             $(document).on("mousedown",handle,function (e) {
                 var $elm = $(this).parents(elm).eq(0);
                 var pageX,pageY,offsetX,offsetY,centerX,centerY;
                 offsetX = $elm.offset().left;
                 offsetY = $elm.offset().top;
                 e.stopPropagation();
-
                 $("body").off("mousemove.elem.rotate").on("mousemove.elem.rotate",function (e) {
                     e.stopPropagation();
                     pageX = e.pageX;
@@ -52,11 +42,12 @@ define(['dynamicStyle'],function (_css) {
                     centerX = $elm.width()/2 + offsetX;
                     centerY = $elm.height()/2 + offsetY;
                     var rotat,rotat2,y,x;
+
                     y = Math.abs(centerY - pageY);
                     x = Math.abs(centerX - pageX);
-                    //第一象限
                     rotat2 = Math.atan(($elm.height()/2)/($elm.width()/2))*180/Math.PI;
                     rotat = Math.atan(y/x)*180/Math.PI;
+                    //第一象限
                     if(pageX < centerX && pageY < centerY){
                         rotat = rotat -rotat2;
                     }
