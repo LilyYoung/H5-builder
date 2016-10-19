@@ -29,7 +29,7 @@
                 <a class="hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;"  data-hint="特效"><i class="fa fa-star-o" aria-hidden="true"></i></a>-->
                 <a class="active hint--right hint--rounded grid-guide" href="javascript:;" data-hint="网格设置"><i class="fa fa-table" aria-hidden="true"></i></a>
                <!-- <a class="active hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;" data-hint="手机边框"><em class="imp heart"></em><i class="fa fa-mobile" aria-hidden="true"></i></a>-->
-                <a class="active hint--right hint--rounded" href="javascript:;" id="warn" data-hint="警告"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>
+               <!-- <a class="active hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;" id="warn" data-hint="警告"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>-->
 
                 <div class="grid-guide-container">
                     <div class="grid-guide-setting">

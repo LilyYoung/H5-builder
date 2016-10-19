@@ -2,10 +2,11 @@
  * Created by wangyongqiang-ds1 on 2016/9/14.
  * param:文本可编辑状态切换
  */
-define(function () {
+define(['Editor'],function (Editor) {
     var compText = {
         init: function () {
             this.action();
+            Editor.init();
         },
         action: function () {
             $('body').on('dblclick','.editable-text',function (event) {

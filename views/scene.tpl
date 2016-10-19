@@ -24,6 +24,7 @@
 		,"build/css/modal.min.css"
 		,"build/css/template.min.css"
 		,"build/css/drag_rotate.min.css"
+		,"build/css/editor.min.css"
 	]) }}
 </head>
 <body>
@@ -57,7 +58,7 @@
 	<script src="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-	<script src="{{ config.jsServer }}build/js/lib/cheditor/ckeditor.js"></script>
+	<!--<script src="{{ config.jsServer }}build/js/lib/cheditor/ckeditor.js"></script>-->
 	<script src="{{ config.jsServer }}build/js/lib/colorbox/jquery.colorbox.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/dragsort/jquery.dragsort-0.4.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/jquery-ui/jquery-ui.min.js"></script>
@@ -82,6 +83,7 @@
 			$('#scene').append(GTPL.compLayout());
 			//拖拽、旋转组件
 			$('._edit_area').append(GTPL.dragRotate());
+
 
    		});
 	</script>
