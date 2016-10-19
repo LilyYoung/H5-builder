@@ -39,7 +39,11 @@ require.config({
         'rotate' : 'app/plugin/rotate',
         'drag' : 'app/plugin/drag',
         'adsorbConfig' : 'app/plugin/adsorbConfig',
+<<<<<<< HEAD
         'Editor': 'app/plugin/editor'
+=======
+        'editTool' : 'app/plugin/editTool'
+>>>>>>> origin/master
     },
     //没有使用 define() 声明依赖项、没有设置模块值,暴露出全局变量
     shim: {
