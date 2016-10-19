@@ -38,7 +38,8 @@ require.config({
         'dynamicStyle' : 'app/plugin/dynamicStyle',
         'rotate' : 'app/plugin/rotate',
         'drag' : 'app/plugin/drag',
-        'adsorbConfig' : 'app/plugin/adsorbConfig'
+        'adsorbConfig' : 'app/plugin/adsorbConfig',
+        'Editor': 'app/plugin/editor'
     },
     //没有使用 define() 声明依赖项、没有设置模块值,暴露出全局变量
     shim: {

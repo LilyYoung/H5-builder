@@ -1,0 +1,167 @@
+
+#editor-box {
+    position: absolute;
+    z-index: 1040;
+    box-shadow: 0 3px 7px rgba(0,0,0,.3);
+    background-color: #FFF;
+    height: 40px;
+    padding: 6px 12px;
+    a {color:#828d98;}
+    .btn-group {
+        float: left;
+        border: 0;
+        text-decoration: none;
+        text-shadow: rgba(0,0,0,.3) 0 1px 1px;
+        margin: 0;
+    }
+    .text-btn-border {
+        background-color: #fff;
+        height: 28px;
+        position: relative;
+        text-align: left;
+        line-height: 28px;
+        color: #828d98;
+        position: relative;
+        cursor: pointer;
+
+        span {
+            display: inline-block;
+            height: 28px;
+            overflow: hidden;
+        }
+        .caret {
+            position: absolute;
+            margin: 0;
+            top: 50%;
+            right: 5px;
+        }
+
+        .text-btn-border-color {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            text-align: center;
+            line-height: 18px;
+            color: #828d98;
+            i {
+                width: 16px;
+                height: 3px;
+                position: absolute;
+                bottom: 0px;
+                left: 1px;
+                border: 1px solid #ccd5db;
+            }
+        }
+
+        .select-color {
+            cursor: pointer;
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            opacity: 0;
+            width: 28px;
+            height: 28px;
+            background-color: rgb(232, 116, 116);
+        }
+    }
+
+
+
+    .dropdown-menu li {
+        height: 28px;
+        line-height: 28px;
+        padding: 0px 10px;
+        font-size: 12px;
+        color: #828d98;
+        text-align: left;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        width: 100%;
+        &:hover {
+            color: #fff;
+            background-color: #48d5b2;
+        }
+
+    }
+
+    .intersected {
+        margin-left: 3px;
+        margin-right: 5px;
+        height: 28px;
+        border-right: 1px solid #ccd5db;
+    }
+
+    .fontFamily {
+        .text-btn-border {
+            padding-right: 20px;
+            font-size: 12px;
+            span {
+                display: inline-block;
+                height: 28px;
+                width: 70px;
+                overflow: hidden;
+            }
+        }
+        .dropdown-menu {
+            min-width: 130px;
+            max-height: 350px;
+            overflow-y:auto;
+        }
+    }
+
+    .fontSize,.textAlignment,.textLineHeight,.textLetterspace,.textLink {
+        .text-btn-border {
+            padding-left: 5px;
+            padding-right: 20px;
+        }
+
+        .dropdown-menu {
+            color: #000;
+            min-width: 100px;
+        }
+    }
+
+    .txtFontColor, .txtBackgroundColor {
+        .dropdown {
+            width: 28px;
+        }
+
+    }
+
+    .txtBackgroundColor {
+
+        .text-btn-border {
+
+            .text-btn-border-color {
+                background-image: url(build/css/i/toobarbg.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                text-align: center;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .txtFontStyle, .txtEraser {
+        .text-btn-border {
+            width: 90px;
+        }
+       .text-style a  {
+            width: 18px;
+           text-align: center;
+       }
+    }
+    .txtEraser {
+        .text-btn-border {
+            width: 20px;
+        }
+    }
+
+}
