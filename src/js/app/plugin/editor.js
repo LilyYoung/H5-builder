@@ -21,10 +21,10 @@ define(function () {
 		$(document).on('dblclick','.editable-text',function(ev) {
 			var elem = $(this);
 			that.showEditor(elem);
-
+			$(elem).closest('li').attr('data-elemandgroup','false');
 
 		});
-		$(document).on('click.editor',function(ev) {
+		$(document).on('mousedown.editor',function(ev) {
 
 			var elem = $(ev.target);
 
@@ -33,11 +33,15 @@ define(function () {
 
 			if(contenteditable !=undefined ){
 				if(!contenteditable){
+
 					that.hideEditor($('[contenteditable="true"]'));
+					//$('[contenteditable="true"]').closest('li').attr('data-elemandgroup','true');
 				}
 			}else{
 				if(!elem.closest('.cke_float').length){
+
 					that.hideEditor($('[contenteditable="true"]'));
+					//$('[contenteditable="true"]').closest('li').attr('data-elemandgroup','true');
 				}
 			}
 		});
@@ -53,6 +57,7 @@ define(function () {
 	Editor.disableEditing = function(id) {
 		if ( CKEDITOR.instances[id] )
 			CKEDITOR.instances[id].destroy();
+		$('#'+id).closest('li').attr('data-elemandgroup','true');
 	};
 
 	Editor.showEditor = function(elem) {

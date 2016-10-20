@@ -50,6 +50,9 @@
                     padding: .3em 15px;
                     margin: 0;
                     word-wrap: break-word;
+                    &:focus {
+                        outline: none;
+                    }
                 }
                 .contentEdit {
                     cursor: text;
