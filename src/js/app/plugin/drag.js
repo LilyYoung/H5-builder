@@ -188,7 +188,7 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
 
         getNode:function ($this) {
             var $elm = $this,
-                $parent = $elm.parents(".edit_wrapper").eq(0);
+                $parent = $elm.parents(".edit_area").eq(0);
             return {
                 element:$elm,
                 parent:$parent

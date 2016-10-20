@@ -9,12 +9,13 @@ define(['Editor'],function (Editor) {
             Editor.init();
         },
         action: function () {
+            $('.editable-text').editable();
             $('body').on('dblclick','.editable-text',function (event) {
-                event.preventDefault;
-                $('.editable-text').editable();
+                // event.preventDefault;
                 $('.comp-drag').draggable('disable');
                 $('.editable-text').attr('contenteditable','true');
                 $('.editable-text').addClass('contentEdit');
+
 
                 // 创建一个textarea元素
                 // var textAreaElement = document.createElement("textarea");
