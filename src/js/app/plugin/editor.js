@@ -5,8 +5,81 @@ define(function () {
 	var Editor ={};
 
 	Editor.init = function () {
-		this.txtEditor();
+
+
+		$('._edit_area').append(GTPL.dragRotate());
+		this.editorEvent();
+
+		//this.txtEditor();
+		//this.txtEvent();
+
 	};
+
+	//双击document事件弹窗文字编辑框
+	Editor.editorEvent = function() {
+		var that = this;
+		$(document).on('dblclick','.editable-text',function(ev) {
+			var elem = $(this);
+			that.showEditor(elem);
+
+
+		});
+		$(document).on('click.editor',function(ev) {
+
+			var elem = $(ev.target);
+
+			var elemTarget = elem.closest('[contenteditable]');
+			var contenteditable = elemTarget.attr('contenteditable');
+
+			if(contenteditable !=undefined ){
+				if(!contenteditable){
+					that.hideEditor($('[contenteditable="true"]'));
+				}
+			}else{
+				if(!elem.closest('.cke_float').length){
+					that.hideEditor($('[contenteditable="true"]'));
+				}
+			}
+		});
+	};
+	Editor.enableEditing  = function(id) {
+		if ( !CKEDITOR.instances[id] ) {
+			CKEDITOR.inline( id, {
+				startupFocus: true
+			} );
+		}
+	};
+
+	Editor.disableEditing = function(id) {
+		if ( CKEDITOR.instances[id] )
+			CKEDITOR.instances[id].destroy();
+	};
+
+	Editor.showEditor = function(elem) {
+		var that = this;
+		var isEditingEnabled = elem.attr('isEditingEnabled');
+		var id = elem.attr('id');
+		if(!isEditingEnabled) {
+			elem.attr('isEditingEnabled','false');
+		}
+		if(elem.attr('isEditingEnabled') == 'false') {
+			elem.attr('isEditingEnabled','true');
+		}else if(isEditingEnabled == 'true'){
+			return false;
+		}
+
+		elem.attr( 'contenteditable', true );
+
+		that.enableEditing(id);
+	};
+
+	Editor.hideEditor = function(elem) {
+		var that = this;
+		elem.attr('isEditingEnabled','false');
+		var id = elem.attr('id');
+		that.disableEditing(id);
+		elem.attr( 'contenteditable', false );
+	}
 
 	//网格颜色选择器初始化
 	Editor.chooseColorWay = function(option) {
@@ -55,7 +128,7 @@ define(function () {
 					top: pos.top
 				});
 
-				that.txtEvent();
+
 
 				that.chooseColorWay({
 					selectorObj: $('#selTxtFontColor'),
@@ -86,36 +159,45 @@ define(function () {
 
 		$(document).on('mousedown.editor',function(ev) {
 			var elem = $(ev.target);
-			var contenteditable = elem.attr('contenteditable');
+			var elemTarget = elem.closest('[contenteditable]');
+			if(elemTarget.length){
+				var contenteditable = elemTarget.attr('contenteditable');
 
-			if(contenteditable != 'true' &&　!elem.closest('#editor-box').length) {
-				$('#editor-box').remove();
+				if(contenteditable != 'true' &&　!elem.closest('.cke_float').length) {
+					$('#editor-box').remove();
+				}
 			}
+
+
 		});
 	};
 	//文本编辑框事件
 	Editor.txtEvent = function() {
 		this.fontPullDown();
-		this.fontFamily();
+		//this.fontFamily();
 	};
 	//设置字体事件
 	Editor.fontFamily = function() {
-		$('document').on('click.fontFamily','#editor-box ')
+
 	};
 	Editor.fontPullDown = function() {
-		$('document').on('click','#editor-box .dropdown-toggle',function() {
+		var that = this;
+		$(document).on('click','#editor-box .dropdown-toggle',function() {
 
 		});
-		$('document').on('click','#editor-box .dropdown-menu li',function() {
+		$(document).on('click','#editor-box .dropdown-menu li',function() {
+			if($(this).closest('.fontFamily').length || $(this).closest('.fontSize').length) {
+				var text = $(this).text().replace(/px/g,'');
+				$(this).parent().siblings('.dropdown-toggle').find('span').text(text);
 
+				that.txtStyle();
+
+			}
 		});
 	};
 	Editor.txtStyle = function () {
 		var that = this;
-		$(document).on('click.txtStyle',function(ev) {
-			var elem = $(ev.target);
-			that.createEditorBox(elem);
-		});
+
 	};
 
 	//计算文本编辑框的位置

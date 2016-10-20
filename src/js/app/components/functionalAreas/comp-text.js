@@ -9,12 +9,12 @@ define(['Editor'],function (Editor) {
             Editor.init();
         },
         action: function () {
-            $('.editable-text').editable();
+            // $('.editable-text').editable();
             $('body').on('dblclick','.editable-text',function (event) {
                 // event.preventDefault;
-                $('.comp-drag').draggable('disable');
-                $('.editable-text').attr('contenteditable','true');
-                $('.editable-text').addClass('contentEdit');
+                // $('.comp-drag').draggable('disable');
+                // $('.editable-text').attr('contenteditable','true');
+                // $('.editable-text').addClass('contentEdit');
 
 
                 // 创建一个textarea元素
@@ -52,9 +52,9 @@ define(['Editor'],function (Editor) {
 
             });
             $(document).click(function () {
-                $('.editable-text').removeAttr('contenteditable','true');
-                $('.editable-text').removeClass('contentEdit');
-                $('.comp-drag').draggable('enable');
+                //$('.editable-text').removeAttr('contenteditable','true');
+                // $('.editable-text').removeClass('contentEdit');
+                // $('.comp-drag').draggable('enable');
             });
         }
     };
