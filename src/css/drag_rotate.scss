@@ -2,8 +2,9 @@
 .edit_area {
     li{
         width: 320px;
-        height: 38px;
+       // height: 38px;
         position: absolute;
+
         color: #676767;
         line-height: 1;
         background: 0 0;
@@ -22,6 +23,7 @@
             z-index: 101;
             width: 100%;
             height: 100%;
+            overflow: hidden;
             font-size: 24px;
             transform: none;
             touch-action: pan-x pan-y;
@@ -41,8 +43,8 @@
                     //height: 100%;
                     //width: 320px;
                     //height: 38px;
-                    min-width: 1px;
-                    min-height: 1px;
+                   //min-width: 1px;
+                    min-height: 38px;
                     color: #404449;
                     line-height: inherit;
                     padding: .3em 15px;

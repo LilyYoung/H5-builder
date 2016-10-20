@@ -79,7 +79,9 @@ define(function () {
 		var id = elem.attr('id');
 		that.disableEditing(id);
 		elem.attr( 'contenteditable', false );
-	}
+	};
+
+
 
 	//网格颜色选择器初始化
 	Editor.chooseColorWay = function(option) {
