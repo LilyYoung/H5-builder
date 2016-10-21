@@ -34,7 +34,7 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
             // 点击非元素时移除拖拽，旋转
             _docu.on("click",function (e) {
                 $this = $(e.target);
-                console.info($this);
+                // console.info($this);
             });
 
             // 鼠标抬起时解绑移动事件并更新缓存

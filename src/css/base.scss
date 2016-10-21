@@ -22,6 +22,7 @@ textarea{ resize:none;overflow:auto;}
 body {
   font:14px/1.2 '微软雅黑',YaHei,'黑体',Hei,Tahoma,Helvetica,arial,sans-serif;
   background-color: $body-bgc;
+	user-select:none;
 }
 
 //按钮颜色
@@ -154,4 +155,10 @@ label.radio-square {
 		}
 
 	}
+}
+
+.clone{
+	position: absolute;
+	color: #fff;
+	opacity: 0.8;
 }
