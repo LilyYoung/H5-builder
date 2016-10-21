@@ -21,9 +21,11 @@ define(function () {
 		$(document).on('dblclick','.editable-text',function(ev) {
 			var elem = $(this);
 			that.showEditor(elem);
+
 			$(elem).closest('li').attr('data-elemandgroup','false');
 
 		});
+
 		$(document).on('mousedown.editor',function(ev) {
 
 			var elem = $(ev.target);
@@ -35,29 +37,38 @@ define(function () {
 				if(!contenteditable){
 
 					that.hideEditor($('[contenteditable="true"]'));
-					//$('[contenteditable="true"]').closest('li').attr('data-elemandgroup','true');
 				}
 			}else{
 				if(!elem.closest('.cke_float').length){
 
 					that.hideEditor($('[contenteditable="true"]'));
-					//$('[contenteditable="true"]').closest('li').attr('data-elemandgroup','true');
 				}
 			}
 		});
 	};
 	Editor.enableEditing  = function(id) {
 		if ( !CKEDITOR.instances[id] ) {
+
 			CKEDITOR.inline( id, {
-				startupFocus: true
+				startupFocus: true,
+				on: {
+					change: function ( ev ) {
+					},
+					focus: function(ev) {
+						document.execCommand("selectAll");
+					}
+				}
+
 			} );
+			/*var editor = $(this);
+			editor.focus();*/
 		}
 	};
 
 	Editor.disableEditing = function(id) {
 		if ( CKEDITOR.instances[id] )
 			CKEDITOR.instances[id].destroy();
-		$('#'+id).closest('li').attr('data-elemandgroup','true');
+		//$('#'+id).closest('li').attr('data-elemandgroup','true');
 	};
 
 	Editor.showEditor = function(elem) {
@@ -74,7 +85,7 @@ define(function () {
 		}
 
 		elem.attr( 'contenteditable', true );
-
+		//document.execCommand("selectAll");
 		that.enableEditing(id);
 	};
 
