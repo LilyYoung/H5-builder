@@ -15,8 +15,8 @@ define(function () {
 		$(document).on('contextmenu',function(ev) {
 			$target = $(ev.target);
 			var pos = {
-				left: ev.pageX,
-				top: ev.pageY
+				left: ev.pageX + 20,
+				top: ev.pageY - 50
 			};
 			if($target.closest('.edit-workspace .edit_area .comp_paragraph').length) {
 				that.showShortcut(pos);
