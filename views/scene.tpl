@@ -24,6 +24,7 @@
 		,"build/css/modal.min.css"
 		,"build/css/template.min.css"
 		,"build/css/drag_rotate.min.css"
+        ,"build/css/contextmenu.css"
 	]) }}
 </head>
 <body>

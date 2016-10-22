@@ -2,11 +2,12 @@
  * Created by wangyongqiang-ds1 on 2016/9/14.
  * param:文本可编辑状态切换
  */
-define(['Editor'],function (Editor) {
+define(['Editor','Contextmenu'],function (Editor,Contextmenu) {
     var compText = {
         init: function () {
             this.action();
             Editor.init();
+            Contextmenu.init();
         },
         action: function () {
             // $('.editable-text').editable();
