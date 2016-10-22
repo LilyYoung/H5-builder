@@ -68,7 +68,7 @@ define(function () {
 	Editor.disableEditing = function(id) {
 		if ( CKEDITOR.instances[id] )
 			CKEDITOR.instances[id].destroy();
-		//$('#'+id).closest('li').attr('data-elemandgroup','true');
+		$('#'+id).closest('li').attr('data-elemandgroup','true');
 	};
 
 	Editor.showEditor = function(elem) {
