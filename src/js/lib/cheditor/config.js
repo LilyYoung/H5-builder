@@ -15,17 +15,9 @@ CKEDITOR.editorConfig = function( config ) {
 	];
 
 	config.uiColor = '#48d5b2';
-	config.toolbarStartupExpanded = true;
-	config.toolbarCanCollapse = true;
-	config.toolbarStartupExpanded = true;
 	config.font_defaultLabel = '微软雅黑';
 	config.font_names = '宋体;微软雅黑;黑体;Arial';
 	config.fontSize_defaultLabel = '14px';
-	config.ignoreEmptyParagraph = true;
-	config.image_removeLinkByEmptyURL = true;
-	config.startupOutlineBlocks = true;
-	config.editingBlock = false;
 	config.fontSize_sizes ='12/12px;14/14px;16/16px;18/18px;20/20px;22/22px;24/24px;26/26px;28/28px;36/36px;48/48px;72/72px';
-	config.enterMode = CKEDITOR.ENTER_BR;
 
 };
