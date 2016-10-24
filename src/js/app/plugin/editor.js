@@ -10,18 +10,6 @@ define(function () {
 		$('._edit_area').append(GTPL.dragRotate());
 		this.editorEvent();
 
-		$('body').append('<div id="aaaa" contenteditable="true" style="width: 200px; height: 200px; position: absolute;left:50%; top:50%; z-index: 10000; background: red;" >aaaaa</div>')
-		CKEDITOR.inline( 'aaaa', {
-			startupFocus: true,
-			 on: {
-			 change: function ( ev ) {
-			 },
-			 focus: function(ev) {
-			 document.execCommand("selectAll");
-			 }
-			 }
-
-		} );
 		//this.txtEditor();
 		//this.txtEvent();
 
