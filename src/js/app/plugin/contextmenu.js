@@ -18,10 +18,12 @@ define(function () {
 				left: ev.pageX + 20,
 				top: ev.pageY - 50
 			};
-			if($target.closest('.edit-workspace .edit_area .comp_paragraph').length) {
+			if($target.closest('.edit-workspace .edit_area .comp_paragraph').length && $target.closest('.edit-workspace .edit_area .comp_paragraph').attr('contenteditable') == 'false') {
 				that.showShortcut(pos);
 			}
-			ev.preventDefault()
+			ev.stopPropagation();
+			ev.preventDefault();
+
 		})
 
 		$(document).on('click',function () {

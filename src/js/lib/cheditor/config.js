@@ -13,7 +13,6 @@ CKEDITOR.editorConfig = function( config ) {
 		['Cut','Copy','Paste','PasteText'],
 		['TextColor','BGColor']
 	];
-
 	config.uiColor = '#48d5b2';
 	config.font_defaultLabel = '微软雅黑';
 	config.font_names = '宋体;微软雅黑;黑体;Arial';

@@ -51,12 +51,16 @@ define(function () {
 
 			CKEDITOR.inline( id, {
 				startupFocus: true,
+				removePlugins : 'contextmenu,liststyle,tabletools',
 				on: {
 					change: function ( ev ) {
 					},
 					focus: function(ev) {
 						document.execCommand("selectAll");
 					}
+				},
+				contextMenu: function(ev) {
+					ev.preventDefault();
 				}
 
 			} );
