@@ -39,7 +39,7 @@ define(function () {
 					that.hideEditor($('[contenteditable="true"]'));
 				}
 			}else{
-				if(!elem.closest('.cke_float').length){
+				if(!elem.closest('.cke_reset_all').length){
 
 					that.hideEditor($('[contenteditable="true"]'));
 				}
@@ -49,7 +49,7 @@ define(function () {
 	Editor.enableEditing  = function(id) {
 		if ( !CKEDITOR.instances[id] ) {
 
-			CKEDITOR.inline( id, {
+			var editor = CKEDITOR.inline( id, {
 				startupFocus: true,
 				removePlugins : 'contextmenu,liststyle,tabletools',
 				on: {
@@ -58,14 +58,11 @@ define(function () {
 					focus: function(ev) {
 						document.execCommand("selectAll");
 					}
-				},
-				contextMenu: function(ev) {
-					ev.preventDefault();
 				}
 
 			} );
-			/*var editor = $(this);
-			editor.focus();*/
+			//var editor = $(this);
+			editor.focus();
 		}
 	};
 
