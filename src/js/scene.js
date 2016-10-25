@@ -22,6 +22,7 @@ require.config({
         'compSet' : 'app/components/comp-setting',
         'compShortcut' : 'app/components/comp-shortcut',
         'compTemplate' : 'app/components/comp-template',
+        'headSetting': 'app/components/head-setting',
 
 
         /*插件类*/
