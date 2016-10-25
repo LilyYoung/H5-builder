@@ -101,7 +101,7 @@
 </div>
 <div class="create-action">
     <ul>
-        <li class="act-border setting gray-dark all-change">
+        <li class="act-border setting gray-dark all-change _header_setting">
             <span class="tip">设置</span>
         </li>
         <li class="act-border save gray-dark all-change">
