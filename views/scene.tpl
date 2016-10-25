@@ -24,6 +24,7 @@
 		,"build/css/modal.min.css"
 		,"build/css/template.min.css"
 		,"build/css/drag_rotate.min.css"
+		,"build/css/editor.min.css"
 	]) }}
 </head>
 <body>
@@ -81,7 +82,7 @@
 			//comp-settings 组件设置
 			$('#scene').append(GTPL.compLayout());
 			//拖拽、旋转组件
-			$('._edit_area').append(GTPL.dragRotate());
+			//$('._edit_area').append(GTPL.dragRotate());
 
    		});
 	</script>

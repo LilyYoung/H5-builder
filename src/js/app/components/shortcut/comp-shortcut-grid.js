@@ -41,7 +41,7 @@ define(['grid'],function (grid) {
 			var chooseColorL = $('#speedy-toolbar').offset().left-218-178;
 			var chooseColorT = $('.grid-guide-setting .choose-color-box').offset().top + 8;
 			$('.grid-guide-setting input').val(this.gridColor);
-			$('.grid-guide-setting .choose-color-box span').css('background-color',this.gridColor);
+			$('.grid-guide-setting .choose-color-box span i').css('background-color',this.gridColor);
 			grid.init('#grid',this.gridColor);
 
 			$('body').append($('<div class="gridColorPicker hide" style="left:'+chooseColorL+'px;top:'+chooseColorT+'px"></div>'));

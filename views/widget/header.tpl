@@ -88,7 +88,7 @@
             <span class="tip">互动</span>
             <em ng-if="wechatWTip" class="effect-tip heart ng-scope"></em>
         </li>-->
-        <li class="interaction form hint--bottom hint--rounded header-form">
+        <!--<li class="interaction form hint&#45;&#45;bottom hint&#45;&#45;rounded header-form">
             <span class="fa fa-list-ul" aria-hidden="true"></span>
             <div class="form-menus">
                 <div class="popover bottom">
@@ -104,7 +104,7 @@
                                         <div class="arrow"></div>
                                         <div class="popover-content">
                                             <ul class="menus">
-                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加联系人">
+                                                <li class="menu-item comp-draggable textarea hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="点击添加联系人">
                                                     <span class="fa fa-user" aria-hidden="true"></span>
                                                     <span class="menu-item-name">联系人</span>
                                                 </li>
@@ -123,22 +123,22 @@
                                         <div class="arrow"></div>
                                         <div class="popover-content">
                                             <ul class="menus">
-                                                <li class="header-input menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加输入框">
+                                                <li class="header-input menu-item comp-draggable textarea hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="点击添加输入框">
                                                     <span class="fa fa-pencil" aria-hidden="true"></span>
                                                     <span class="menu-item-name">输入框</span>
                                                 </li>
 
-                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加单选按钮">
+                                                <li class="menu-item comp-draggable textarea hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="点击添加单选按钮">
                                                     <span class="fa fa-dot-circle-o" aria-hidden="true"></span>
                                                     <span class="menu-item-name">单选</span>
                                                 </li>
 
-                                                <li class="menu-item comp-draggable textarea hint--right hint--rounded ui-draggable" data-hint="点击添加多选按钮">
+                                                <li class="menu-item comp-draggable textarea hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="点击添加多选按钮">
                                                     <span class="fa fa-check-square" aria-hidden="true"></span>
                                                     <span class="menu-item-name">多选</span>
                                                 </li>
 
-                                                <!--<li class="menu-item comp-draggable textarea hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="点击添加下拉列表">
+                                                &lt;!&ndash;<li class="menu-item comp-draggable textarea hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="点击添加下拉列表">
                                                     <span class="fa fa-list" aria-hidden="true"></span>
                                                     <span class="menu-item-name">下拉列表</span>
                                                 </li>
@@ -146,14 +146,14 @@
                                                 <li class="menu-item comp-draggable textarea hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="点击添加评分组件">
                                                     <span class="fa fa-star" aria-hidden="true"></span>
                                                     <span class="menu-item-name">评分</span>
-                                                </li>-->
+                                                </li>&ndash;&gt;
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </li>
 
-                          <!--  <li class="menu-item">
+                          &lt;!&ndash;  <li class="menu-item">
                                 <span class="fa fa-gift" aria-hidden="true"></span>
                                 <span class="menu-item-name">图表</span>
                                 <span class="caret"></span>
@@ -190,9 +190,9 @@
                             <li class="menu-item comp-draggable phone hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="一个场景建议只添加一个">
                                 <span class="fa fa-commenting" aria-hidden="true"></span>
                                 <span class="menu-item-name">留言板</span>
-                            </li>-->
+                            </li>&ndash;&gt;
 
-                            <li class="menu-item comp-draggable phone hint--right hint--rounded ui-draggable" data-hint="一个场景建议只添加一个">
+                            <li class="menu-item comp-draggable phone hint&#45;&#45;right hint&#45;&#45;rounded ui-draggable" data-hint="一个场景建议只添加一个">
                                 <span class="fa fa-tty" aria-hidden="true"></span>
                                 <span class="menu-item-name">提交按钮</span>
                             </li>
@@ -201,7 +201,7 @@
                 </div>
             </div>
             <span class="tip">表单</span>
-        </li>
+        </li>-->
         <!--<li class="comp-draggable images">
             <span class="fa fa-star-o"></span>
             <span class="tip">特效</span>
