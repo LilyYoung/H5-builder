@@ -1,0 +1,43 @@
+/* 右键样式 */
+#contextmenuPhone {
+    min-width: 150px;
+    position: absolute;
+    -webkit-user-select: none;
+    left: 776px;
+    top: 525px;
+    z-index: 10001;
+    margin: 0;
+    li {
+        height: 30px;
+        a {
+        font-weight: lighter;
+        color: #676767;
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0px 10px;
+        cursor: pointer;
+
+            &:hover {
+                background-color: #59c7f9;
+                color: #fff;
+            }
+            .fa {
+                margin-right: 8px;
+            }
+        }
+    }
+    .bottom_bar {
+        border-top: 1px solid #ccc;
+        text-align: center;
+        padding: 1px;
+        a {
+            padding: 0;
+            width: 18%;
+            text-align: center;
+            display: inline-block;
+            font-size: 18px;
+            .fa {margin: 0;}
+        }
+    }
+}

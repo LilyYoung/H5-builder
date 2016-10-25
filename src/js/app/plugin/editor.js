@@ -21,9 +21,11 @@ define(function () {
 		$(document).on('dblclick','.editable-text',function(ev) {
 			var elem = $(this);
 			that.showEditor(elem);
+
 			$(elem).closest('li').attr('data-elemandgroup','false');
 
 		});
+
 		$(document).on('mousedown.editor',function(ev) {
 
 			var elem = $(ev.target);
@@ -35,22 +37,32 @@ define(function () {
 				if(!contenteditable){
 
 					that.hideEditor($('[contenteditable="true"]'));
-					//$('[contenteditable="true"]').closest('li').attr('data-elemandgroup','true');
 				}
 			}else{
-				if(!elem.closest('.cke_float').length){
+				if(!elem.closest('.cke_reset_all').length){
 
 					that.hideEditor($('[contenteditable="true"]'));
-					//$('[contenteditable="true"]').closest('li').attr('data-elemandgroup','true');
 				}
 			}
 		});
 	};
 	Editor.enableEditing  = function(id) {
 		if ( !CKEDITOR.instances[id] ) {
-			CKEDITOR.inline( id, {
-				startupFocus: true
+
+			var editor = CKEDITOR.inline( id, {
+				startupFocus: true,
+				removePlugins : 'contextmenu,liststyle,tabletools',
+				on: {
+					change: function ( ev ) {
+					},
+					focus: function(ev) {
+						document.execCommand("selectAll");
+					}
+				}
+
 			} );
+			//var editor = $(this);
+			editor.focus();
 		}
 	};
 
@@ -74,7 +86,7 @@ define(function () {
 		}
 
 		elem.attr( 'contenteditable', true );
-
+		//document.execCommand("selectAll");
 		that.enableEditing(id);
 	};
 
@@ -87,7 +99,7 @@ define(function () {
 	};
 
 
-
+/*
 	//网格颜色选择器初始化
 	Editor.chooseColorWay = function(option) {
 		var that = this;
@@ -220,7 +232,7 @@ define(function () {
 
 		return pos;
 
-	}
+	}*/
 
 	return Editor;
 });

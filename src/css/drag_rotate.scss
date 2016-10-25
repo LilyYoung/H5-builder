@@ -53,6 +53,9 @@
                     &:focus {
                         outline: none;
                     }
+                    em {
+                        font-style: italic;
+                    }
                 }
                 .contentEdit {
                     cursor: text;

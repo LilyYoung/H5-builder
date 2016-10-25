@@ -40,7 +40,8 @@ require.config({
         'drag' : 'app/plugin/drag',
         'adsorbConfig' : 'app/plugin/adsorbConfig',
         'Editor': 'app/plugin/editor',
-        'editTool' : 'app/plugin/editTool'
+        'editTool' : 'app/plugin/editTool',
+        'Contextmenu': 'app/plugin/contextmenu'
     },
     //没有使用 define() 声明依赖项、没有设置模块值,暴露出全局变量
     shim: {
