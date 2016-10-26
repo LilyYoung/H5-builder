@@ -350,15 +350,8 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
             list = list || {};
             var resizeTool = $(".resizeT,.resizeB,.resizeL,.resizeR,.resizeLT,.resizeTR,.resizeLB,.resizeBR");
             resizeTool.length && list.type != "move" && resizeTool.remove();
-
-            list.toolbar && $(".elementToolbar,.rotationdiv").remove();// 移除元素浮动工具栏
             $(".onDraging").removeClass("onDraging").find(".onDragingElement").removeClass("onDragingElement");// 移除正在拖动class
             $(document).trigger("removeGroup");
-
-            if (list.elm) {//双击元素编辑时触发的操作
-                var $group = list.elm.parents(".wqdGroup");
-                $group.length ? $group.siblings("[data-groupstatus='on']").attr("data-groupstatus","off") : $("[data-groupstatus='on']").attr("data-groupstatus","off");
-            }
         },
 
         deleteElement:function ($elm) {
@@ -367,12 +360,6 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                 $parent   = $elm.parents("[data-elemandgroup=true]").eq(0);
             $("style."+$elm.attr("elementid")+",style."+$elm.attr("groupid")).remove();
             $elm.remove();
-            //悬浮容器
-            if($elm.hasClass("wqdFixedContainer") && !$(".wqdFixedContainerWrap").find(".wqdFixedContainer").length){
-                $(".wqdFixedContainerWrap, .fixedController").remove();
-            }
-            // this.getElemZindex($siblings,"reset",$siblings.length ? void 0 : $parent);
-            //$(document).trigger("appSetCatch");
         }
     };
 
