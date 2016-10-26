@@ -34,8 +34,6 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
             // 点击非元素时移除拖拽，旋转
             _docu.on("click",function (e) {
                 $this = $(e.target);
-                // console.info($this);
-
             });
 
             // 鼠标抬起时解绑移动事件并更新缓存
@@ -117,17 +115,14 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                 minHeight    = 10,
                 maxLeft      = parentWidth - width,
                 maxTop       = parentHeight - height,
-                isFreeMove   = data.isFreeMove || this.isFreeMove($elm,data.isDrag),
-                canOverTop,
-                canOverBottom;
+                isFreeMove   = data.isFreeMove || this.isFreeMove($elm,data.isDrag);
 
             if(width < minWidth) width = minWidth;
             if(height < minHeight) height = minHeight;
-            if($elm.attr('data-elementtype')=='line') height = 2;
 
             if(maxTop < 0) maxTop = 0;
-            top = top ? top > 0 || (isFreeMove && $elm.parents(".wqd-carouseOverlay").length) || canOverTop ? top : 0 : 0;
-            if(!data.keepChildren && top > maxTop && !isFreeMove && !canOverBottom) top = maxTop;
+            top = top ? (top > 0 || isFreeMove ? top : 0) : 0;
+            if(!data.keepChildren && top > maxTop && !isFreeMove) top = maxTop;
 
             if(left > maxLeft) left = maxLeft;
             if(left <=0 || left.toString().indexOf('px')>0 ) left = 0;
