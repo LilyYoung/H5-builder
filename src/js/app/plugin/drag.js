@@ -34,10 +34,8 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
             // 点击非元素时移除拖拽，旋转
             _docu.on("click",function (e) {
                 $this = $(e.target);
-<<<<<<< HEAD
                 // console.info($this);
-=======
->>>>>>> 4f65f7c10e65552c9ebbc9878bf6bf56cba9a8fd
+
             });
 
             // 鼠标抬起时解绑移动事件并更新缓存
