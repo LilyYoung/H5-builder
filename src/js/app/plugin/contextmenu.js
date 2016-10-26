@@ -15,10 +15,11 @@ define(function () {
 		$(document).on('contextmenu',function(ev) {
 			$target = $(ev.target);
 			var pos = {
-				left: ev.pageX + 20,
-				top: ev.pageY - 50
+				left: ev.pageX,
+				top: ev.pageY
 			};
-			if($target.closest('.edit-workspace .edit_area .comp_paragraph').length && $target.closest('.edit-workspace .edit_area .comp_paragraph').attr('contenteditable') == 'false') {
+			var contenteditable = $target.closest('.edit-workspace .edit_area .comp_paragraph').attr('contenteditable');
+			if( $target.closest('.edit-workspace .edit_area .comp_paragraph').length && (contenteditable=='false'||!contenteditable)) {
 				that.showShortcut(pos);
 			}
 			ev.stopPropagation();
@@ -43,9 +44,15 @@ define(function () {
 		if(!$('#contextmenuPhone').length) {
 			$('#scene').append(GTPL.contextmenu());
 		}
+
+		var height = $('#contextmenuPhone').innerHeight();
+		if(pos.top+height > window.innerHeight) {
+			pos.top = pos.top-height;
+		}
+
 		$('#contextmenuPhone').css({
-			left: pos.left,
-			top: pos.top
+			left: pos.left + 20,
+			top: pos.top -50
 		}).show();
 	};
 
