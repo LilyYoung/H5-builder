@@ -3,6 +3,8 @@
  * param:组件设置(弹窗)
  */
 define(function () {
+    var demo=$('.demo .edit-area li .demo-area-box');
+    var isReturn = false;
     var compSet = {
         init:function () {
             var _this =this;
@@ -158,27 +160,18 @@ define(function () {
         },
         getElementValue:function (element,value,div) {
             div.css(element,value);
-            console.log(element+"---"+value);
-
         },
         //获取动画
         getElementAnimate:function () {
             var _this = this;
-            // $('#base-select-animate-style').change(function(){
-            //     var val = $(this).val();
-            //     $('.demo .edit-area li .demo-area-box').css("animation",val+" 5s");
-            // });
             //点击添加动画
             $(".animate-btn-add").on("click",function () {
                 _this.getAddAnimate();
 
             });
-            //点击删除动画
-            // $("#comp-tab2 .style-setting").on("click",".fa-trash-o",function (){
-            //
-            // });
             _this.getDelAnimate();
             // _this.getSelectAnimate();
+            _this.getPreviewAnimate();
         },
         //添加动画
         getAddAnimate:function () {
@@ -202,6 +195,7 @@ define(function () {
 
             this.getAnimateCirculation(sLength);
 
+
         },
         //点击删除动画
         getDelAnimate:function () {
@@ -209,7 +203,6 @@ define(function () {
             $("#comp-tab2 .style-setting").on("click",".fa-trash-o",function () {
                 var sIndex=$(this).parent().index();
                 var  sLength=$("#comp-tab2 .style-setting section").length;
-
                 if(sIndex-sLength <0){
                     // for(var i=-1; i>sIndex-sLength; i--){
                     for(var i=sIndex-sLength; i<0; i++){
@@ -227,16 +220,12 @@ define(function () {
                         s_section.find(".collapse .base-select input[name='number']").attr("id","base-select-animate-number-input"+s_index);
                         s_section.find(".style-list span").eq(0).text("动画"+s_index);
                         $(this).parent().remove();
-                        _this.getSelectAnimate(s_index);
+                        _this.getSelectAnimate();
 
                     }
                 }
 
                 console.log("删除"+s_index);
-
-                //_this.getSelectAnimate(s_index-1);
-
-                //
 
 
             });
@@ -245,97 +234,185 @@ define(function () {
         //选择动画
         getSelectAnimate:function () {
             var _this = this;
-            // var select=$("#base-select-animate-style"+i);
-            var  sLength=0;
             if($("#comp-tab2 .style-setting section")){
-                sLength=$("#comp-tab2 .style-setting section").length-1;
+                $("#comp-tab2 .style-setting section").each(function(){
+                    var i=$(this).index()+1;
+                    var select = $('#base-select-animate-style'+i),
+                        direction = $('#base-select-animate-direction'+i),
+                        time = $('#base-select-animate-time-input'+i),
+                        defer = $('#base-select-animate-defer-input'+i),
+                        number = $('#base-select-animate-number-input'+i);
+                    select.change(function () {
+                        var value = $(this).val();
+                        if (value == "bounceIn" || value == "fadeIn" || value == "slideIn"  ||value == "zoomIn" | value == "bounceOut" || value == "fadeOut" || value=="slideOut" || value=="zoomOut"){
+                            direction.parents("li").show();
+                            time.parents("li").show();
+                            defer.parents("li").show();
+                            number.parents("li").show();
+                            setTimeout(function(){
+
+                                // $('.demo .edit-area li .demo-area-box').attr("style").replace(/(-|\w|\s|)*animation(-|\w|\s|:)+;/g,"");
+                                $('.demo .edit-area li .demo-area-box').css("animation","none 0s 0s forward");
+
+                            },(parseFloat(defer.val())+parseFloat(time.val()))*1000);
+                            _this.getElementValue("animation",time.val()+"s "+defer.val()+"s "+value+direction.val(),$('.demo .edit-area li .demo-area-box'));
+                            _this.getAnimateDirection(value,direction,time.val(), defer.val());
+                        }else if(value == "no"){
+                            direction.parents("li").hide();
+                            time.parents("li").hide();
+                            defer.parents("li").hide();
+                            number.parents("li").hide();
+                        }else{
+                            time.parents("li").show();
+                            defer.parents("li").show();
+                            number.parents("li").show();
+                            direction.parents("li").hide();
+                            setTimeout(function(){
+                                $('.demo .edit-area li .demo-area-box').css("animation","none 0s 0s forward");
+
+                            },(parseFloat(defer.val())+parseFloat(time.val()))*1000);
+                            _this.getElementValue("animation",time.val()+"s "+defer.val()+"s "+value,$('.demo .edit-area li .demo-area-box'));
+                        }
+
+                    });
+                });
             }
-            var s_select=$("#comp-tab2 .style-setting section").eq(sLength).find("select").eq(0);
-
-            s_select.change(function(){
-                // _this.getAnimateValue($(this).val(),i);
-                var select=$("#"+$(this).attr("id")),
-                    direction=$("#"+$(this).parents(".base-style-list").find("select").eq(1).attr("id")),
-                    time = $("#"+$(this).parents(".base-style-list").find("input").eq(0).attr("id")),
-                    defer=$("#"+$(this).parents(".base-style-list").find("input").eq(1).attr("id")),
-                    circulation=$("#"+$(this).parents(".base-style-list").find("input").eq(2).attr("id")),
-                    value=$(this).val();
-                console.log(select+"--"+value);
-                //当动画为弹入、淡入、滑动进入、缩小进入、弹出、淡出、滑动退出、缩小退出时动画
-                if (value == "bounceIn" || value == "fadeIn" || value == "slideIn"  ||value == "zoomIn" | value == "bounceOut" || value == "fadeOut" || value=="slideOut" || value=="zoomOut"){
-                    direction.parents("li").show();
-                    time.parents("li").show();
-                    defer.parents("li").show();
-                    circulation.parents("li").show();
-                    var s_time = time.val(),
-                        s_defer =  defer.val();
-                    _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value+ direction.val(),$('.demo .edit-area li .demo-area-box'));
-                    // $('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value+ direction.val());
-                    _this.getAnimateDirection(value,direction,time,defer);
-                }else if(value == "no"){
-                    direction.parents("li").hide();
-                    time.parents("li").hide();
-                    defer.parents("li").hide();
-                    circulation.parents("li").hide();
-                }else{
-                    direction.parents("li").hide();
-                    time.parents("li").show();
-                    defer.parents("li").show();
-                    circulation.parents("li").show();
-                    var s_time = time.val(),
-                        s_defer =  defer.val();
-                    _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value,$('.demo .edit-area li .demo-area-box'));
-                }
-
-
-            });
 
         },
-        //动画参数值
-        // getAnimateValue:function(value,i){
+        //预览动画
+        // getPreviewAnimate:function () {
         //     var _this = this;
-        //     console.log("动画参数值"+value+"---"+i);
-        //     var select=$("#base-select-animate-style"+i),
-        //         direction=$("#base-select-animate-direction"+i),
-        //         time = $('#base-select-animate-time'+i),
-        //         defer=$('#base-select-animate-defer'+i),
-        //         circulation=$('#base-select-animate-number-input'+i);
-        //     //当动画为弹入、淡入、滑动进入、缩小进入、弹出、淡出、滑动退出、缩小退出时动画
-        //     if (value == "bounceIn" || value == "fadeIn" || value == "slideIn"  ||value == "zoomIn" | value == "bounceOut" || value == "fadeOut" || value=="slideOut" || value=="zoomOut"){
-        //         direction.parents("li").show();
-        //         time.parents("li").show();
-        //         defer.parents("li").show();
-        //         circulation.parents("li").show();
-        //         var s_time = time.next().find("input").val(),
-        //             s_defer =  defer.next().find("input").val();
-        //         _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value+ direction.val(),$('.demo .edit-area li .demo-area-box'));
-        //         // $('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value+ direction.val());
-        //         _this.getAnimateDirection(value,direction,time,defer);
-        //     }else if(value == "no"){
-        //         direction.parents("li").hide();
-        //         time.parents("li").hide();
-        //         defer.parents("li").hide();
-        //         circulation.parents("li").hide();
-        //     }else{
-        //         direction.parents("li").hide();
-        //         time.parents("li").show();
-        //         defer.parents("li").show();
-        //         circulation.parents("li").show();
-        //         var s_time = time.next().find("input").val(),
-        //             s_defer =  defer.next().find("input").val();
-        //         _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value,$('.demo .edit-area li .demo-area-box'));
-        //         //$('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value);
+        //     $("#comp-tab2 .style-setting .animate-btn-preview").on("click",function () {
+        //         if($("#comp-tab2 .style-setting section")){
+        //             var s_length=$("#comp-tab2 .style-setting section").length;
+        //             var a= new Array(s_length-1);
+        //             for(var i=1;i<=s_length;i++){
+        //                 var value = $('#base-select-animate-style'+i).val(),
+        //                     direction = $('#base-select-animate-direction'+i).val(),
+        //                     time = $('#base-select-animate-time-input'+i).val(),
+        //                     defer = $('#base-select-animate-defer-input'+i).val(),
+        //                     number = $('#base-select-animate-number-input'+i).val();
+        //                 if (value == "bounceIn" || value == "fadeIn" || value == "slideIn"  ||value == "zoomIn" | value == "bounceOut" || value == "fadeOut" || value=="slideOut" || value=="zoomOut") {
+        //                     value =value+ direction;
+        //                 }else {
         //
-        //     }
+        //                 }
+        //
+        //                 $('.demo .edit-area li .demo-area-box').delay().css('animation'," 0s 0s no");
+        //
+        //                 var sss=(parseFloat(defer)+parseFloat(time))*1000;
+        //                 var sum=0;
+        //                 sum += sss;
+        //                 setTimeout(function(){
+        //                     $('.demo .edit-area li .demo-area-box').delay().css('animation',time+'s '+defer+'s '+value);
+        //                 },sum);
+        //
+        //                 // _this.animationInit($('.demo .edit-area li .demo-area-box'),(time+'s '+defer+'s '+value));
+        //                 console.log(i+"==defer"+sss+"===sun"+sum+"动画"+time+'s '+defer+'s '+value);
+        //
+        //             }
+        //
+        //         }else{
+        //             console.log("预览2");
+        //         }
+        //
+        //     });
         // },
-        //动画方向
+        getPreviewAnimate:function () {
+            var _this = this;
+            $("#comp-tab2 .style-setting .animate-btn-preview").on("click",function () {
+                if($("#comp-tab2 .style-setting section")){
+                    _this.animationInit($('.demo .edit-area li .demo-area-box'),"0s 0s no");
+                    var s_length=$("#comp-tab2 .style-setting section").length;
+                    var animates= new Array(s_length);
+
+                    var a_sum=0;
+                    for(var i=1;i<=s_length;i++){
+                        var value = $('#base-select-animate-style'+i).val(),
+                            direction = $('#base-select-animate-direction'+i).val(),
+                            time = $('#base-select-animate-time-input'+i).val(),
+                            defer = $('#base-select-animate-defer-input'+i).val(),
+                            number = $('#base-select-animate-number-input'+i).val();
+
+                        if (value == "bounceIn" || value == "fadeIn" || value == "slideIn"  ||value == "zoomIn" | value == "bounceOut" || value == "fadeOut" || value=="slideOut" || value=="zoomOut") {
+                            value =value+ direction;
+                        }else {
+
+                        }
+
+                        if(i==1){
+                            var a=parseFloat(defer);
+                            animates[i-1]=time+'s '+a+'s '+value+" 1 both";
+                        }else{
+                                var a_time = $('#base-select-animate-time-input'+(i-1)).val(),
+                                    a_defer = $('#base-select-animate-defer-input'+(i-1)).val();
+                                var a=parseFloat(a_time)+parseFloat(a_defer);
+                                if(i>2){
+                                    var b=animates[i-2].split("s",2)[1];
+                                    a+=parseFloat(b);
+                                    console.log(b);
+                                }else{
+                                    a=a+parseFloat(defer);
+                                }
+                            animates[i-1]=time+'s '+a+'s '+value+" 1 forwards";
+                            console.log(i+"  a_time="+a_time+"--a_defer="+a_defer+"---defer="+defer+"---aa="+a);
+                        }
+
+                        // $('.demo .edit-area li .demo-area-box').delay().css('animation'," 0s 0s no");
+
+                        // var sss=(parseFloat(defer)+parseFloat(time))*1000;
+                        // var sum=0;
+                        // sum += sss;
+                        // setTimeout(function(){
+                        //
+                        //     // $('.demo .edit-area li .demo-area-box').attr("style").replace(/(-|\w|\s|)*animation(-|\w|\s|:)+;/g,"");
+                        //     $('.demo .edit-area li .demo-area-box').css("animation","");
+                        //
+                        // },sum);
+                        // _this.animationInit($('.demo .edit-area li .demo-area-box'),(time+'s '+defer+'s '+value));
+                        // $('.demo .edit-area li').attr({
+                        //     "data-animate":value,
+                        //     "data-animation-duration":time,
+                        //     "data-animation-delay":defer,
+                        //     "data-animation-iteration-count":number
+                        // });
+
+
+
+                        // _this.animationInit($('.demo .edit-area li .demo-area-box'),(time+'s '+defer+'s '+value));
+                        // // console.log(i+"==defer"+sss+"===sun"+sum+"动画"+time+'s '+defer+'s '+value);
+
+                    }
+                    // a_sum += a;
+
+                    _this.animationInit($('.demo .edit-area li .demo-area-box'),animates);
+                    var atime = animates[s_length-1].split("s",2)[0],
+                        adefer = animates[s_length-1].split("s",2)[1];
+                    a_sum=parseFloat(atime)+parseFloat(adefer);
+                    setTimeout(function(){
+
+                        // $('.demo .edit-area li .demo-area-box').attr("style").replace(/(-|\w|\s|)*animation(-|\w|\s|:)+;/g,"");
+                        $('.demo .edit-area li .demo-area-box').css("animation","none 0s 0s forward");
+
+                    },a_sum*1000);
+                    console.log(animates);
+
+                }else{
+                    console.log("预览失败");
+                }
+
+            });
+        },
+        //动画加载
+        animationInit:function (div,a) {
+                $('.demo .edit-area li .demo-area-box').css("animation",a);
+        },
+
+            //动画方向
         getAnimateDirection:function (value,direction,time,defer) {
             var _this=this;
             direction.change(function(){
-                var s_time = time.next().find("input").val(),
-                    s_defer =  defer.next().find("input").val();
-                // $('.demo .edit-area li .demo-area-box').css("animation",s_time+"s "+s_defer+"s "+value+$(this).val());
-                _this.getElementValue("animation",s_time+"s "+s_defer+"s "+value+$(this).val(),$('.demo .edit-area li .demo-area-box'));
+                _this.getElementValue("animation",time+"s "+defer+"s "+value+$(this).val(),$('.demo .edit-area li .demo-area-box'));
             });
         },
         //动画循环
@@ -359,6 +436,10 @@ define(function () {
 
 
         }
+
+        //确定、关闭按钮
+
+
 
     };
     return compSet;

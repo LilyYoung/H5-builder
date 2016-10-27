@@ -115,17 +115,14 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                 minHeight    = 10,
                 maxLeft      = parentWidth - width,
                 maxTop       = parentHeight - height,
-                isFreeMove   = data.isFreeMove || this.isFreeMove($elm,data.isDrag),
-                canOverTop,
-                canOverBottom;
+                isFreeMove   = data.isFreeMove || this.isFreeMove($elm,data.isDrag);
 
             if(width < minWidth) width = minWidth;
             if(height < minHeight) height = minHeight;
-            if($elm.attr('data-elementtype')=='line') height = 2;
 
             if(maxTop < 0) maxTop = 0;
-            top = top ? top > 0 || (isFreeMove && $elm.parents(".wqd-carouseOverlay").length) || canOverTop ? top : 0 : 0;
-            if(!data.keepChildren && top > maxTop && !isFreeMove && !canOverBottom) top = maxTop;
+            top = top ? (top > 0 || isFreeMove ? top : 0) : 0;
+            if(!data.keepChildren && top > maxTop && !isFreeMove) top = maxTop;
 
             if(left > maxLeft) left = maxLeft;
             if(left <=0 || left.toString().indexOf('px')>0 ) left = 0;
@@ -353,15 +350,8 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
             list = list || {};
             var resizeTool = $(".resizeT,.resizeB,.resizeL,.resizeR,.resizeLT,.resizeTR,.resizeLB,.resizeBR");
             resizeTool.length && list.type != "move" && resizeTool.remove();
-
-            list.toolbar && $(".elementToolbar,.rotationdiv").remove();// 移除元素浮动工具栏
             $(".onDraging").removeClass("onDraging").find(".onDragingElement").removeClass("onDragingElement");// 移除正在拖动class
             $(document).trigger("removeGroup");
-
-            if (list.elm) {//双击元素编辑时触发的操作
-                var $group = list.elm.parents(".wqdGroup");
-                $group.length ? $group.siblings("[data-groupstatus='on']").attr("data-groupstatus","off") : $("[data-groupstatus='on']").attr("data-groupstatus","off");
-            }
         },
 
         deleteElement:function ($elm) {
@@ -370,12 +360,6 @@ define(['tools','rotate','dynamicStyle','adsorbConfig'],function (tools,_rotate,
                 $parent   = $elm.parents("[data-elemandgroup=true]").eq(0);
             $("style."+$elm.attr("elementid")+",style."+$elm.attr("groupid")).remove();
             $elm.remove();
-            //悬浮容器
-            if($elm.hasClass("wqdFixedContainer") && !$(".wqdFixedContainerWrap").find(".wqdFixedContainer").length){
-                $(".wqdFixedContainerWrap, .fixedController").remove();
-            }
-            // this.getElemZindex($siblings,"reset",$siblings.length ? void 0 : $parent);
-            //$(document).trigger("appSetCatch");
         }
     };
 
