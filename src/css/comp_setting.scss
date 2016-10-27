@@ -15,7 +15,8 @@
 }
 #comp_setting {
     position: fixed;
-    width: 260px;
+    //width: 260px;
+    width: 270px;
     background-color: #fff;
     top: 100px;
     right: 288px;
@@ -60,7 +61,6 @@
 
         li {
             margin-right: 1px;
-
         }
     }
 
@@ -69,6 +69,7 @@
         color: $main-color-one;
         .style-setting {
             height: 430px;
+            overflow-y: auto;
             padding-top: 10px;
             .panel{
                 margin-top: 0;
@@ -110,6 +111,7 @@
 
                     }
                     .base-select{
+                        position: relative;
                         .base-select-style{
                             float: left;
                             width: 100px;
@@ -153,21 +155,107 @@
                                 padding-left: 2px;
                             }
                         }
-                        .select-box{
-                            select{
-                                border: 1px solid #ccc;
-                                height: 20px;
-                                width: 155px;
-                            }
-
+                        .animate-number-input >input[type=number]{
+                            border: 1px solid #ccc;
+                            height: 20px;
+                            width: 40px;
+                            text-align: center;
+                            float: left;
                         }
+                        .animate-number-checkbox{
+                            font: 400 12px "Microsoft YaHei";
+                            float: left;
+                            background-color: #fff;
+                            border: 2px solid #ccd5db;
+                            border-radius: 3px;
+                            display: block;
+                            height: 16px;
+                            margin-left: 50px;
+                            position: relative;
+                            width: 16px;
+
+                            >input[type=checkbox]{
+                                bottom: 0;
+                                cursor: pointer;
+                                height: 16px;
+                                left: 0;
+                                margin: 0;
+                                opacity: 0;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                width: 16px;
+                            }
+                            .checkbox-yes{
+                                display: none;
+                                font-size: 12px;
+                                left: 0;
+                                position: absolute;
+                                top: 1px;
+                            }
+                        }
+                        .check{
+                            background-color: #48d5b2;
+                            border-color: #48d5b2;
+                            .checkbox-yes{
+                                display: block;
+                                color: #fff;
+                            }
+                        }
+                        .animate-number-text{
+                            float: left;
+                            line-height: 20px;
+                            margin-left: 5px;
+                        }
+
+
                     }
+                }
+                .animate-direction{
+                    display: none;
+                    .base-select > select{
+                        color: #9d9d9d;
+
+                    }
+                }
+                .animate-time,.animate-defer,.animate-number{
+                    display: none;
                 }
                 > .no-border-bottom{
                     border-bottom: none;
                 }
 
             }
+            .animate-btn{
+                padding: 10px 20px;
+                .btn{
+                    display: block;
+                    float: left;
+                    width: 100px;
+                    color: #fff;
+                    padding-left: 22px;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        left: 10px;
+                        line-height: 18px;
+                    }
+                }
+                .animate-btn-preview{
+                    float: right;
+                }
+            }
+
+        }
+        section{
+            position: relative;
+        }
+        .fa-trash-o{
+            position: absolute;
+            color: $main-color-one;
+            right: 10px;
+            top:10px;
+            font-size: 20px;
         }
         .style-list {
             border-bottom: 1px solid #ccd5db;
@@ -176,16 +264,16 @@
             line-height: 40px;
             cursor: pointer;
             padding-left: 20px;
+            position: relative;
 
             span {
                 color: $main-color-one;
                 font-size: 12px;
+                position: relative;
             }
+
             .caret{
                 margin-left: 160px;
-                border-left: 4px solid transparent;
-                border-right: 4px solid transparent;
-                border-top: 4px dashed;
                 display: inline-block;
                 height: 0;
                 vertical-align: middle;

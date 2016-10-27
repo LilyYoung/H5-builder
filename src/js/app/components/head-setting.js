@@ -5,15 +5,18 @@ define(function () {
     var headSetting = {
         data:[],
         init: function () {
-            this.creatBombbox();
             this.ismobileSet();
-            this.switchingEffect();
+            this.creatBombbox();
         },
         //创建弹出层
         creatBombbox: function () {
             var _this=this;
-            var iframePhone = '<div class="setting-bg"></div>';
-            $('#scene').append(iframePhone);
+            $('.header_setting').click(function () {
+                $('.mobile-preview').css({'z-index':'1050'});
+                $('.setting-bg').show().css({'z-index':'1042'});
+                $('.phone_panel').show().css({'top':'50%','left':'50%',"margin-top":'-328px','margin-left':'-160px','z-index':'1050'});
+                _this.switchingEffect();
+            });
         },
         //初始化缩放
         setScale: function () {
@@ -98,7 +101,7 @@ define(function () {
                 onInit: function(swiper){
                     //Swiper初始化了
                     //模拟设置元素的data 动画数组
-                    $('.inside_1448735641').find('.element-box').data('animation',['zoomIn 1.4s ease 1.1s 1 both','fadeInRight 1.4s ease 1.4s 1 both']);
+                   /* $('.inside_1448735641').find('.element-box').data('animation',['zoomIn 1.4s ease 1.1s 1 both','fadeInRight 1.4s ease 1.4s 1 both']);*/
 
                     //取data 属性放入数组
                     $('.swiper-slide').each(function(index, el) {

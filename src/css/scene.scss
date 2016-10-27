@@ -5,7 +5,9 @@
  *  outline:视图大纲样式文件
  *  comp_setting: 组件设置样式文件
  *  modal:弹窗样式文件
- * template:模板样式文件
+ *  template:模板样式文件
+ *  drag_rotate:拖拽旋转样式
+ *  drag_rotate:文本编辑样式
 */
 @import 'base';
 @import 'header';
@@ -14,3 +16,6 @@
 @import 'comp_setting';
 @import 'modal';
 @import 'template';
+@import "drag_rotate";
+@import "contextmenu";
+@import "editor";

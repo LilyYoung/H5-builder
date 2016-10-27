@@ -1,5 +1,5 @@
 <!-- 面板框架布局 -->
-<div id="comp_setting">
+<div id="comp_setting" class="comp-drag">
     <div class="cancel">
         <span class="set-title">组件设置</span>
         <i class="fa fa-times set-close" aria-hidden="true"></i>
@@ -186,50 +186,42 @@
         </div>
         <div class="tab-pane fade" id="comp-tab2">
             <div class="style-content">
+                <!--模板addAnimate-->
                 <div class="style-setting">
-                    <section>
-                        <div class="style-list active" data-toggle="collapse" data-target="#base-animate1">
-                            <span>动画1</span>
-                            <span class="caret off"></span>
-                        </div>
-                        <div class="collapse in"  id="base-animate1">
-                            <ul class="base-style-list">
-                                <li>
-                                    <label>方式</label>
-                                    <div class="base-select clearfix">
-                                        <div class="select-box">
-                                            <select id="base-select-animate-style" >
-                                                <option value="solid">直线</option>
-                                                <option value="dashed">破折线</option>
-                                                <option value="dotted">点状线</option>
-                                                <option value="double">双划线</option>
-                                                <option value="groove">3D凹槽</option>
-                                                <option value="ridge">3D垄状</option>
-                                                <option value="inset">3D内嵌</option>
-                                                <option value="outset">3D外嵌</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <label>尺寸</label>
-                                    <div class="base-select clearfix">
-                                        <div class="base-select-style" id="base-select-animate-time"></div>
-                                        <p class="name">
-                                            <input id="base-select-animate-time-input" type="number"  name="points" min="0" max="20" step="1" value="0"  >
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
+                    <div class="animate-btn">
+                        <a class="btn btn-sm btn-green animate-btn-add" href="javascript:;"><i class="fa fa-plus-square" aria-hidden="true"></i>添加动画</a>
+                        <a class="btn btn-sm btn-blue animate-btn-preview" href="javascript:;"><i class="fa fa-play-circle-o" aria-hidden="true"></i>预览动画</a>
+                    </div>
+                </div>
+
+                <div class="btn-option">
+                    <a class="btn btn-sm btn-green" href="javascript:;">确定</a>
+                    <a class="btn btn-sm btn-red" href="javascript:;">清除动画</a>
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="comp-tab3">aaaaaaaaaaaaaaaaaaaaa</div>
+        <div class="tab-pane fade" id="comp-tab3">
+            <div class="style-content">
+                <div class="style-setting">
+                    <div class="style-list active">
+                        <span>浏览页面时，当</span>
+                        <select>
+                            <option value="click">点击</option>
+                            <option value="yao">摇一摇</option>
+                        </select>
+
+                    </div>
+                    <div class="style-list active">
+                        <span>页面元素</span>
+                        <select>
+                            <option value="text">文字1</option>
+                            <option value="div">点击选择元素</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 </div>
-
-

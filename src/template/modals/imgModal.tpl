@@ -1,5 +1,5 @@
 
-<div class="modal fade gome-modal" style="z-index:10000" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade gome-modal img-console" style="z-index:1050" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -17,8 +17,6 @@
                         <li><a href="javascript:;">我的图片</a></li>
                     </ul>
                     <ul class="group-nav">
-                        <li><a href="javascript:;">图片库<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:;">我的图片<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">组1<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">组2<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:;">组3<i class="fa fa-times-circle" aria-hidden="true"></i></a></li>
@@ -31,21 +29,22 @@
                         <li><a href="javascript:;">最近使用</a></li>
                     </ul>
                     <div class="add-tool clearfix">
-                        <a href="javascript:;">
+                        <a href="javascript:;" style="width: 200px;">
                             <i class="fa fa-plus-circle" aria-hidden="true"></i>
                             <em>添加分组</em>
                         </a>
-                        <a href="javascript:;">
+                        <!--<a href="javascript:;">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                             <em>在线制作</em>
-                        </a>
+                        </a>-->
                     </div>
                     <div class="uploading">
                         <div class="upload-con hint--top hint--rounded" data-hint="大小不超过3M，支持格式：jpg、gif、png、jpeg，一次最多上传6张">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                             <em>上传</em>
                         </div>
-                        <div class="upload-tip"></div>
+                        <div class="upload-image" >
+                            <input type="file" multiple="" accept="image/jpeg,.jpg,image/gif,.gif,image/png,.png,.jpeg"></div>
                     </div>
                 </div>
                 <div class="gome-modal-list">
@@ -229,9 +228,9 @@
                 <div class="pagination-wrap" id="img-pagination">
 
                 </div>
-                <a href="" class="modal-cancle" >取消</a>
-                <a href="" class="btn btn-green">确定</a>
+                <a href="javascript:;" class="modal-cancle" data-dismiss="modal" >取消</a>
+                <a href="javascript:;" class="btn btn-green" data-dismiss="modal" >确定</a>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>
+    </div>
+</div>

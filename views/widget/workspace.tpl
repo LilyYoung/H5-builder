@@ -7,7 +7,7 @@
                     <div class="wrapper-background"></div>
 
                     <!-- 手机编辑区 -->
-                    <ul class="edit_area weebly-content-area weebly-area-active">
+                    <ul class="edit_area _edit_area weebly-content-area weebly-area-active">
 
                     </ul>
                 </div>
@@ -25,11 +25,11 @@
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="刷新预览"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded" href="javascript:;" data-hint="复制当前页"><i class="fa fa-files-o" aria-hidden="true"></i></a>
                 <a class="active hint--right hint--rounded background-tool" href="javascript:;" data-hint="背景"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-                <a class="active hint--right hint--rounded" href="javascript:;" data-hint="音乐"><i class="fa fa-music" aria-hidden="true"></i></a>
-                <a class="hint--right hint--rounded" href="javascript:;"  data-hint="特效"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                <!--<a class="active hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;" data-hint="音乐"><i class="fa fa-music" aria-hidden="true"></i></a>
+                <a class="hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;"  data-hint="特效"><i class="fa fa-star-o" aria-hidden="true"></i></a>-->
                 <a class="active hint--right hint--rounded grid-guide" href="javascript:;" data-hint="网格设置"><i class="fa fa-table" aria-hidden="true"></i></a>
-                <a class="active hint--right hint--rounded" href="javascript:;" data-hint="手机边框"><em class="imp heart"></em><i class="fa fa-mobile" aria-hidden="true"></i></a>
-                <a class="active hint--right hint--rounded" href="javascript:;" id="warn" data-hint="警告"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>
+               <!-- <a class="active hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;" data-hint="手机边框"><em class="imp heart"></em><i class="fa fa-mobile" aria-hidden="true"></i></a>-->
+               <!-- <a class="active hint&#45;&#45;right hint&#45;&#45;rounded" href="javascript:;" id="warn" data-hint="警告"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>-->
 
                 <div class="grid-guide-container">
                     <div class="grid-guide-setting">
@@ -107,13 +107,16 @@
    <div class="demo">
        <div class="edit_wrapper">
            <!-- 背景元素 -->
-           <div class="wrapper-background"></div>
-           <ul class="edit-area">
-                <li class="demo-area" contenteditable="true">
-                    <div class="demo-area-box">
-                        aaa
-                    </div>
-                </li>
+           <!--<div class="wrapper-background"></div>-->
+           <!--<ul class="edit_area weebly-content-area weebly-area-active">-->
+
+           <!--</ul>-->
+           <ul class="edit_area edit-area  weebly-content-area weebly-area-active ">
+               <li class="demo-area ui-draggable ui-draggable-handle ui-resizable" contenteditable="true" style="position: relative; left: 79px; top: 86px; width: 160px; height: 165px;">
+                   <div class="demo-area-box">
+                       <h1>缓存测试块</h1>
+                   </div>
+                   <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></li>
            </ul>
        </div>
    </div>

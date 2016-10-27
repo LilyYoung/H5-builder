@@ -117,6 +117,11 @@ define(['application'],function (_app) {
             $('._delete_page').show();
 
         });
+        //保存到我的模板
+        $('._save_myTemplate').on('click',function () {
+            //保存当前视图页面到我的模板
+            alert('成功后，给个toast提示！');
+        });
 
     };
 

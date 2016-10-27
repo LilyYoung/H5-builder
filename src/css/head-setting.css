@@ -23,15 +23,6 @@ table{border-collapse:collapse;border-spacing:0}
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .clearfix,.wbox{*zoom:1}
 
-@font-face{
-    font-family:iconfont;
-    src:url('/gmlib/ui/iconfont/1.0.0/iconfont.eot');
-    src:url('/gmlib/ui/iconfont/1.0.0/iconfont.eot?#iefix') format('embedded-opentype'),
-    url('/gmlib/ui/iconfont/1.0.0/iconfont.woff') format('woff'),
-    url('/gmlib/ui/iconfont/1.0.0/iconfont.ttf') format('truetype'),
-    url('/gmlib/ui/iconfont/1.0.0/iconfont.svg#iconfont') format('svg');
-}
-
 body {
     padding: 0px;
     background-image:url("http://res.eqh5.com/group1/M00/CB/22/yq0KXVbLxByAHYd-AABNIFqL3Rc349.svg");
@@ -42,6 +33,14 @@ body {
     padding: 0;
 }
 
+.mobile-preview{
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 640px;
+    overflow: hidden;
+}
 .phone_panel {
     height: 641px;
     position: absolute;
@@ -49,6 +48,7 @@ body {
     top: 50%;
     margin-left: -130px;
     margin-top: -320px;
+    display: none;
 }
 .phoneBox {
     width: 322px;
@@ -57,6 +57,7 @@ body {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    box-sizing:content-box;
 }
 .phoneBox .top {
     height: 48px;
@@ -95,6 +96,7 @@ body {
     -webkit-user-select: none;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
+    box-sizing:content-box;
 }
 
 .swiper-slide {
@@ -202,7 +204,7 @@ body {
     float: left;
     padding-top: 110px;
 }
-.btn {
+.pre_btn,.next_btn{
     width: 20px;
     height: 70px;
     border-top-right-radius: 5px;
@@ -214,15 +216,15 @@ body {
     border: 1px solid #2096f9;
     color: #fff;
     background: #2096f9;
-    text-align: center
+    text-align: center;
+     box-sizing: content-box;
 }
-.btn:hover{
+.pre_btn:hover,.next_btn:hover{
     background:#fff;
     color:#2096f9;
 }
 .pre_btn {
     margin-bottom: 40px;
-
 }
 
 /*自定义的翻页 进度条*/
@@ -301,6 +303,17 @@ body {
     left: -4.5px;
     -webkit-transform: rotate(50deg);
     transform: rotate(50deg);
+}
+
+/*蒙层*/
+.setting-bg{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    display: none;
 }
 @-moz-keyframes start {
     0%,30% {

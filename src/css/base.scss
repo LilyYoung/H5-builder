@@ -41,7 +41,14 @@ body {
 	color: #fff;
 	background-color: #ff7267;
 }
-
+.btn-blue{
+	color: #fff;
+	background-color: #59c7f9;
+}
+.btn-blue:hover{
+	color: #fff;
+	background-color: #56c6ff;
+}
 /* 公共样式 */
 .all-change {
 	transition: all .3s ease-in-out 0s;
@@ -97,5 +104,54 @@ body {
 		width: $template-w;
 		z-index: 1040;
 		background-color: #76828e;
+	}
+}
+
+/* 按钮选择样式 */
+label.icheck {
+	height:16px;
+    line-height: 16px;
+	position: relative;
+	padding-left: 26px;
+	font-size: 12px;
+	font-weight: normal;
+}
+label.radio-square {
+    margin-right: 15px;
+    margin-bottom: 0;
+	span {
+		position: absolute;
+		left: 0;
+		top:50%;
+		margin-top: -8px;
+		background-color: #fff;
+		border: 1px solid #ccd5db;
+		width: 16px;
+		height: 16px;
+		border-radius: 8px;
+		&:hover {
+			border-color: #48d5b2;
+		}
+
+		i {
+			background-color: #48d5b2;
+			width: 6px;
+			height: 6px;
+			border-radius: 3px;
+			margin-top: 4px;
+			margin-left: 4px;
+		}
+	}
+	input {
+		display: none;
+		&:checked+span i {
+			display: block;
+		}
+		&:checked+span {
+			&:hover {
+				border-color: #ccd5db;
+			}
+		}
+
 	}
 }

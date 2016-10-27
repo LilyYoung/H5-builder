@@ -39,7 +39,7 @@ header{
     }
 
     .creat_con{
-        width: 660px;
+        width: 360px;
         margin: 0 auto;
 
         .comp_panel{
@@ -79,7 +79,7 @@ header{
 
             }
 
-            .interaction:hover{
+            .interaction:hover,.from:hover{
                 .form-menus {
                     top: 50px;
                     left: -40px;
@@ -188,7 +188,15 @@ header{
         }
     }
 
-
+    .interaction {
+        .caret {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin: 0;
+            margin-top: -2px;
+        }
+    }
 }
 .gray-dark{
     background-color: $headBtnColor;
