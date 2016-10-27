@@ -14,8 +14,13 @@ define(function () {
             $('.header_setting').click(function () {
                 $('.mobile-preview').css({'z-index':'1050'});
                 $('.setting-bg').show().css({'z-index':'1042'});
-                $('.phone_panel').show().css({'top':'50%','left':'50%',"margin-top":'-328px','margin-left':'-160px','z-index':'1050'});
+                $('.phone_panel').show().css({'left':'50%',"margin-top":'-328px','margin-left':'-160px','z-index':'1050'});
                 _this.switchingEffect();
+            });
+            $('.create-action .publish,.create-action .save,.create-action .quit').click(function () {
+                $('.mobile-preview').css({'z-index':'0'});
+                $('.setting-bg').css({'z-index':'0'}).hide();
+                $('.phone_panel').css({'left':'35%',"margin-top":'-320px','margin-left':'-130px','z-index':'0'}).hide();
             });
         },
         //初始化缩放
@@ -49,13 +54,10 @@ define(function () {
                 var winHeight = $(window).height();
                 //修改移动端的结构
                 $('.phone_panel').removeClass('phone_panel');
-                $('.phoneBox').find('.top').hide();
-                $('.phoneBox').find('.phone_menubar').hide();
                 $('.phoneBox').find('.scene_title_baner').hide();
-                $('.phoneBox').find('.bottom').hide();
                 $('.ctrl_panel').hide();
                 $('.phoneBox').css({'width': '100%', 'height': '100%'});
-                $('.swiper-container').css({'width': '100%', 'height': winHeight + 'px'});
+                $('.swiper-container').css({'width': '100%', 'height': winHeight + 'px','top':'0px'});
                 $('.edit_area').css({'margin-top': "41px"});
             }
         },
