@@ -22,10 +22,9 @@ define(['application','compShortcut','compSet','compText','compTemplate','modal'
         var that = this;
         $(document).on('dblclick','.editable-image',function(ev) {
             var elem = $(this);
-            if($('.modal').length>0) $('.modal').remove();
-            _modal.createModal();
-
-            $('.img-console').modal();
+            _modal.createModal({
+                handle: 'image'
+            });
         });
     };
     return workspace;

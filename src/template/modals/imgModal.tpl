@@ -1,5 +1,5 @@
 
-<div class="modal fade gome-modal img-console" style="z-index:1050" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="img-console" class="modal fade gome-modal img-console" style="z-index:1050" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

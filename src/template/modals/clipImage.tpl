@@ -1,5 +1,5 @@
 
-<div class="modal fade gome-modal pictures1" style="z-index:1050" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="clipImage" class="modal fade gome-modal pictures1" style="z-index:1050" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -23,12 +23,12 @@
                             <img src="build/img/212.jpg" id="img_preview" style="">
                         </div>
 
-                        <div class="img-abbre">
+                       <!-- <div class="img-abbre">
                             <ul class="clearfix">
                                 <li class="active">
                                     <div class="img-set">
-                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                        <div class="delete-img hint&#45;&#45;top hint&#45;&#45;rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint&#45;&#45;bottom hint&#45;&#45;rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
                                     </div>
 
                                     <p class="eqf-plus2 hide">
@@ -38,8 +38,8 @@
 
                                 <li>
                                     <div class="img-set hide">
-                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                        <div class="delete-img hint&#45;&#45;top hint&#45;&#45;rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint&#45;&#45;bottom hint&#45;&#45;rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
                                     </div>
 
                                     <p class="eqf-plus2">
@@ -49,8 +49,8 @@
 
                                 <li>
                                     <div class="img-set hide">
-                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                        <div class="delete-img hint&#45;&#45;top hint&#45;&#45;rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint&#45;&#45;bottom hint&#45;&#45;rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
                                     </div>
 
                                     <p class="eqf-plus2">
@@ -60,8 +60,8 @@
 
                                 <li>
                                     <div class="img-set hide">
-                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                        <div class="delete-img hint&#45;&#45;top hint&#45;&#45;rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint&#45;&#45;bottom hint&#45;&#45;rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
                                     </div>
 
                                     <p class="eqf-plus2">
@@ -71,8 +71,8 @@
 
                                 <li>
                                     <div class="img-set hide">
-                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                        <div class="delete-img hint&#45;&#45;top hint&#45;&#45;rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint&#45;&#45;bottom hint&#45;&#45;rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
                                     </div>
 
                                     <p class="eqf-plus2">
@@ -82,8 +82,8 @@
 
                                 <li>
                                     <div class="img-set hide">
-                                        <div class="delete-img hint--top hint--rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-                                        <div class="abbre hint--bottom hint--rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                        <div class="delete-img hint&#45;&#45;top hint&#45;&#45;rounded" data-hint="删除图片"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                        <div class="abbre hint&#45;&#45;bottom hint&#45;&#45;rounded" data-hint="更换图片"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
                                     </div>
 
                                     <p class="eqf-plus2">
@@ -91,7 +91,7 @@
                                     </p>
                                 </li>
                             </ul>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="picture-size">
                         <ul>

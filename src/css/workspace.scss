@@ -45,6 +45,7 @@
 			background-size: cover;
 			background-position: 50% 50%;
 			background-color: transparent;
+			//animation: scaleUp 7s ease 1s both;
 		}
 		.edit_area {
 			position: absolute;
@@ -303,6 +304,45 @@
 	}
 }
 
+@-webkit-keyframes scaleUp {
+	0% {
+		-webkit-transform: scale(1)
+	}
+
+	100% {
+		-webkit-transform: scale(1.5)
+	}
+}
+
+@keyframes scaleUp {
+	0% {
+		transform: scale(1)
+	}
+
+	100% {
+		transform: scale(1.5)
+	}
+}
+
+@-webkit-keyframes scaleDown {
+	0% {
+		-webkit-transform: scale(1.5)
+	}
+
+	100% {
+		-webkit-transform: scale(1)
+	}
+}
+
+@keyframes scaleDown {
+	0% {
+		transform: scale(1.5)
+	}
+
+	100% {
+		transform: scale(1)
+	}
+}
 
 
 //测试

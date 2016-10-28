@@ -19,6 +19,37 @@ define(function () {
         });
     };
 
+    //裁剪图片
+    tools.jcrop = function(option) {
+        var jcrop_api;
+        $(option.selector).Jcrop({
+            setSelect: option.setSelect,
+            aspectRatio: option.aspectRatio,
+            onSelect: updateCoords,
+            onRelease: function(){
+
+            }
+        },function(){
+            jcrop_api = this;
+
+            $('.jcrop-holder').css({
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                WebkitTransform: 'translate(-50%,-50%)',
+                MozTransform: 'translate(-50%,-50%)',
+                OTransform: 'translate(-50%,-50%)',
+                transform: 'translate(-50%,-50%)'
+            });
+            $('.jcrop-holder input').css('visibility','hidden');
+            return false;
+        });
+        function updateCoords(c){
+        };
+
+
+    };
+
     tools.createID = function(msg){
         return msg ? msg + new Date().getTime() : new Date().getTime();
     };

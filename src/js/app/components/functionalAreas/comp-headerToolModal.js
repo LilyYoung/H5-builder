@@ -23,11 +23,9 @@ define(['modal'],function (_modal) {
 	headerToolModal.headerBtnEvent = function() {
 		var that = this;
 		$('.comp_panel').on('click','li.bg,li.music,li.image',function() {
-			if($('.modal').length>0) $('.modal').remove();
-			_modal.createModal();
+			_modal.createModal({
 
-			$('.img-console').modal();
-
+			});
 			//3333333
 			that.uploading();
 		});

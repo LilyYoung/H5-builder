@@ -3,11 +3,11 @@
  * param:快捷区
  * 网格和背景快捷区
  */
-define(['grid'],function (grid) {
-
+define(['grid','tools','modal'],function (grid,tools,_modal) {
 	var compGridBg = {
 		init: function() {
 			this.gridColor = '#76828e';//默认颜色值
+			this.timer = 0;
 			this.chooseColorWay();
 			this.events();
 		},
@@ -104,11 +104,11 @@ define(['grid'],function (grid) {
 			var that = this;
 			//网格按钮事件
 			$('#speedy-toolbar .grid-guide').on('click',function() {
-				that.fnBtnEvent($('#speedy-toolbar .grid-guide-container'));
+				that.dealOnClass($('#speedy-toolbar .grid-guide-container'));
 			})
 			//背景按钮事件
 			$('#speedy-toolbar .background-tool').on('click',function() {
-
+				
 				var bgImg = that.dealBgImg($('.wrapper-background').css('background-image'));
 				var bgColor = that.dealBgColor($('.wrapper-background').css('background-color'));
 				var clipElem = $('.background-pane .setting-group.clip');
@@ -116,16 +116,20 @@ define(['grid'],function (grid) {
 				if($('.wrapper-background').length>0) {
 
 					if( !bgImg &&  !bgColor){
-
+						_modal.createModal({
+							handle: 'bg'
+						});
 						return false;
 					}else if(!bgImg &&  bgColor) {
 						clipElem.hide();
 					}else {
 						clipElem.show();
 					}
-					that.fnBtnEvent($('#speedy-toolbar .background-container'));
+					that.dealOnClass($('#speedy-toolbar .background-container'));
 				}else {
-
+					_modal.createModal({
+						handle: 'bg'
+					});
 				}
 			})
 		},
@@ -154,34 +158,129 @@ define(['grid'],function (grid) {
 		//背景设置按钮事件
 		setBgEvent: function() {
 			var that = this;
-			$(document).on('click','.background-pane .setting-group',function () {
+			$(document).on('click','.background-pane .setting-group,.bgoption-container .setting-group',function () {
 				var name = $.trim( $(this).attr('class').replace('setting-group ','') );
 				that.fnSetBgEvent(name);
+			});
+
+			$(document).on('mouseover','.background-pane .setting-group.effect,#speedy-toolbar .bgoption-container',function () {
+				clearTimeout(that.timer);
+				if($(this).hasClass('effect')) {
+					if(!$('.wrapper-background').attr('move') || $('.wrapper-background').attr('move') == 'none') {
+						$('#speedy-toolbar .bgoption-container .deleteEffect').hide();
+					}else {
+						$('#speedy-toolbar .bgoption-container .deleteEffect').show();
+					}
+				}
+				$('#speedy-toolbar .bgoption-container').addClass('on');
+			});
+			$(document).on('mouseout','.background-pane .setting-group.effect,#speedy-toolbar .bgoption-container',function () {
+				that.timer = setTimeout(function() {
+					$('#speedy-toolbar .bgoption-container').removeClass('on');
+				},100);
 			});
 		},
 
 		//背景设置按钮事件函数
 		fnSetBgEvent: function(name) {
+			var that = this;
 			switch (name) {
 				//裁剪
-				case 'clip': break;
+				case 'clip':
+					that.fnClip();
+					break;
 				//更换
-				case 'renewal': break;
+				case 'renewal':
+					that.fnRenewal();
+					break;
 				//效果
-				case 'effect': break;
+				case 'effect':
+					that.fnEffect();
+					break;
 				//删除背景
-				case 'deleteBg': break;
+				case 'deleteBg':
+					that.fnDeleteBg();
+					break;
 				//放大
-				case 'enlarge': break;
+				case 'enlarge':
+					that.fnEnlargeOrNarrow('enlarge');
+					break;
 				//缩小
-				case 'narrow': break;
+				case 'narrow':
+					that.fnEnlargeOrNarrow('narrow');
+					break;
 				//删除背景效果
-				case 'deleteEffect': break;
+				case 'deleteEffect':
+					that.fnEnlargeOrNarrow('deleteEffect');
+					break;
 			}
+			that.dealOnClass($('#speedy-toolbar .background-container'));
+
 		},
 
-		//快捷区按钮事件函数
-		fnBtnEvent: function(obj) {
+		//背景裁剪, 需要设置一个标识符，来区分是背景图，还是页面的编辑图
+		fnClip: function() {
+			if($('.modal').length>0) $('.modal').remove();
+			$('body').append(GTPL.clipImage());
+			$('#clipImage').modal({
+				backdrop: 'static'
+			});
+
+			$('#clipImage').attr('handle','bg');//表示操作的是背景
+
+			$('#img_preview').parent().css({
+				width: 738,
+				height: 430
+			});
+			$('#clipImage .picture-size').hide();
+
+			//裁剪
+			tools.jcrop({
+				selector:'#img_preview',
+				aspectRatio: 1,
+				setSelect: [0,0,738,430]
+			})
+		},
+
+		//更换背景图
+		fnRenewal: function() {
+			_modal.createModal({
+				handle: 'bg'
+			});
+		},
+
+		//背景图效果
+		fnEffect: function() {
+		},
+
+		//删除背景图
+		fnDeleteBg: function() {
+			$('.wrapper-background').css({
+				'background-image': 'none',
+				'background-color': 'transparent'
+			});
+		},
+
+		//放大或者缩小背景图效果
+		fnEnlargeOrNarrow: function(name) {
+			var move;
+			if(name == 'enlarge') {
+				move = 'scaleUp 7s ease 1s both';
+			}else if(name == 'narrow'){
+				move = 'scaleDown 7s ease 1s both';
+			}else {
+				move = 'none';
+			}
+
+			$('.wrapper-background').css({
+				'animation': move,
+				'-webkit-animation': move,
+				'-moz-animation': move
+			}).attr('move',move);
+		},
+
+		//快捷区按钮添加或删除on的class名
+		dealOnClass: function(obj) {
 			obj.hasClass('on') ? obj.removeClass('on') : obj.addClass('on');
 		},
 
