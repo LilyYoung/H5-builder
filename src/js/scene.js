@@ -22,7 +22,7 @@ require.config({
         /*组件类*/
         'compSet' : 'app/components/comp-setting',
         'compShortcut' : 'app/components/shortcut/comp-shortcut',
-        'compShortcutGrid':'app/components/shortcut/comp-shortcut-grid',
+        'compShortcutGridBg':'app/components/shortcut/comp-shortcut-gridbg',
         'compShortcutCache':'app/components/shortcut/comp-shortcut-cache',
         'compTemplate' : 'app/components/comp-template',
         'headSetting': 'app/components/head-setting',

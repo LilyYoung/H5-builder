@@ -1,10 +1,11 @@
 /**
  * Created by liusuling on 2016/9/9.
  * param:快捷区
+ * 网格和背景快捷区
  */
 define(['grid'],function (grid) {
 
-	var compGrid = {
+	var compGridBg = {
 		init: function() {
 			this.gridColor = '#76828e';//默认颜色值
 			this.chooseColorWay();
@@ -59,6 +60,7 @@ define(['grid'],function (grid) {
 			this.btnEvent();
 			this.gridColorEvent();
 			this.switchEvent();
+			this.setBgEvent();
 			this.documentEvent();
 		},
 
@@ -106,10 +108,76 @@ define(['grid'],function (grid) {
 			})
 			//背景按钮事件
 			$('#speedy-toolbar .background-tool').on('click',function() {
+
+				var bgImg = that.dealBgImg($('.wrapper-background').css('background-image'));
+				var bgColor = that.dealBgColor($('.wrapper-background').css('background-color'));
+				var clipElem = $('.background-pane .setting-group.clip');
+
 				if($('.wrapper-background').length>0) {
+
+					if( !bgImg &&  !bgColor){
+
+						return false;
+					}else if(!bgImg &&  bgColor) {
+						clipElem.hide();
+					}else {
+						clipElem.show();
+					}
 					that.fnBtnEvent($('#speedy-toolbar .background-container'));
+				}else {
+
 				}
 			})
+		},
+
+		//处理获取背景颜色的兼容性问题
+		dealBgColor: function(bgColor) {
+			if(!bgColor) {
+				return false;
+			}else {
+				if(bgColor == 'rgba(0, 0, 0, 0)') {
+					return false;
+				}else if (bgColor == 'transparent'){
+					return false;
+				}
+			}
+			return true;
+		},
+		//处理是否有背景图片
+		dealBgImg: function(bgImg) {
+			if(!bgImg || bgImg == 'none') {
+				return false;
+			}
+			return true;
+		},
+
+		//背景设置按钮事件
+		setBgEvent: function() {
+			var that = this;
+			$(document).on('click','.background-pane .setting-group',function () {
+				var name = $.trim( $(this).attr('class').replace('setting-group ','') );
+				that.fnSetBgEvent(name);
+			});
+		},
+
+		//背景设置按钮事件函数
+		fnSetBgEvent: function(name) {
+			switch (name) {
+				//裁剪
+				case 'clip': break;
+				//更换
+				case 'renewal': break;
+				//效果
+				case 'effect': break;
+				//删除背景
+				case 'deleteBg': break;
+				//放大
+				case 'enlarge': break;
+				//缩小
+				case 'narrow': break;
+				//删除背景效果
+				case 'deleteEffect': break;
+			}
 		},
 
 		//快捷区按钮事件函数
@@ -156,5 +224,5 @@ define(['grid'],function (grid) {
 
 	};
 
-	return compGrid;
+	return compGridBg;
 });

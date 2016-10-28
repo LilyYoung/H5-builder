@@ -52,7 +52,7 @@
                                 <span class="input-group-addon"><i ></i></span>
                             </div>
                         </div>
-                        <div class="setting-group">
+                        <!--<div class="setting-group">
                             <span>智能参考</span>
                             <div class="setting-choice">
                                 <div class="switch switch-open">
@@ -71,26 +71,42 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
                     </div>
                 </div>
                 <div class="background-container">
                     <div class="background-pane">
-                        <div class="setting-group">
+                        <div class="setting-group clip">
                             <div class="setting-btn"><i class="fa fa-scissors" aria-hidden="true"></i></div>
                             <span>裁剪</span>
                         </div>
-                        <div class="setting-group">
+                        <div class="setting-group renewal">
                             <div class="setting-btn"><i class="fa fa-repeat" aria-hidden="true"></i></div>
                             <span>更换</span>
                         </div>
-                        <div class="setting-group">
+                       <div class="setting-group effect">
                             <div class="setting-btn"><i class="fa fa-moon-o" aria-hidden="true"></i></div>
                             <span>效果</span>
                         </div>
-                        <div class="setting-group">
+                        <div class="setting-group deleteBg">
                             <div class="setting-btn"><i class="fa fa-trash" aria-hidden="true"></i></div>
+                            <span>删除</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bgoption-container">
+                    <div class="bgoption-panel">
+                        <div class="setting-group enlarge">
+                            <div class="setting-btn"><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                            <span>放大</span>
+                        </div>
+                        <div class="setting-group narrow">
+                            <div class="setting-btn"><i class="fa fa-search-minus" aria-hidden="true"></i></div>
+                            <span>缩小</span>
+                        </div>
+                        <div class="setting-group deleteEffect">
+                            <div class="setting-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
                             <span>删除</span>
                         </div>
                     </div>
