@@ -44,7 +44,9 @@
                             <em>上传</em>
                         </div>
                         <div class="upload-image" >
-                            <input type="file" multiple="" accept="image/jpeg,.jpg,image/gif,.gif,image/png,.png,.jpeg"></div>
+                            <!--<form action="" id="fileupload" enctype="multipart/form-data">-->
+                                <input id="fileupload" name="uploadify" type="file" multiple="multiple" accept="image/jpeg,.jpg,image/gif,.gif,image/png,.png,.jpeg"></div>
+                           <!-- </form>-->
                     </div>
                 </div>
                 <div class="gome-modal-list">
