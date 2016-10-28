@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/nanoscroller/nanoscroller.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/jquery-ui/jquery-ui.min.css" />
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/hint/hint.min.css">
+	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/swiper/swiper.css">
 	<link rel="stylesheet" href="{{ config.cssServer }}build/js/lib/animate/animate.css">
 	<!--{{ macroset.linkcsss(config,[
 		"build/css/scene.min.css"
@@ -23,9 +24,9 @@
 		,"build/css/comp_setting.min.css"
 		,"build/css/modal.min.css"
 		,"build/css/template.min.css"
+		,"build/css/head-setting.min.css"
 		,"build/css/drag_rotate.min.css"
         ,"build/css/contextmenu.min.css"
-
 	]) }}
 </head>
 <body>
@@ -35,6 +36,10 @@
 	</header>
 
 	<div class="scene" id="scene">
+		<!-- start 蒙层手机预览 -->
+		<div class="mobile-preview">
+			{% include "widget/mobile-preview.tpl" %}
+		</div><!-- end 蒙层手机预览 -->
 		<!-- start 大纲视图 -->
 		<div class="outline">
 			{% include "widget/outline.tpl" %}
@@ -56,6 +61,7 @@
 
 	{% include "widget/global.tpl" %}
 	<script src="{{ config.jsServer }}build/js/lib/jquery/jquery-1.11.2.min.js"></script>
+	<script src="{{ config.jsServer }}build/js/lib/swiper/swiper.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/widget/jquery.ui.widget.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="{{ config.jsServer }}build/js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>

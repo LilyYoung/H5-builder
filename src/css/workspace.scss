@@ -343,6 +343,9 @@
 				border-style: solid;
 				border-radius: 0;
 				box-shadow:0 0 0 rgba(0,0,0,0.5);
+				//animate-duration: 2s;    //动画持续时间
+				//animate-delay: 0s;    //动画延迟时间
+				//animate-iteration-count: 1;    //动画执行次数;
 			}
 
             .ui-icon, .ui-widget-content .ui-icon{

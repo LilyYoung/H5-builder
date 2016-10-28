@@ -25,6 +25,7 @@ require.config({
         'compShortcutGrid':'app/components/shortcut/comp-shortcut-grid',
         'compShortcutCache':'app/components/shortcut/comp-shortcut-cache',
         'compTemplate' : 'app/components/comp-template',
+        'headSetting': 'app/components/head-setting',
         'compFuncAreas' : 'app/components/functionalAreas/comp-funcAreas',
         'compText' : 'app/components/functionalAreas/comp-text',
         'compPotoList':'app/components/functionalAreas/comp-photoList',

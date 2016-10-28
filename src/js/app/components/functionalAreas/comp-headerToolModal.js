@@ -16,6 +16,7 @@ define(['modal'],function (_modal) {
 
 	 headerToolModal.events = function() {
 		this.headerBtnEvent();
+		 this.headerDragEvent();
 	};
 
 	//点击背景，音乐，图片，图形按钮按钮，出现弹窗
@@ -30,6 +31,20 @@ define(['modal'],function (_modal) {
 			//3333333
 			that.uploading();
 		});
+	};
+	headerToolModal.headerDragEvent= function () {
+		//拖拽
+		$(".comp_panel li").draggable({
+			helper: "clone"
+		});
+		//鼠标松开后事件
+		$(".comp_panel li.bg,li.music,li.image").bind('dragstop', function(event, ui) {
+			if($('.modal').length>0) $('.modal').remove();
+			_modal.createModal();
+
+			$('.img-console').modal();
+		});
+
 	};
 
 	//测试用3333
