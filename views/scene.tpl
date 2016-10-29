@@ -34,12 +34,12 @@
 	<header class="nav-header">
 		{% include "widget/header.tpl" %}
 	</header>
-
+	<!-- start 蒙层手机预览 -->
+	<!--<div class="mobile-preview">-->
+		<!--{% include "widget/mobilePreview.tpl" %}-->
+	<!--</div>-->
+	 <!--end 蒙层手机预览 -->
 	<div class="scene" id="scene">
-		<!-- start 蒙层手机预览 -->
-		<div class="mobile-preview">
-			{% include "widget/mobile-preview.tpl" %}
-		</div><!-- end 蒙层手机预览 -->
 		<!-- start 大纲视图 -->
 		<div class="outline">
 			{% include "widget/outline.tpl" %}
@@ -54,10 +54,7 @@
 		<div class="template">
 			{% include "widget/template.tpl" %}
 		</div><!-- end 模板区 -->
-
 	</div>
-
-
 
 	{% include "widget/global.tpl" %}
 	<script src="{{ config.jsServer }}build/js/lib/jquery/jquery-1.11.2.min.js"></script>
