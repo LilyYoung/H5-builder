@@ -11,11 +11,14 @@ define(function () {
         },
         creatBombbox: function () {
             var _this=this;
-            $('#scene').append(GTPL.mobilePreview());
+            //$('#scene').append(GTPL.mobilePreview());
             $('.header_setting').click(function () {
                 $('.mobile-preview').css({'z-index':'1050'});
                 $('.setting-bg').show().css({'z-index':'1042'});
                 $('.phone_panel').show().css({'left':'50%',"margin-top":'-328px','margin-left':'-160px','z-index':'1050'});
+
+                $('#scene').append(GTPL.mobilePreview());
+
                 _this.switchingEffect();
             });
             $('.create-action .publish,.create-action .save,.create-action .quit').click(function () {

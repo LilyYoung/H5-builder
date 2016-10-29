@@ -6,7 +6,7 @@
             <div class="scene_title_baner">
                 <h1 class="scene_title">demo002</h1>
             </div>
-            <div id="loading" class="loading" style="display: block;">
+            <div id="loading" class="loading">
                 <div class="loadbox">
                     <div class="loadlogo"></div>
                     <div class="loadbg"></div>
