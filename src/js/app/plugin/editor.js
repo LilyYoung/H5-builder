@@ -63,6 +63,8 @@ define(function () {
 			} );
 			//var editor = $(this);
 			editor.focus();
+			editor.getSelection().lock();
+
 		}
 	};
 

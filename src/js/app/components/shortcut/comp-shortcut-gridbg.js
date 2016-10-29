@@ -109,11 +109,11 @@ define(['grid','tools','modal'],function (grid,tools,_modal) {
 			//背景按钮事件
 			$('#speedy-toolbar .background-tool').on('click',function() {
 				
-				var bgImg = that.dealBgImg($('.wrapper-background').css('background-image'));
-				var bgColor = that.dealBgColor($('.wrapper-background').css('background-color'));
+				var bgImg = that.dealBgImg($('#nr .wrapper-background').css('background-image'));
+				var bgColor = that.dealBgColor($('#nr .wrapper-background').css('background-color'));
 				var clipElem = $('.background-pane .setting-group.clip');
 
-				if($('.wrapper-background').length>0) {
+				if($('#nr .wrapper-background').length>0) {
 
 					if( !bgImg &&  !bgColor){
 						_modal.createModal({
@@ -166,13 +166,20 @@ define(['grid','tools','modal'],function (grid,tools,_modal) {
 			$(document).on('mouseover','.background-pane .setting-group.effect,#speedy-toolbar .bgoption-container',function () {
 				clearTimeout(that.timer);
 				if($(this).hasClass('effect')) {
-					if(!$('.wrapper-background').attr('move') || $('.wrapper-background').attr('move') == 'none') {
+					if(!$('#nr .wrapper-background').attr('move') || $('#nr .wrapper-background').attr('move') == 'none') {
 						$('#speedy-toolbar .bgoption-container .deleteEffect').hide();
 					}else {
 						$('#speedy-toolbar .bgoption-container .deleteEffect').show();
 					}
+					if(!$('#speedy-toolbar .background-container').hasClass('on')) {
+						$('#speedy-toolbar .bgoption-container').removeClass('on');
+					}else {
+						$('#speedy-toolbar .bgoption-container').addClass('on');
+					}
+				}else {
+
 				}
-				$('#speedy-toolbar .bgoption-container').addClass('on');
+
 			});
 			$(document).on('mouseout','.background-pane .setting-group.effect,#speedy-toolbar .bgoption-container',function () {
 				that.timer = setTimeout(function() {
@@ -216,6 +223,10 @@ define(['grid','tools','modal'],function (grid,tools,_modal) {
 			}
 			that.dealOnClass($('#speedy-toolbar .background-container'));
 
+			if(!$('#speedy-toolbar .background-container').hasClass('on')) {
+				$('#speedy-toolbar .bgoption-container').removeClass('on');
+			}
+
 		},
 
 		//背景裁剪, 需要设置一个标识符，来区分是背景图，还是页面的编辑图
@@ -255,7 +266,7 @@ define(['grid','tools','modal'],function (grid,tools,_modal) {
 
 		//删除背景图
 		fnDeleteBg: function() {
-			$('.wrapper-background').css({
+			$('#nr .wrapper-background').css({
 				'background-image': 'none',
 				'background-color': 'transparent'
 			});
@@ -271,12 +282,19 @@ define(['grid','tools','modal'],function (grid,tools,_modal) {
 			}else {
 				move = 'none';
 			}
-
-			$('.wrapper-background').css({
-				'animation': move,
-				'-webkit-animation': move,
-				'-moz-animation': move
+			$('#nr .wrapper-background').css({
+				'animation': 'none',
+				'-webkit-animation': 'none',
+				'-moz-animation': 'none'
 			}).attr('move',move);
+			setTimeout(function() {
+				$('#nr .wrapper-background').css({
+					'animation': move,
+					'-webkit-animation': move,
+					'-moz-animation': move
+				}).attr('move',move);
+			},30);
+
 		},
 
 		//快捷区按钮添加或删除on的class名

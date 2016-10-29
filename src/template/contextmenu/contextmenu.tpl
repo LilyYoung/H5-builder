@@ -18,10 +18,10 @@
         <a role="menuitem"><i class="fa fa-floppy-o" aria-hidden="true"></i>复制动画</a>
     </li>
     <li class="bottom_bar" role="presentation">
-       <!-- <a href="javascript:;" title="置顶"></a>
-        <a href="javascript:;" title="上移一层"></a>
-        <a href="javascript:;" title="下移一层"></a>
-        <a href="javascript:;" title="置底"></a>-->
+        <a href="javascript:;" title="置顶"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
+        <a href="javascript:;" title="上移一层"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
+        <a href="javascript:;" title="下移一层"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></a>
+        <a href="javascript:;" title="置底"><i class="fa fa-long-arrow-down" aria-hidden="true"></i></a>
         <a href="javascript:;" title="删除"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
     </li>
 </ul>
