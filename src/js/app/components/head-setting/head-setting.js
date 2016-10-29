@@ -9,9 +9,9 @@ define(function () {
             this.ismobileSet();
             this.creatBombbox();
         },
-        //创建弹出层
         creatBombbox: function () {
             var _this=this;
+            $('#scene').append(GTPL.mobilePreview());
             $('.header_setting').click(function () {
                 $('.mobile-preview').css({'z-index':'1050'});
                 $('.setting-bg').show().css({'z-index':'1042'});
