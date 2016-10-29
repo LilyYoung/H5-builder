@@ -8,6 +8,7 @@ define(['tools'],function (tools) {
 
 	//初始化
 	modal.createModal = function(option) {
+		if($('.modal').length>0) $('.modal').remove();
 		$('body').append(GTPL.imgModal());
 		tools.fnPagination({
 			selector: 'img-pagination',
@@ -19,6 +20,9 @@ define(['tools'],function (tools) {
 
 			}
 		});
+
+		$('#img-console').modal();
+		$('#img-console').attr('handle',option.handle);//表示操作的是背景还是编辑图
 	};
 
 	return modal;

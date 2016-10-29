@@ -44,6 +44,8 @@
 			background-image: url("build/css/i/1.jpg");
 			background-size: cover;
 			background-position: 50% 50%;
+			background-color: transparent;
+			//animation: scaleUp 7s ease 1s both;
 		}
 		.edit_area {
 			position: absolute;
@@ -169,15 +171,9 @@
 		}
 
 	}
-	.grid-guide-container.on {
-		.grid-guide-setting {
-			opacity: 1;
-			transform: none;
-		}
-	}
 
-	.background-container {
-		.background-pane {
+	.background-container, .bgoption-container{
+		.background-pane,.bgoption-panel {
 			opacity: 0;
 			background-color: rgba(0,0,0,.8);
 			color: #fff;
@@ -208,9 +204,16 @@
 			}
 		}
 	}
-	.background-container.on .background-pane {
+	.grid-guide-container.on .grid-guide-setting,.background-container.on .background-pane,.bgoption-container.on .bgoption-panel {
 		opacity: 1;
 		transform: none;
+	}
+
+	.bgoption-container {
+		.bgoption-panel {
+			top: 191px;
+			left: -196px;
+		}
 	}
 
 }
@@ -301,6 +304,45 @@
 	}
 }
 
+@-webkit-keyframes scaleUp {
+	0% {
+		-webkit-transform: scale(1)
+	}
+
+	100% {
+		-webkit-transform: scale(1.5)
+	}
+}
+
+@keyframes scaleUp {
+	0% {
+		transform: scale(1)
+	}
+
+	100% {
+		transform: scale(1.5)
+	}
+}
+
+@-webkit-keyframes scaleDown {
+	0% {
+		-webkit-transform: scale(1.5)
+	}
+
+	100% {
+		-webkit-transform: scale(1)
+	}
+}
+
+@keyframes scaleDown {
+	0% {
+		transform: scale(1.5)
+	}
+
+	100% {
+		transform: scale(1)
+	}
+}
 
 
 //测试
@@ -311,14 +353,14 @@
 	left: 0;
 	top: 0px;
 	background-color: #00AA91;
-	.wrapper-background {
+	/*.wrapper-background {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 320px;
 		height: 486px;
 		background-color: transparent;
-	}
+	}*/
 	.edit-area {
 		position: absolute;
 		top: 0;

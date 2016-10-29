@@ -1,11 +1,13 @@
 /**
  * Created by liusuling on 2016/9/9.
  */
-define(['compShortcutGrid','compShortcutCache'],function (shortcutgrid,compshortcutcache) {
+define(['compShortcutGridBg','compShortcutCache'],function (compShortcutGridBg,compshortcutcache) {
     var shortcut = {};
     shortcut.init=function () {
         compshortcutcache.init();
-        shortcutgrid.init();
-    }
+        compShortcutGridBg.init();
+    };
+
+
     return shortcut;
 });

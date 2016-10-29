@@ -29,7 +29,8 @@ define(['modal'],function (_modal) {
 
 			//裁剪
 			that.jcrop({
-				selector:'#img_preview'
+				selector:'#img_preview',
+				aspectRatio: 1
 			})
 
 		});
@@ -79,7 +80,7 @@ define(['modal'],function (_modal) {
 		var jcrop_api;
 		$(option.selector).Jcrop({
 			setSelect: [ 0, 0, 340, 340 ],
-			aspectRatio: 1,
+			aspectRatio: option.aspectRatio,
 			onSelect: updateCoords,
 			onRelease: function(){
 

@@ -1,5 +1,6 @@
 /**
  * Created by xiejunmei on 2016/10/25.
+ * @param: 头部设置按钮的功能模块
  */
 define(function () {
     var headSetting = {
