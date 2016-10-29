@@ -34,11 +34,7 @@
 	<header class="nav-header">
 		{% include "widget/header.tpl" %}
 	</header>
-	<!-- start 蒙层手机预览 -->
-	<!--<div class="mobile-preview">-->
-		<!--{% include "widget/mobilePreview.tpl" %}-->
-	<!--</div>-->
-	 <!--end 蒙层手机预览 -->
+
 	<div class="scene" id="scene">
 		<!-- start 大纲视图 -->
 		<div class="outline">

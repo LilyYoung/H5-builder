@@ -286,13 +286,13 @@ define(['grid','tools','modal'],function (grid,tools,_modal) {
 				'animation': 'none',
 				'-webkit-animation': 'none',
 				'-moz-animation': 'none'
-			}).attr('move',move);
+			}).attr('data-animation',JSON.stringify([move]));
 			setTimeout(function() {
 				$('#nr .wrapper-background').css({
 					'animation': move,
 					'-webkit-animation': move,
 					'-moz-animation': move
-				}).attr('move',move);
+				}).attr('data-animation',JSON.stringify([move]));
 			},30);
 
 		},
