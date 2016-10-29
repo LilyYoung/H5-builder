@@ -57,12 +57,17 @@ define(function () {
 					},
 					focus: function(ev) {
 						document.execCommand("selectAll");
+					},
+					key: function(ev) {
+						ev.cancel();//禁止输入文字
 					}
 				}
 
 			} );
 			//var editor = $(this);
 			editor.focus();
+			//editor.getSelection().lock();
+
 		}
 	};
 

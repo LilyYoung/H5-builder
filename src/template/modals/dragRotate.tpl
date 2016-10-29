@@ -28,7 +28,7 @@
 </li>
 
 
-<li class="comp-drag comp-resize comp-rotate inside wsite-image" data-elemandgroup='true' id="inside_8137473101" num="1" ctype="2" comp-resize="" title="按住鼠标进行拖动，点击鼠标进行编辑">
+<li class="comp-drag comp-resize comp-rotate inside wsite-image" style="top: 100px" data-elemandgroup='true' id="inside_8137473101" num="1" ctype="2" comp-resize="" title="按住鼠标进行拖动，点击鼠标进行编辑">
     <div class="element-box">
         <div class="element-box-contents">
             <img id="31861840" ctype="4" class="element comp_image editable-image" src="build/img/2.png" style="width: 297px; height: 272px; margin-top: -2px; margin-left: 0px;">
